@@ -15,6 +15,13 @@ const TABS = [
 // длительности состояний окна конца уровня, мс (таблица flt_1009AF78 оригинала, индекс = состояние)
 const COMPLETE_MS = [0, 0, 800, 300, 2000, 300, 800, 800, 300, 800, 800];
 
+const SPADE_ICON = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g transform="rotate(35 32 32)">' +
+  '<rect x="29" y="2" width="6" height="30" rx="3" fill="#b9793a" stroke="#6b3f17" stroke-width="1.5"/>' +
+  '<rect x="24" y="2" width="16" height="6" rx="3" fill="#c98a45" stroke="#6b3f17" stroke-width="1.5"/>' +
+  '<path d="M23 30h18l-1 14c-1 8-5 14-8 16-3-2-7-8-8-16z" fill="#c9d3dc" stroke="#4a5866" stroke-width="2" stroke-linejoin="round"/>' +
+  '<path d="M27 33h4l-1 14c-.5 4-1.500 7-3 9z" fill="#fff" opacity=".55"/></g></svg>');
+
 export class UI {
   constructor(assets, audio) {
     this.assets = assets;
@@ -154,6 +161,7 @@ export class UI {
 
   nextFrame() {
     clearTimeout(this.dlTimer);
+    this.audio.stopVoice();
     const d = document.getElementById('dialogue');
     const f = this.dlFrames && this.dlFrames.shift();
     if (!f) {
@@ -172,11 +180,22 @@ export class UI {
     d.querySelector('.dl_arrow_l').style.visibility = p.left_arrow && p.left_picture ? 'visible' : 'hidden';
     d.querySelector('.dl_arrow_r').style.visibility = p.right_arrow && p.right_picture ? 'visible' : 'hidden';
     document.getElementById('dl_text').textContent = w ? w.db.t(p.text, p.text) : '';
-    this.dlTimer = setTimeout(() => this.nextFrame(), Math.max(2000, Number(p.time) || 8000));
+    const ms = Math.max(2000, Number(p.time) || 8000);
+    this.dlTimer = setTimeout(() => this.nextFrame(), ms);
+    // озвучка реплики: звук = ключ текста; кадр не сменяется, пока голос не договорил
+    const voice = this.audio.playVoice(p.text);
+    if (voice) {
+      const t0 = performance.now();
+      voice.addEventListener('loadedmetadata', () => {
+        const need = voice.duration * 1000 + 500;
+        if (this.audio.voice === voice && need > ms) { clearTimeout(this.dlTimer); this.dlTimer = setTimeout(() => this.nextFrame(), need - (performance.now() - t0)); }
+      });
+    }
   }
 
   clearDialogues() {
     clearTimeout(this.dlTimer);
+    if (this.audio) this.audio.stopVoice();
     this.dlQueue = []; this.dlFrames = null; this.dlActive = false;
     const d = document.getElementById('dialogue'); if (d) d.classList.add('hidden');
   }
@@ -319,8 +338,8 @@ export class UI {
     const div = document.createElement('div');
     div.className = 'shop_item spade' + (w.digMode ? ' active' : '');
     const img = document.createElement('img');
-    const tex = this.assets.resolve('spade', null);
-    if (tex) img.src = this.assets.manifest.textures[tex];
+    // в оригинале лопаты в инвентаре нет (кнопка — идея порта), текстуры тоже: рисуем значок сами (SVG 64x64)
+    img.src = SPADE_ICON;
     div.appendChild(img);
     div.title = extraT('spade_dig');
     div.addEventListener('click', () => { w.toggleDigMode(); this.updateShop(); });

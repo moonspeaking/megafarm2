@@ -152,6 +152,11 @@ export class Menu {
     const s = this.scene;
     const back = this.el('div', 'menu_back', s);
     back.style.backgroundImage = `url('${this.tex('menu_background.png')}')`;
+    // wide_left / wide_right (interfaces/menu.txt): полосы 172x768 по бокам для широких окон (16:9 = 1368 px)
+    for (const [cls, file] of [['menu_wide_l', 'menu_background_left.png'], ['menu_wide_r', 'menu_background_right.png']]) {
+      const w = this.el('div', cls, s);
+      w.style.backgroundImage = `url('${this.tex(file)}')`;
+    }
     // координаты скрипта — центр спрайта от центра экрана, y вверх
     const at = (e, x, y, w, h) => Object.assign(e.style, {
       left: `${W / 2 + x - w / 2}px`, top: `${H / 2 - y - h / 2}px`, width: `${w}px`, height: `${h}px`,

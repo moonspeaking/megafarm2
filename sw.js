@@ -1,6 +1,6 @@
 // Service worker: офлайн-кэш игры. Код (html/js/css/json) — сеть с откатом на кэш,
 // ресурсы (assets/, icons/) — кэш с дозагрузкой при первом обращении.
-const VERSION = 'v6';
+const VERSION = 'v7';
 const CACHE = 'megafarm2-' + VERSION;
 const SHELL = ['./', 'index.html', 'styles.css', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png',
   'assets/manifest.json'];

@@ -28,6 +28,28 @@ export class AudioBank {
     } catch (e) { /* ignore */ }
   }
 
+  /**
+   * Озвучка реплик комиксов и диалогов уровней (soundhost_scripts.txt, vo/<ключ текста>.ogg): имя звука совпадает с
+   * ключом текста реплики. Одна реплика за раз; возвращает Audio (или null, если звука нет / звуки выключены).
+   */
+  playVoice(name) {
+    this.stopVoice();
+    if (!this.sfxOn || !name) return null;
+    const path = this.assets.sound(name + '.ogg');
+    if (!path) return null;
+    const a = new Audio(path);
+    a.volume = Math.min(1, this.sfxVolume * 1.4);
+    a.play().catch(() => {});
+    this.voice = a;
+    return a;
+  }
+
+  stopVoice() {
+    if (!this.voice) return;
+    try { this.voice.pause(); } catch (e) { /* ignore */ }
+    this.voice = null;
+  }
+
   /** Оборвать звук (например копание, когда анимация уже закончилась). */
   stop(name) {
     const a = this.cache.get(name);
@@ -83,7 +105,7 @@ export class AudioBank {
     else if (this.wantedMusic) this.playMusic(this.wantedMusic);
   }
 
-  setSfxEnabled(on) { this.sfxOn = on; }
+  setSfxEnabled(on) { this.sfxOn = on; if (!on) this.stopVoice(); }
 
   /** Звук дождя (sub_1002C62C): три петли, смешиваются по силе 0..100 (пики 33/66/99, громкость 100 − |сила − пик|·3 %). */
   setRainMix(strength) {

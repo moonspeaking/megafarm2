@@ -163,7 +163,12 @@ export class Comics {
       this.balloons.push(arrow);
     }
     box.animate([{ opacity: 0, transform: 'scale(.9)' }, { opacity: 1, transform: 'none' }], { duration: 160 });
-    this.schedule(readTime(text));
+    // озвучка реплики (звук = ключ текста): следующий шаг — после конца голоса, чтобы он не обрывался
+    const voice = this.audio.playVoice(b.props.text_key);
+    if (voice) {
+      this.schedule(readTime(text) + 6000);
+      voice.addEventListener('ended', () => { if (this.audio.voice === voice) this.schedule(600); });
+    } else this.schedule(readTime(text));
   }
 
   /** Автоматическое продолжение: через `ms` показывается следующий шаг (клик делает это раньше). */
@@ -174,6 +179,7 @@ export class Comics {
   }
 
   clearBalloon() {
+    this.audio.stopVoice();
     for (const b of this.balloons || []) b.remove();
     this.balloons = [];
   }
@@ -209,6 +215,7 @@ export class Comics {
   close() {
     if (!this.active) return;
     clearTimeout(this.timer);
+    this.audio.stopVoice();
     this.active = false;
     window.removeEventListener('keydown', this.keyHandler, true);
     this.root.classList.add('hidden');

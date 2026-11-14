@@ -244,13 +244,16 @@ html, body {
 #end_stats .end_good { color: #00ff00; }
 
 /* ---------- main menu (original layout, see src/menu.js) ---------- */
-#menu.menu_root { background: #000; padding: 0; overflow: hidden; display: block; }
+#menu.menu_root { background: #000; padding: 0; overflow: visible; display: block; }
 #menu.menu_root.ingame { background: rgba(0,0,0,.45); }
 #menu.menu_root.ingame .menu_scene { display: none; }
 .menu_scene, .menu_panel { position: absolute; inset: 0; }
 .menu_scene > div { position: absolute; background-repeat: no-repeat; }
 /* фон menu_background.tga: 1024x768 из файла 1024x1024 (texcoord 0,0,1,0.75) */
 .menu_back { left: 0; top: 0; width: 1024px; height: 768px; background-size: 1024px 1024px; background-position: 0 0; }
+.menu_wide_l, .menu_wide_r { top: 0; width: 172px; height: 768px; background-size: 256px 1024px; }
+.menu_wide_l { left: -172px; background-position: -84px 0; }   /* texcoord u 0.3281..1 */
+.menu_wide_r { left: 1024px; background-position: 0 0; }       /* texcoord u 0..0.6719 */
 .sway { background-size: 100% 100%; animation: sway ease-in-out infinite alternate; }
 @keyframes sway { from { transform: rotate(calc(var(--amp) * -1)); } to { transform: rotate(var(--amp)); } }
 .eyes { background-size: 1024px 32px; }
