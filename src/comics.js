@@ -128,7 +128,7 @@ export class Comics {
     });
     this.layers.push(d);
     this.busy = true;
-    this.audio.play('selectmenu', 0.3);
+    
     const from = `translate(${sx - ex}px, ${sy - ey}px) rotate(${p.start_angle || 0}deg) scale(${p.start_size || 1})`;
     const a = d.animate(
       [{ transform: from, opacity: p.start_alpha ?? 0 }, { transform: 'none', opacity: 1 }],

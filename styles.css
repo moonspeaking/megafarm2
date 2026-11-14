@@ -55,7 +55,7 @@ html, body {
 /* upmenu_center: 512x256, pos (138,-98) top right — доска заданий (панель в оригинале выезжает сверху;
    порт показывает её целиком, см. open-questions) */
 #upcenter {
-  position: absolute; left: 374px; top: 0; width: 512px; height: 256px; pointer-events: none;
+  position: absolute; left: 374px; top: -98px; width: 512px; height: 256px; pointer-events: none;
   background: url('assets/textures/gameplay/levelgui/upbar_task.png') 0 0 / 512px 256px no-repeat;
 }
 #btn_menu {
@@ -75,7 +75,7 @@ html, body {
 #btn_center:hover { background: rgba(255,255,255,0.12); border-radius: 6px; }
 #btn_menu:hover { filter: brightness(1.15); }
 #level_name {
-  position: absolute; left: 0; top: 45px; width: 196px; text-align: right; line-height: 16px;
+  position: absolute; left: 196px; top: 45px; width: 120px; text-align: left; line-height: 16px;
   font-family: var(--ui-font); font-weight: 700; font-size: 13px; color: #fff;
   -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill; pointer-events: none;
 }
@@ -88,16 +88,21 @@ html, body {
   transition: width .3s linear;
 }
 #taskbox {
-  /* upmenu_center.task1..: строки по 14 px на деревянной доске (x 60..465, y 0..115 текстуры) */
-  position: absolute; left: 76px; top: 14px; width: 370px; height: 96px;
-  display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left;
+  /* строки task1..7 — абсолютные (см. updateTasks): task1 внизу доски, остальные выше; окно сдвигает tickTaskPanel */
+  position: absolute; left: 76px; top: 0; width: 370px; height: 256px;
   font-family: var(--ui-font); font-weight: 700; color: #fff; font-size: 12px; line-height: 14px;
-  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill; overflow: hidden;
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill; overflow: hidden; text-align: left;
+}
+/* upmenu_center.task_bar: заливка слева направо, ширина 352·доля, центр (4,-6.5), 21 px; texcoord 0..0.695·доля × 0..0.781 */
+#taskfill {
+  position: absolute; left: 84px; top: 124px; width: 0; height: 21px;
+  background: url('assets/textures/gameplay/levelgui/upbar_task_bar.png') 0 0 / 506.5px 26.9px no-repeat;
 }
 #task_label { display: none; }
-#task_text { font-weight: 700; width: 100%; text-align: left; }
+#task_text { font-weight: 700; width: 100%; height: 100%; text-align: left; position: relative; }
+#task_text.single { padding-top: 89px; }
 #task_text.goals { font-size: 12px; line-height: 14px; }
-#task_text .goal { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#task_text .goal { position: absolute; left: 0; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #moneybox {
   /* upmenu_right.money: центр (82,20), 64x32 */
   position: absolute; left: 50px; top: 4px; width: 64px; height: 32px; line-height: 32px; text-align: center;

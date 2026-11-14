@@ -30,6 +30,8 @@ export class UI {
       money: document.getElementById('money'),
       timefill: document.getElementById('timefill'),
       task_text: document.getElementById('task_text'),
+      upcenter: document.getElementById('upcenter'),
+      taskfill: document.getElementById('taskfill'),
       toolslots: document.getElementById('toolslots'),
       shop_tabs: document.getElementById('shop_tabs'),
       shop_items: document.getElementById('shop_items'),
@@ -47,7 +49,22 @@ export class UI {
     this.el.end_next.addEventListener('click', () => this.onEndNext());
   }
 
+  // Доска заданий (sub_100259AC): раз в 40 мс окно upmenu_center сдвигается на 1 px к -14·(число строк) от
+  // стартового положения y=-98, а заливка task_bar догоняет долю выполненных целей шагом 0.02 (уменьшается сразу).
+  tickTaskPanel() {
+    if (!this.el.upcenter) return;
+    const tgt = this.taskTarget || 0;
+    if (this.taskOff === undefined) this.taskOff = 0;
+    if (this.taskOff < tgt) this.taskOff++;
+    else if (this.taskOff > tgt) this.taskOff--;
+    const f = this.taskFrac || 0;
+    this.taskShown = this.taskShown === undefined || f <= this.taskShown ? f : Math.min(f, this.taskShown + 0.02);
+    this.el.upcenter.style.top = `${-98 + this.taskOff}px`;
+    this.el.taskfill.style.width = `${352 * this.taskShown}px`;
+  }
+
   tickMoney() {
+    this.tickTaskPanel();
     if (this.moneyShown === undefined || this.moneyShown === this.moneyTarget || this.moneyTarget === undefined) return;
     let d = Math.trunc((this.moneyTarget - this.moneyShown) / 2);
     if (d === 0) d = this.moneyTarget > this.moneyShown ? 1 : -1;
@@ -57,6 +74,7 @@ export class UI {
 
   bind(world, hooks) {
     this.moneyShown = null; this.moneyTarget = undefined;
+    this.taskOff = 0; this.taskTarget = 0; this.taskFrac = 0; this.taskShown = 0;
     clearInterval(this.moneyTimer);
     this.moneyTimer = setInterval(() => this.tickMoney(), 40);
     this.world = world;
@@ -186,13 +204,16 @@ export class UI {
     // как в оригинале (upmenu_form.task1..4): цели текущего задания с прогрессом, а не название задания
     const lines = taskGoalLines(w);
     if (lines.length) {
+      this.taskTarget = 14 * lines.length;
+      this.taskFrac = lines.filter((l) => l.cur >= l.target).length / lines.length;
       const sig = lines.map((l) => `${l.text}|${l.cur}|${l.target}`).join('\n');
       if (box.dataset.sig === sig) return;
       box.dataset.sig = sig;
       box.className = 'goals';
-      box.replaceChildren(...lines.map((l) => {
+      box.replaceChildren(...lines.map((l, i) => {
         const row = document.createElement('div');
         row.className = 'goal';
+        row.style.top = `${89 - 14 * i}px`; // task1 — нижняя строка, следующие выше (task1..7: y = 32, 46, 60 …)
         row.textContent = `${l.text}: ${l.cur}/${l.target}`; // формат оригинала "%s: %i/%i"
         return row;
       }));
@@ -200,11 +221,13 @@ export class UI {
     }
     // целей нет (например, всё выполнено или у задания только временные условия): название задания
     box.dataset.sig = '';
-    box.className = '';
+    box.className = 'single';
+    this.taskFrac = 0;
     const active = [...w.tasks].reverse().find((t) => t.state === 'active');
     if (active) box.textContent = w.db.t(active.key, active.key);
     else if (w.tasks.length) box.textContent = w.db.t(w.tasks[w.tasks.length - 1].key, '');
     else box.textContent = '';
+    this.taskTarget = box.textContent ? 14 : 0;
   }
 
   // ---------------------------------------------------------------- shop
