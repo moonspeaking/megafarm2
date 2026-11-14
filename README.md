@@ -8,7 +8,17 @@
 Играть: https://moonspeaking.github.io/megafarm2/ — открывается как PWA (Chrome/Edge: «Установить»; Android — «Добавить на главный экран»),
 запускается в полноэкранном режиме, работает офлайн после первой загрузки.
 
-Локально: `python3 -m http.server` в корне и открыть http://localhost:8000/. Проверки: `node tools/test_*.mjs`.
+Локально (без зависимостей, нужен только Node):
+
+```bash
+node tools/serve.mjs            # http://localhost:8080/
+node tools/serve.mjs 9000       # другой порт
+node tools/serve.mjs --lan      # ещё и по адресу в локальной сети (проверка на телефоне)
+```
+
+Сервер отдаёт файлы с `Cache-Control: no-store`, поэтому браузер не показывает устаревшие модули. Если когда-то
+открывали сайт с этого адреса как PWA, один раз сбросьте service worker (DevTools → Application → Unregister).
+Проверки: `for f in tools/test_*.mjs; do node $f; done`.
 
 --- Ниже README первой части (устарел до выполнения задач) ---
 
