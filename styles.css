@@ -391,14 +391,14 @@ html, body {
 .lm_text { position: absolute; text-align: center; color: rgb(251, 229, 129);
   -webkit-text-stroke: 3px #6a3a10; paint-order: stroke fill; white-space: nowrap; overflow: hidden; }
 /* старт (@text start_game pos 10,-285 size 160x40, ahtung — пульсирует) */
-.lm_start { position: absolute; width: 160px; height: 40px; line-height: 40px; text-align: center;
+.lm_start { position: absolute; z-index: 2; width: 160px; height: 40px; line-height: 40px; text-align: center;
   font-size: 28px; color: rgb(251, 229, 129); -webkit-text-stroke: 3px #6a3a10; paint-order: stroke fill;
   cursor: pointer; animation: lm_pulse 1.2s ease-in-out infinite; }
 .lm_start:hover { color: #fff; }
 /* @buttonex_back / @buttonex_camera: 64x64, в файле 64x128 (верхняя половина —
    обычное состояние, нижняя — нажатое); белый фон гасится multiply (альфы нет,
    прозрачность этих текстур — вопрос задачи 7) */
-.lm_bitbtn { position: absolute; width: 64px; height: 64px; background-size: 64px 128px;
+.lm_bitbtn { position: absolute; z-index: 2; width: 64px; height: 64px; background-size: 64px 128px;
   background-repeat: no-repeat; cursor: pointer; mix-blend-mode: multiply; }
 .lm_bitbtn:hover { background-position: 0 -64px; }
 /* нижняя полка downbar_levels.tga (в файле 1024x256 полка занимает нижние ~136 строк,
