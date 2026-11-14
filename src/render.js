@@ -272,11 +272,8 @@ export class Renderer {
         const o = d.o;
         this.drawGlow(ctx, o);
         if (o.kind === 'box' && o.type && o.count > 0) {
-          const num = this.fruitIconNum(o.type);
-          if (num !== undefined) {
-            this.drawPile(ctx, num, o.count >= 4, 2, o.x + 2, o.y - 14);
-            if (this.hover.obj === o) this.drawFruitRow(ctx, o.x, o.y, num, 4, o.count);
-          }
+          this.drawPile(ctx, o.type, o.count >= 4, 2, o.x + 2, o.y - 14);
+          if (this.hover.obj === o) this.drawFruitRow(ctx, o.x, o.y, o.type, 4, o.count);
         }
         if (this.hover.obj === o && (o.kind === 'watercan' || o.kind === 'seed')) {
           this.drawObjectBadge(ctx, o.kind, o.def, o.kind === 'seed' ? o.count : o.charges, o.x, o.y);
@@ -882,20 +879,40 @@ export class Renderer {
    * A box (CBox `sub_419B20`) that is highlighted (carried / under the mouse) draws `cap` 32px icons of its fruit,
    * 4 per row, centred 48 px above its position; the first `count` are bright, the rest dim.
    */
-  drawFruitRow(ctx, x, y, num, cap, count) {
+  drawFruitRow(ctx, x, y, type, cap, count) {
     const cols = 4;
-    const rows = Math.ceil(cap / cols);
     for (let i = 0; i < cap; i++) {
       const r = Math.floor(i / cols), c = i % cols;
       const inRow = Math.min(cols, cap - r * cols);
-      this.drawCell(ctx, num, x - (inRow * 32) / 2 + 16 + c * 32, y - 48 + r * 32, 32, 1, i >= count);
+      this.drawNamedIcon(ctx, `${type}_icon`, x - (inRow * 32) / 2 + 16 + c * 32, y - 48 + r * 32, 32, i >= count);
     }
-    void rows;
   }
 
-  /** Pile of fruit in/on a box: frame = base(type) + (full ? 8 : 0) + direction slot. */
-  drawPile(ctx, num, full, k, cx, cy) {
-    this.drawCell(ctx, PILE_BASE[num % 25] + (full ? 8 : 0) + k, cx, cy, 64, 1, false);
+  /**
+   * Pile of fruit in/on a box (части 2: imagehost_scripts.txt `<имя>_halfstuff_icon` / `<имя>_fullstuff_icon` — полоса из
+   * 8 кадров по 64 px в icons1.tga/icons0.tga, кадр = направление; у деревьев и животных только fullstuff).
+   */
+  drawPile(ctx, type, full, k, cx, cy) {
+    const images = this.world.db.images;
+    const node = (full ? images.get(`${type}_fullstuff_icon`) : images.get(`${type}_halfstuff_icon`) || images.get(`${type}_fullstuff_icon`));
+    if (!node) return;
+    const img = this.assets.image(node.props.texture);
+    if (!img || !img.complete || !img.naturalWidth) return;
+    const [x0, y0] = node.props.rect;
+    ctx.drawImage(img, x0 + (k & 7) * 64, y0, 64, 64, cx - 32, cy - 32, 64, 64);
+  }
+
+  /** Именованная картинка imagehost (`<имя>_icon`, прямоугольник листа icons0.tga), по центру (cx, cy). */
+  drawNamedIcon(ctx, name, cx, cy, size, dim) {
+    const node = this.world.db.images.get(name);
+    if (!node) return;
+    const img = this.assets.image(node.props.texture);
+    if (!img || !img.complete || !img.naturalWidth) return;
+    const [x0, y0, x1, y1] = node.props.rect;
+    ctx.save();
+    if (dim) { ctx.globalAlpha = 0.63; ctx.filter = 'brightness(0.5)'; }
+    ctx.drawImage(img, x0, y0, x1 - x0, y1 - y0, cx - size / 2, cy - size / 2, size, size);
+    ctx.restore();
   }
 
   /** Badge of a can or seed packet (carried by the hero when `owner` is the hero's held item, or lying under the mouse). */
@@ -912,20 +929,11 @@ export class Renderer {
     if (!held || held.kind !== 'box' || !held.type || !(held.count > 0)) return;
     // кадры hero_put_box* (сдача в амбар / постановка) уже содержат ящик в руках: стопка у ног дала бы двойной ящик
     if (h.act && /^hero_put_box/.test(h.act.name)) return;
-    const num = this.fruitIconNum(held.type);
-    if (num === undefined) return;
     const cap = 4;
     // the pile slot: index (14 - dir) % 8 while walking, 0 when standing (dword_483FDC)
     const k = h.moving ? (((6 - h.facing) % 8) + 8) % 8 : 0;
-    this.drawPile(ctx, num, held.count >= cap, k, h.x + PILE_OFF[k][0], h.y - PILE_OFF[k][1]);
-    if (!h.act) this.drawFruitRow(ctx, h.x, h.y - 100, num, cap, held.count);
-  }
-
-  fruitIconNum(type) {
-    const def = this.world.db.objects.get(type);
-    let num = def && (def.props.seed_icon_num !== undefined ? def.props.seed_icon_num : def.props.ready_icon_num);
-    if (type === 'beehive') num = 24;
-    return num;
+    this.drawPile(ctx, held.type, held.count >= cap, k, h.x + PILE_OFF[k][0], h.y - PILE_OFF[k][1]);
+    if (!h.act) this.drawFruitRow(ctx, h.x, h.y - 100, held.type, cap, held.count);
   }
 
   drawShadow(ctx, x, y, r) {

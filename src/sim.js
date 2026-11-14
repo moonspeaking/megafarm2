@@ -1940,13 +1940,16 @@ export class World {
         const plant = task.plant;
         if (!plant || plant.dead || !plant.def.props.weed) return;
         if (!this.allowed.weed) return;
-        anim('hero_hands_up', 0.5, () => {
+        // действие «прополка» (маска 0x2000, sub_100039B4) в оригинале идёт тем же путём, что и копание (маска 8):
+        // звук dig.ogg и та же длительность состояния; анимация — копание (hero_dug), killplant — звук инструмента destructor
+        this.hooks.playSound('dig');
+        anim('hero_dug', 1.5, () => {
+          this.hooks.stopSound && this.hooks.stopSound('dig');
           if (plant.dead) return;
           this.removeObject(plant);
           this.bump('kill_' + plant.name);
           this.bump('dead_' + plant.name);
           this.dust(plant.cell.x, plant.cell.y);
-          this.hooks.playSound('killplant');
           this.hooks.updateHud();
         });
         break;
@@ -2261,7 +2264,10 @@ export class World {
     for (let i = this.objects.length - 1; i >= 0; i--) {
       const o = this.objects[i];
       if (o.kind === 'plant') {
-        if (Math.abs(wx - o.x) < 32 && Math.abs(wy - o.y) < 32) return o;
+        // клетка 64x64 плюс видимая картинка растения (frame_size со сдвигом delta_pos: репейник 81x73 выше клетки)
+        const p = o.def.props, fs = p.frame_size || [32, 32], d = p.delta_pos || [0, 0];
+        const top = Math.min(o.y - 32, o.y - d[1] - fs[1] / 2);
+        if (Math.abs(wx - o.x) < Math.max(32, fs[0] / 2) && wy > top && wy < o.y + 32) return o;
         continue;
       }
       if (o.kind === 'worker') {
