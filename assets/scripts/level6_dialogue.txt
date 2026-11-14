@@ -1,0 +1,220 @@
+<<
+@simple_dialogue
+{
+	#string name "l6_intro";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#string text "l6_intro_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_ravan.tga";
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#string text "l6_intro_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_ravan.tga";
+		#bool right_slide_out true;		
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#string text "l6_intro_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_sell_orchids";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_sell_orchids_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_buy_patents";
+
+	@simple_dialogue_frame
+	{		
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#string text "l6_buy_patents_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta5.tga";
+		#string right_picture "face_silvy.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#string text "l6_buy_patents_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_silvy.tga";		
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_buy_patents_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_buy_1st_worker";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#string text "l6_buy_1st_worker_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_ravan.tga";
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#string text "l6_buy_1st_worker_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_ravan.tga";
+		#bool right_slide_out true;		
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#string text "l6_buy_1st_worker_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_buy_workers";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_buy_workers_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_sell_trees";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#string text "l6_sell_trees_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";		
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_sell_trees_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_sell_trees";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_sell_trees_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_build_beehive";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_build_beehive_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l6_sell_strawberry";
+	@simple_dialogue_frame
+	{		
+		#string right_picture "face_ravan.tga";
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#string text "l6_sell_strawberry_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_ravan.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;	
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_sell_strawberry_2";
+	}
+	
+}
+
+@simple_dialogue
+{
+	#string name "l6_victory";
+	#bool pause true;
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#string text "l6_victory_1";
+	}
+}
+
+
+
+
+
+
+
+
+>>
+

@@ -1,0 +1,305 @@
+
+<<
+
+@level
+{
+   #string level_name "level1";
+   #point level_size 24, 16;
+   #string level_env "grass";
+   #float level_time 600;
+   #string name_emb_music "music_emb_grass_day.ogg";
+   #string name_pri_music "music_pri_neutral1.ogg";
+   #float plant_thirst_growth 0.5;
+   #float plant_fruit_growth 6;
+   #float plant_growth 6;
+   #float health_reduction_after_harvest 7;
+   #float health_reduction_when_thirsty 0.2;
+   #float plant_fertilizer_strength 10;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 100;
+   #float plant_minimal_health 1;
+   #bool cant_harvest true;
+   #bool cant_weed true;
+   #bool cant_plant true;
+   @game_field
+   {
+      @ground
+      {
+         #string name "grass";
+         #string texground_name "grass_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level1_entry]
+      @event
+      {
+         #string name "l1_init";
+         @action
+         {
+            #string type "set money";
+            #string data "20";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_dig_first_by_scenario_dialog";
+            #float delay 1000;
+         }
+      }
+      @event
+      {
+         #string name "l1_dig_first_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "dig bed";
+            #string data ">=4";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_sow_by_scenario_dialog";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "plant 1";
+         }
+      }
+      @event
+      {
+         #string name "l1_dig1_dialog";
+         @condition
+         {
+            #string type "dig bed";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_dig_by_scenario_dialog";
+         }
+      }
+	   @event
+      {
+         #string name "l1_sell_dialog";
+         @condition
+         {
+            #string type "harvest plant_tomato";
+            #string data ">=4";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_sell_stuff_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l1_no_digging";
+         @condition
+         {
+            #string type "dig bed";
+            #string data ">=4";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "dig 0";
+         }
+      }
+      @event
+      {
+         #string name "l1_sow_hint";
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_dig_first_by_scenario";
+         }
+         @action
+         {
+            #string type "add particles";
+            #string data "seed_tomato item_hint 10";
+            #float delay 2000;
+         }
+      }
+      @event
+      {
+         #string name "l1_sow_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sow seed_tomato";
+            #string data ">=4";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_dig_first_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_weeding_by_scenario_dialog";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "weed 1";
+         }
+      }
+      @event
+      {
+         #string name "l1_weeding_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "kill plant_bur";
+            #string data ">=8";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_sow_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_sell_by_scenario_dialog";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "harvest 1";
+         }
+      }
+      @event
+      {
+         #string name "l1_start_to_weed_dialog";
+         @condition
+         {
+            #string type "end dialogue l1_weeding_by_scenario_dialog";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "dig 1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_weeding_by_scenario_dialog_2";
+         }
+         @action
+         {
+            #string type "add particles";
+            #string data "plant_bur item_hint 10";
+         }
+      }
+      @event
+      {
+         #string name "l1_sell_by_scenario";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @condition
+         {
+            #string type "sell plant_tomato";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_weeding_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_buy_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l1_buy_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place box";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_sell_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_fin_sell_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l1_fin_sell_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell plant_tomato";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_buy_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l1_victory_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l1_victory";
+         @action
+         {
+            #string type "show help";
+         }
+         @action
+         {
+            #string type "victory";
+            #float delay 2000;
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l1_fin_sell_by_scenario";
+         }
+         @condition
+         {
+            #string type "end dialogue l1_victory_dialog";
+            #string data ">=1";
+         }
+      }
+   }
+}
+
+>>

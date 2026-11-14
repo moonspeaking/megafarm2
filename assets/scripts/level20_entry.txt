@@ -1,0 +1,1129 @@
+<<
+@event
+{
+	#string name "default placement";
+	@action
+	{
+		#string type "add to field";
+		#string data "hero 7.753597 45.575500";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "factory_sausage 8.633115 8.739195 4";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_peach 2.907802 -1.680754 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_peach 7.860927 -1.571379 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_peach 12.822618 -1.852629 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "truck 10.342932 2.745556";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "truck 4.827307 2.745556";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 1.777516 1.374821";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 1.730641 1.952946";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 1.715016 2.593571";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 1.699391 3.218571";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 1.668141 3.968571";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 1.636891 4.656071";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 7.480641 1.124821";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 7.480641 1.749821";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 7.543141 2.484196";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 7.574391 3.202946";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 7.605641 3.781071";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 7.605641 4.484196";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 13.272327 1.173735";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 13.272327 1.798735";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 13.303577 2.454985";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 13.319202 3.095610";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 13.303577 3.767485";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 13.272327 4.423735";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 2.355713 1.001860";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 3.277588 0.986235";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 4.199463 1.001860";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 5.121338 0.954985";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 6.058838 0.970610";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 6.824463 0.939360";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 8.230713 0.970610";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 9.152588 0.923735";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 9.918213 0.954985";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 10.855713 0.939360";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 11.761963 0.939360";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone8 12.668213 0.892485";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 4.136080 -0.318928";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 6.526705 0.415447";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 11.792330 -0.459553";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 13.971417 -0.740803";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches4 8.557827 -0.615803";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 13.750130 40.758354";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 15.203255 32.451141";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 8.422408 30.178326";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 0.484908 27.475201";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 6.813033 26.678326";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 8.875185 16.530153";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 3.001309 12.426552";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 15.311116 11.973427";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 3.713294 5.670906";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 15.057055 2.211330";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 5.356027 -0.489460";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 13.519468 5.715500";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 2.115828 8.057602";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 8.428328 13.838852";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 3.084578 14.731079";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 11.338581 19.963442";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 1.934392 21.020655";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 0.184392 30.794209";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 5.231267 34.872185";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 1.965642 38.586609";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 15.211769 39.680359";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 5.771215 39.586609";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 3.187815 32.874790";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 10.195548 30.023277";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 0.981143 24.421978";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 7.457855 20.304758";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 14.367767 17.487288";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 10.404114 -0.577520";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_tuft8 15.323191 34.082855";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "streetlamp 2.523479 0.326279";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 4.835808 21.645292";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "big_generator 4.706753 19.182692";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "big_generator 4.488003 24.088940";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "streetlamp 1.581753 20.047106";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "streetlamp 1.519253 24.890980";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "switch 3.113003 21.500353 1";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "switch 4.284878 21.500353 3";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "switch 2.894253 26.406603 0";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "switch 4.159878 26.406603 2";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "switch 5.503628 21.484728 5";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "switch 5.425503 26.375353 4";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 9.114347 20.077723 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 9.114347 23.893789 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 9.192472 25.846914 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 9.067472 27.987539 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 7.312500 28.728973 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 5.046875 28.822723 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 2.796875 28.807098 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 9.004687 17.973160 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 1.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 9.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 17.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 25.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 33.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 41.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_left_center -1.000000 49.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 49.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 41.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 33.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 25.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 17.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 9.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "fence_right_center 17.000000 1.000000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_lake 12.030493 45.851074";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_brokenhouse 8.085297 41.271942";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_peach 13.616547 39.796227 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 10.350922 38.905602 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stub1 11.319672 41.492233";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 11.569672 40.070358";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches1 14.022797 42.867233";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower1 10.694672 42.710983";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 12.257172 42.687325";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 8.741547 43.937325";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower1 6.275412 48.455742";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower2 1.712912 45.996239";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_flower3 5.712722 45.891628";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 0.892730 28.735584 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 0.955230 16.855797 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 7.392730 16.918297 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 5.173980 16.808922 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 3.064605 16.754845 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower3 10.243105 0.098211";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 14.690491 1.315664";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 14.690491 2.675039";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 14.721741 3.831289";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 0.764847 1.503164";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 0.749222 2.753164";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 0.702347 4.096914";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pear 12.534721 35.208225 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pear 4.912917 31.419056 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_peach 4.506667 37.015518 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_peach 12.400232 29.538145 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_cherry 1.331045 34.312878 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 8.190420 35.156628";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 1.331045 37.344128";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 8.909170 31.440733";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 14.431746 29.206358";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 14.822371 37.076736";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bush1 3.053558 41.220085";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pear 4.460466 44.966522 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower3 6.991716 47.607147";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower3 8.240138 37.362164";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower3 7.208888 32.313950";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower3 1.931925 32.251450";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bigflower3 1.072550 43.001999";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stone9 2.025675 47.739693";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_stub1 1.213175 40.100765";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 5.760050 38.413223";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 3.494425 46.234573";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 2.592970 34.377861";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 5.327345 32.377861";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches3 13.530470 36.330986";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches2 2.967970 39.677494";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_branches2 11.436720 30.786234";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_tuft7 6.584247 34.655811";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_grass_bareground1 13.756122 32.768143";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "guard 7.000000 19.000000 mudy";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 1.731862 43.028625 fxyji";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 0.716237 42.716125 vzigz";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 0.388112 43.700500 frdik";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 1.169362 43.700500 fivxo";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 11.064703 42.481750 qrioc";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 10.205328 42.997375 wkscj";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 10.408453 43.434875 facyd";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 11.174078 43.294250 ilfqe";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 10.674078 42.497375 tgili";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 7.986578 37.117012 qxgif";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 7.486578 37.898262 bwvpq";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 8.830327 37.320137 qourm";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 7.220953 32.882637 cewkn";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 7.205328 31.945137 kfvxu";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 7.517828 32.195137 zljvz";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 6.736578 32.273262 zsesd";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 1.282520 32.309948 cngaz";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 2.360645 32.450573 rfosj";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 2.641895 32.372448 dfenc";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "lightbug 1.454395 32.278698 yqqnf";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "guard 12.500000 5.000000 sergy";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_ravine 12.847134 25.354948";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "streetlamp 12.497677 0.309217";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "streetlamp 4.185176 11.952950";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "streetlamp 12.309873 11.984200";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "guard 14.000000 15.000000 oleg";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "guard 14.000000 14.000000 lexy";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "generator 14.720394 -0.229111";
+	}
+
+}
+>>
+that's it, folks!

@@ -1,0 +1,194 @@
+<<
+@factory 1
+{
+	#string name "factory_sausage";
+	#string type_goods "buildings";
+
+	#int price 12000;
+	#point pos 0, 0;
+	#point size 512, 512;
+	#bool solid true;
+	#point zbase 20, -65;
+	#int profit 60;
+
+	#point base_center 20, -65;
+	#point base_radius 280, 170;
+	#point dock_center -260, -65;
+	#point dock_radius 15, 15;
+
+	#string texpicture_name "factory_sausage.tga";
+	#string texhighlight_name "factory_sausage.tga";
+	#string texmask_name "factory_sausage.tga";
+
+	#string empty_indicator_texture "indicator_empty.tga";
+	#string full_indicator_texture "indicator_full.tga";
+
+	#point indicator_icon_pos 0, 192;
+	
+	#float max_resource 3;
+	#float resource_time 60000;
+	
+	#point profit_source 182, -130;
+
+	@accept_feed_list
+	{
+		house_chicken;
+		house_cow;
+		house_pig;
+	}
+
+	@phase0
+	{
+		@anim
+		{
+			#string name "sausage_factory_transporter1_broken";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_wire_broken";
+		}
+	}
+	
+	@phase1
+	{
+		@anim
+		{
+			#string name "sausage_factory_transporter1";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_steam1";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_wire_broken";
+		}
+	}
+	
+	@phase2
+	{
+		@anim
+		{
+			#string name "sausage_factory_mixer";
+		}
+		
+		@anim
+		{
+			#string name "sausage_factory_transporter1";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_steam1";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_fan";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_steam2";
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_wire_broken";
+		}
+	}
+	
+	@phase3
+	{
+		@anim
+		{
+			#string name "sausage_factory_mixer";
+		}
+		
+		@anim
+		{
+			#string name "sausage_factory_transporter1";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_steam1";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_fan";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_steam2";
+		}		
+		@anim
+		{
+			#string name "sausage_factory_transporter2";
+		}
+		@anim
+		{
+			#string name "sausage_factory_wire";
+		}
+	}
+	
+	@phase4
+	{
+		@anim
+		{
+			#string name "sausage_factory_mixer";
+		}
+		
+		@anim
+		{
+			#string name "sausage_factory_transporter1";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_steam1";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_fan";			
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_steam2";
+		}		
+
+		@anim
+		{
+			#string name "sausage_factory_transporter2";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_sausage";
+			#bool gives_money true;
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_discharge";			
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_wire";
+		}
+
+		@anim
+		{
+			#string name "sausage_factory_boxes";			
+		}
+	}
+}
+>>>>

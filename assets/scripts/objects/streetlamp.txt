@@ -1,0 +1,23 @@
+<<
+@streetlamp 3
+{
+	#string name "streetlamp";
+	#string type_goods "inventory";
+	#int price 100;
+	#point pos 0, 0;
+	#point size 128, 256;
+	#bool solid true;
+	#point zbase 0, -90;		
+
+	#point base_center 0, -90;
+	#point base_radius 20, 10;
+	#point dock_center 0, -90;
+	#point dock_radius 0, 0;
+	
+	#string texpicture_name "streetlamp.tga";
+	#string texhighlight_name "streetlamp.tga";
+	#string texmask_name "streetlamp.tga";
+}
+
+>>
+

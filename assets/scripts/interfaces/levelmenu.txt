@@ -1,0 +1,703 @@
+<<
+
+@ilevelmenu
+{
+	#string name "levelmenu";
+	#string texture_pack "levelmenu_pack";
+	#string sound_pack "levelmenu_pack";
+	
+	@bitmap
+	{
+		#string name "main_layer";
+		#point pos 0, 0;
+		#point size 1024, 768;
+		#rect texcoord 0, 0, 1, 0.75;
+		#string texture_name "levelmenu_back.tga";
+	}
+	@bitmap
+	{
+		#string name "wide_right";
+		#point pos 598, 0;
+		#point size 172, 768;
+		#rect texcoord 0, 0, 0.6719, 0.75;
+		#string texture_name "levelmenu_back_right.tga";
+	}
+	@bitmap
+	{
+		#string name "wide_left";
+		#point pos -598, 0;
+		#point size 172, 768;
+		#rect texcoord 0.3281, 0, 1, 0.75;
+		#string texture_name "levelmenu_back_left.tga";
+	}
+
+	@image
+	{
+		#string name "trophy1";
+		#point pos -107, 297.5;
+		#point size 192, 128;
+		#string image_name "trophy1";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy2";
+		#point pos 279.5, -16.5;
+		#point size 64, 64;
+		#string image_name "trophy2";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy3";
+		#point pos 164.5, 300;
+		#point size 128, 64;
+		#string image_name "trophy3";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy4";
+		#point pos 287.5, 233.5;
+		#point size 128, 128;
+		#string image_name "trophy4";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy5";
+		#point pos 458.5, 282;
+		#point size 128, 192;
+		#string image_name "trophy5";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy6";
+		#point pos 407.5, -53.5;
+		#point size 128, 192;
+		#string image_name "trophy6";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy7";
+		#point pos -158, 204;
+		#point size 128, 64;
+		#string image_name "trophy7";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy8";
+		#point pos 433, -221;
+		#point size 192, 128;
+		#string image_name "trophy8";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy9";
+		#point pos 310, -272.5;
+		#point size 224, 192;
+		#string image_name "trophy9";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy10";
+		#point pos 87, 229.5;
+		#point size 64, 128;
+		#string image_name "trophy10";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy11";
+		#point pos -31, 200;
+		#point size 128, 128;
+		#string image_name "trophy11";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy12";
+		#point pos 187.5, 143;
+		#point size 128, 128;
+		#string image_name "trophy12";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy13";
+		#point pos -251.5, 322;
+		#point size 64, 128;
+		#string image_name "trophy13";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy14";
+		#point pos -188, -247;
+		#point size 128, 128;
+		#string image_name "trophy14";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy15";
+		#point pos -417, -79;
+		#point size 128, 320;
+		#string image_name "trophy15";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy16";
+		#point pos -188, 95.5;
+		#point size 128, 128;
+		#string image_name "trophy16";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy17";
+		#point pos -310.5, 1;
+		#point size 128, 320;
+		#string image_name "trophy17";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy18";
+		#point pos 256.5, 304.5;
+		#point size 64, 64;
+		#string image_name "trophy18";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy19";
+		#point pos 481, -96.5;
+		#point size 128, 192;
+		#string image_name "trophy19";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy20";
+		#point pos -343.5, -195;
+		#point size 128, 128;
+		#string image_name "trophy20";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy21";
+		#point pos 279, 147.5;
+		#point size 64, 64;
+		#string image_name "trophy21";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy22";
+		#point pos -213, -165;
+		#point size 128, 128;
+		#string image_name "trophy22";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy23";
+		#point pos 231.5, -172;
+		#point size 128, 128;
+		#string image_name "trophy23";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy24";
+		#point pos 261.5, 60.5;
+		#point size 64, 128;
+		#string image_name "trophy24";
+		#bool visible false;
+		#bool pulsating true;
+	}
+	
+	@image
+	{
+		#string name "trophy25";
+		#point pos 21, 8;
+		#point size 384, 320;
+		#string image_name "trophy25";
+		#bool visible false;
+		#bool pulsating true;
+	}
+
+	@dataholder
+	{
+		#string name "new_trophy_data";
+	}
+
+	@levelselector
+	{
+		#string name "level_selector";
+
+		@item_list
+		{
+			level1;
+			level2;
+			level3;
+			level4;
+			level5;
+			level6;
+			level7;
+			level8;
+			level9;
+			level10;
+			level11;
+			level12;
+			level13;
+			level14;
+			level15;
+			level15;
+			level16;
+			level17;
+			level18;
+			level18;
+			level19;
+			level20;
+			level21;
+			level22;
+			level23;
+			level24;
+		}		
+	}
+	
+	@text
+	{
+		#string name "screen_level_name";
+		#point pos 10.5, -122;
+		#point size 235, 0;
+		#float font_size 20;
+		#rect color 251, 229, 129, 255;
+		#string text_align "center";
+		#string text_key "level1_name";
+		#bool font_scale true;
+	}
+	
+	@text
+	{
+		#string name "screen_level_description";
+		#point pos 10.5, -147;
+		#point size 235, 0;
+		#float font_size 12;
+		#rect color 251, 229, 129, 255;
+		#string text_align "center";
+		#string text_key "level1_description";
+		#bool font_scale true;
+	}
+	
+	@text
+	{
+		#string name "screen_level_time";
+		#point pos 10.5, -172;
+		#point size 235, 0;
+		#float font_size 14;
+		#rect color 251, 229, 129, 255;
+		#string text_align "center";
+		#string text_key "Time 00:00:00";
+		#bool font_scale true;
+	}
+	
+	@text
+	{
+		#string name "screen_level_best_time";
+		#point pos 10.5, -196;
+		#point size 235, 0;
+		#float font_size 14;
+		#rect color 251, 229, 129, 255;
+		#string text_align "center";
+		#string text_key "Best 00:00:00";
+		#bool font_scale true;
+	}
+	
+	@text
+	{
+		#string name "screen_level_winner";
+		#point pos 10.5, -220;
+		#point size 235, 0;
+		#float font_size 14;
+		#rect color 251, 229, 129, 255;
+		#string text_align "center";
+		#string text_key "БУРМИНАТОР";
+		#bool font_scale true;
+	}
+	
+	@bitmap
+	{
+		#string name "screen_monitor";
+		#point pos 11.5, -172.5;
+		#point size 283, 158;
+		#rect texcoord 0, 0, 0.553, 0.617;
+		#string texture_name "levelmenu_monitor.tga";		
+	}
+	
+	@text
+	{
+		#string name "start_game";
+		#point pos 10, -285;
+		#point size 160, 40;
+		#float font_size 28;
+		#string text_align "center";
+		#string text_key "start_game";
+		#bool font_scale true;
+		#bool highlightable true;
+		#bool ahtung true;
+	}
+
+	@simple_hint
+	{
+		#string name "hint1";
+		#point pos 57, 187;
+		#point size 256, 0;				
+		#string activator "trophy1";
+		@hint_text
+		{
+			#string text_key "trophy_hint1";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint2";
+		#point pos 137, 78;
+		#point size 256, 0;				
+		#string activator "trophy2";
+		@hint_text
+		{
+			#string text_key "trophy_hint2";
+		}
+	}
+	
+	@simple_hint
+	{
+		#string name "hint3";
+		#point pos 124, 210;
+		#point size 256, 0;				
+		#string activator "trophy3";
+		@hint_text
+		{
+			#string text_key "trophy_hint3";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint4";
+		#point pos 216, 134;
+		#point size 256, 0;				
+		#string activator "trophy4";
+		@hint_text
+		{
+			#string text_key "trophy_hint4";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint5";
+		#point pos 325, 171;
+		#point size 256, 0;				
+		#string activator "trophy5";
+		@hint_text
+		{
+			#string text_key "trophy_hint5";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint6";
+		#point pos 261, -188;
+		#point size 256, 0;				
+		#string activator "trophy6";
+		@hint_text
+		{
+			#string text_key "trophy_hint6";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint7";
+		#point pos -154, 92;
+		#point size 256, 0;				
+		#string activator "trophy7";
+		@hint_text
+		{
+			#string text_key "trophy_hint7";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint8";
+		#point pos 340, -124;
+		#point size 256, 0;				
+		#string activator "trophy8";
+		@hint_text
+		{
+			#string text_key "trophy_hint8";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint9";
+		#point pos 356, -130;
+		#point size 256, 0;				
+		#string activator "trophy9";
+		@hint_text
+		{
+			#string text_key "trophy_hint9";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint10";
+		#point pos 239, 143;
+		#point size 256, 0;				
+		#string activator "trophy10";
+		@hint_text
+		{
+			#string text_key "trophy_hint10";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint11";
+		#point pos -166, 108;
+		#point size 256, 0;				
+		#string activator "trophy11";
+		@hint_text
+		{
+			#string text_key "trophy_hint11";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint12";
+		#point pos 78, 250;
+		#point size 256, 0;				
+		#string activator "trophy12";
+		@hint_text
+		{
+			#string text_key "trophy_hint12";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint13";
+		#point pos -254, 197;
+		#point size 256, 0;				
+		#string activator "trophy13";
+		@hint_text
+		{
+			#string text_key "trophy_hint13";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint14";
+		#point pos -92, -155;
+		#point size 256, 0;				
+		#string activator "trophy14";
+		@hint_text
+		{
+			#string text_key "trophy_hint14";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint15";
+		#point pos -242, -54;
+		#point size 256, 0;				
+		#string activator "trophy15";
+		@hint_text
+		{
+			#string text_key "trophy_hint15";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint16";
+		#point pos -73, 204;
+		#point size 256, 0;				
+		#string activator "trophy16";
+		@hint_text
+		{
+			#string text_key "trophy_hint16";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint17";
+		#point pos -108, 78;
+		#point size 256, 0;				
+		#string activator "trophy17";
+		@hint_text
+		{
+			#string text_key "trophy_hint17";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint18";
+		#point pos 163, 217;
+		#point size 256, 0;				
+		#string activator "trophy18";
+		@hint_text
+		{
+			#string text_key "trophy_hint18";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint19";
+		#point pos 271, -72;
+		#point size 256, 0;				
+		#string activator "trophy19";
+		@hint_text
+		{
+			#string text_key "trophy_hint19";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint20";
+		#point pos -191, -105;
+		#point size 256, 0;				
+		#string activator "trophy20";
+		@hint_text
+		{
+			#string text_key "trophy_hint20";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint21";
+		#point pos 189, 204;
+		#point size 256, 0;				
+		#string activator "trophy21";
+		@hint_text
+		{
+			#string text_key "trophy_hint21";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint22";
+		#point pos -160, -141;
+		#point size 256, 0;				
+		#string activator "trophy22";
+		@hint_text
+		{
+			#string text_key "trophy_hint22";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint23";
+		#point pos 316, -70;
+		#point size 256, 0;				
+		#string activator "trophy23";
+		@hint_text
+		{
+			#string text_key "trophy_hint23";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint24";
+		#point pos 160, 183;
+		#point size 256, 0;				
+		#string activator "trophy24";
+		@hint_text
+		{
+			#string text_key "trophy_hint24";
+		}
+	}
+	@simple_hint
+	{
+		#string name "hint25";
+		#point pos 244, 189;
+		#point size 256, 0;				
+		#string activator "trophy25";
+		@hint_text
+		{
+			#string text_key "trophy_hint25";
+		}
+	}
+	
+	
+			
+	@buttonex_back
+	{
+		#string name "back";
+		#point pos -430, -265;
+		#point size 64, 64;
+	}	
+	
+	@buttonex_camera
+	{
+		#string name "play_comics";
+		#point pos 430, -265;
+		#point size 64, 64;
+	}
+	
+	@cursor;
+}
+
+>>
+

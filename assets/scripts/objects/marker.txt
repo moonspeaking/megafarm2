@@ -1,0 +1,26 @@
+<<
+@marker 1
+{
+	#string name "marker";
+	#string type_goods "decor";
+	#int price 0;
+	#point pos 0, 0;
+	#point size 128, 64;
+	#bool solid false;
+	#bool decor false;
+
+	#point zbase 0, -64;
+
+	#string texpicture_name "marker.tga";
+	#string texhighlight_name "marker.tga";
+	#string texmask_name "marker.tga";
+
+
+	#point base_center 0, 0;
+	#point base_radius 128, 64;
+	#point dock_center 0, 0;
+	#point dock_radius 8, 8;
+	
+}
+>>
+

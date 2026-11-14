@@ -1,0 +1,12 @@
+<<
+@event
+{
+	#string name "default placement";
+	@action
+	{
+		#string type "add to field";
+		#string data "hero 24 24";
+	}
+}
+>>
+that's it, folks!

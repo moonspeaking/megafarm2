@@ -1,0 +1,78 @@
+<<
+
+	@igameplay
+	{
+		#string name "gameplay";
+		#string texture_pack "gameplay_pack";
+		#string sound_pack "gameplay_pack";
+		
+		@levelstatuschecker;
+		@particle_list;
+		@upmenu_left;
+		@upmenu_right;
+		@upmenu_center;	
+		@virtual_window
+		{
+			#string name "task_details";
+			#point pos 118, 0;
+			#point size 64, 64;			
+			#string align "top right";			
+			#string tex_mask_name "loupe.tga";
+
+			@bitmap
+			{
+				#string name "center";
+				#point pos 0, 0;
+				#point size 100, 100;			
+				#bool mask true;
+				#string align "scalex scaley";
+				#string texture_name "loupe.tga";
+			}
+		}
+		@center_on_worker;		
+		@inventory_tab;
+		@buildings_tab;
+		@seeds_tab;
+		@sprouts_tab;
+		@trees_tab;
+		@workers_tab;
+		//@decor_tab;
+		//@stuff_tab;
+		@shop_tabs;
+		//@arrow_helper;		
+		@end_task_flyer;
+		@dialogue_form;	
+
+		@tasks_form;
+
+		
+		@default_dialog;
+		@endgame_dialog;
+		@savegame_dialog;
+		@quitgame_dialog;
+		@saveandexitgame_dialog;
+		@replaygame_dialog;
+		@notify_holder;
+			
+		@main_menu_form;
+		@ingame_options;
+		@ingame_volume;
+		@ingame_help;
+		@level_complete_window {#bool visible false; #bool alive false;}
+		@cursor
+		{
+			@transparent_hint
+			{
+				#string name "item_hint";
+				#point pos 100, 100;
+				#point size 180, 0;				
+				#bool manual true;
+			}
+		}
+	}
+
+
+
+>>
+
+

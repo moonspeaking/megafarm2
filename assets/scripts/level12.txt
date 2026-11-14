@@ -1,0 +1,212 @@
+
+<<
+
+@level
+{
+   #string level_name "level12";
+   #point level_size 48, 16;
+   #string level_env "jungle";
+   #float level_time 560;
+   #string name_emb_music "music_emb_jungle_night.ogg";
+   #string name_pri_music "music_pri_jungle_night.ogg";
+   #float plant_thirst_growth 0;
+   #float plant_fruit_growth 20;
+   #float plant_growth 20;
+   #float health_reduction_after_harvest 0;
+   #float health_reduction_when_thirsty 0;
+   #float plant_fertilizer_strength 2.5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 100;
+   #float plant_minimal_health 90;
+   #bool cant_dig true;
+   #bool cant_plant true;
+   #bool cant_generator_fix true;
+   @game_field
+   {
+      @ground
+      {
+         #string name "jungle";
+         #string texground_name "jungle_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @ground
+      {
+         #string name "sand";
+         #string texground_name "sand_center_tile.tga";
+         #string texmask_name "l12_beach_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level12_entry]
+      @event
+      {
+         #string name "l12_init";
+         @action
+         {
+            #string type "start night";
+            #string data "100";
+         }
+         @action
+         {
+            #string type "overload generator";
+            #string data "generator";
+            #float delay 500;
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l12_start";
+            #float delay 2000;
+         }
+      }
+      @event
+      {
+         #string name "l12_find_spares";
+         #bool player_task true;
+         @action
+         {
+            #string type "allow action";
+            #string data "fix 1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l12_time_to_fix_generator";
+         }
+         @condition
+         {
+            #string type "take spare";
+            #string data ">=7";
+         }
+      }
+      @event
+      {
+         #string name "l12_repair_generator";
+         #bool player_task true;
+         
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l12_pilot_1";
+         }
+         @condition
+         {
+            #string type "fixed generator";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l12_find_spares";
+         }
+      }
+	  @event
+	  {
+		#string name "continued dialogue";
+		  @action
+         {
+            #string type "add dialogue";
+            #string data "l12_pilot_2";
+         }
+		  @action
+         {
+            #string type "play sound";
+            #string data "factory_sausage.ogg";
+         }
+		  @action
+         {
+            #string type "effect show";
+            #string data "airplane_cockpit";
+            #float delay 1000;
+         }
+        
+		  @condition
+         {
+            #string type "end dialogue l12_pilot_1";
+            #string data ">=1";
+         }
+	  }
+	  @event
+	  {
+		#string name "end of conversation";
+		  @condition
+		  {
+			#string type "end dialogue l12_pilot_2";
+			#string data ">=1";
+		  }
+		   @action
+         {
+            #string type "allow action";
+            #string data "plant 1";
+         }
+	  }
+      @event
+      {
+         #string name "l12_sow_sos";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l12_wait_for_morning";
+         }
+         @condition
+         {
+            #string type "sow seed_lily";
+            #string data ">=36";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "end of conversation";
+         }
+      }
+      @event
+      {
+         #string name "l12_saving";
+         @action
+         {
+            #string type "start morning";
+            #string data "9000";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l12_saved";
+            #float delay 12000;
+         }
+         @condition
+         {
+            #string type "end dialogue l12_wait_for_morning";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l12_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l12_saved";
+            #string data ">=1";
+         }
+      }
+   }
+}
+
+>>

@@ -1,0 +1,31 @@
+<<
+@generator 1
+{
+	#string name "big_generator";
+	#string type_goods "buildings";
+	#int price 2000;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase 0, -44;
+
+	#string texpicture_name "big_generator.tga";
+	#string texhighlight_name "big_generator.tga";
+	#string texmask_name "big_generator.tga";
+
+	#int power_production 999;
+
+	#bool cant_fix true;
+
+	#point base_center 0, -40;
+	#point base_radius 140, 70;
+	#point dock_center 0, -50;
+	#point dock_radius 8, 8;
+
+
+	#point dock_center 0, -115;
+	#point dock_radius 15, 15;
+	
+}
+>>
+

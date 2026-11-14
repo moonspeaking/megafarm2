@@ -1,0 +1,112 @@
+<<
+@simple_dialogue
+{
+	#string name "l13_intro";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_intro_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_intro_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l13_herder";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_herder_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l13_generators";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_generators_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_generators_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l13_streetlamps";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_streetlamps_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_streetlamps_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l13_upgrades";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_upgrades_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l13_victory";
+	#bool pause true;
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta3.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l13_victory_1";
+	}
+}
+
+
+
+
+>>

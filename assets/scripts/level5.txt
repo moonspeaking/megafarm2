@@ -1,0 +1,490 @@
+
+<<
+
+@level
+{
+   #string level_name "level5";
+   #point level_size 32, 24;
+   #string level_env "sand";
+   #float level_time 2000;
+   #string name_emb_music "music_emb_sand_day.ogg";
+   #string name_pri_music "music_pri_desert.ogg";
+   #float plant_thirst_growth 0.25;
+   #float plant_fruit_growth 6;
+   #float plant_growth 6;
+   #float health_reduction_after_harvest 13;
+   #float health_reduction_when_thirsty 0.25;
+   #float plant_fertilizer_strength 5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 33;
+   #float plant_minimal_health 0;
+   @game_field
+   {
+      @ground
+      {
+         #string name "sand";
+         #string texground_name "sand_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level5_entry]
+      @event
+      {
+         #string name "l5_harvester_down";
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "harvester";
+         }
+      }
+      @event
+      {
+         #string name "l5_herder_down";
+         @condition
+         {
+            #string type "place herder";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "herder";
+         }
+      }
+      @event
+      {
+         #string name "l5_waterboy_down";
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "waterboy";
+         }
+      }
+      @event
+      {
+         #string name "l5_helper_down";
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "helper";
+         }
+      }
+      @event
+      {
+         #string name "l5_init";
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterpump";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "destructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "upgrade house";
+            #string data "house_cow 0";
+         }
+         @action
+         {
+            #string type "upgrade house";
+            #string data "house_chicken 0";
+         }
+		 @action
+         {
+            #string type "set upgrade";
+            #string data "house_cow 0 0";			
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 0 0";			
+         }
+         @action
+         {
+            #string type "add money";
+            #string data "150";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_cabbage";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_wheat";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_watermelon";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue1";
+            #float delay 2000;
+         }
+      }
+      @event
+      {
+         #string name "l5_sow_feed";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sow seed_cabbage";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sow seed_wheat";
+            #string data ">=12";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_beetroot";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue2";
+         }
+      }
+      @event
+      {
+         #string name "l5_workers_common";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_cow 0 1";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 0 1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_sow_feed";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue3";
+         }
+      }
+      @event
+      {
+         #string name "l5_repair_time";
+         #bool player_task true;
+         @condition
+         {
+            #string type "upgraded house_cow 1";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "upgraded house_chicken 1";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_refrigerator";
+            #float delay 10000;
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_orange";
+            #float delay 5000;
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_lemon";
+            #float delay 5000;
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_pepper";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_workers_common";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue4";
+         }
+      }
+      @event
+      {
+         #string name "l5_harvest_and_save";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place hangar_refrigerator";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_pig";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_repair_time";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue5";
+         }
+      }
+      @event
+      {
+         #string name "l5_build_time";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place house_pig";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "herder";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "water_sprinkler";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_harvest_and_save";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue6";
+         }
+      }
+      @event
+      {
+         #string name "l5_more_workers";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place herder";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_cow";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_chicken";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_cow 1 2";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_build_time";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue7";
+         }
+      }
+      @event
+      {
+         #string name "l5_greate_upgrade";
+         #bool player_task true;
+         @condition
+         {
+            #string type "upgraded house_cow 2";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 1 2";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_pig 1 2";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_more_workers";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue8";
+         }
+      }
+      @event
+      {
+         #string name "l5_market_conquest";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell house_cow";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "sell house_chicken";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "sell house_pig";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l5_greate_upgrade";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l5_dialogue9";
+         }
+      }
+      @event
+      {
+         #string name "l5_victory";
+         @condition
+         {
+            #string type "end dialogue l5_dialogue9";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "victory";
+         }
+      }
+   }
+}
+
+>>

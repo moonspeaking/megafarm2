@@ -1,0 +1,28 @@
+<<
+@plant 6
+{
+	#string name "plant_yellowlily";
+	#string type_goods "plants";
+	#point pos 0, 0;
+	#point size 64, 64;
+	#bool solid false;
+	#point zbase 0, -20;
+	#int cost_fruit 50;
+	#bool flower true;
+	
+	#point frame_size 63, 73;
+	#point delta_pos 0, 10;
+	#bool complete_harvest true;
+
+	#int cost_fruit 50;
+	#int thirsty 136;
+	#int harvest 46;
+	#int growth 46;
+	#int harvest_damage 119;
+	#int thirst_death 100;
+	#int shit_strength  100;
+	#int shit_time 100;
+	#int start_health 100;
+}
+>>
+

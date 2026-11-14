@@ -1,0 +1,288 @@
+
+<<
+
+@level
+{
+   #string level_name "level14";
+   #point level_size 40, 24;
+   #string level_env "stone";
+   #float level_time 532;
+   #string name_emb_music "music_emb_forest.ogg";
+   #string name_pri_music "music_pri_pink_panther.ogg";
+   #float plant_thirst_growth 0.2;
+   #float plant_fruit_growth 2;
+   #float plant_growth 2;
+   #float health_reduction_after_harvest 7;
+   #float health_reduction_when_thirsty 0.2;
+   #float plant_fertilizer_strength 10;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 100;
+   #float plant_minimal_health 0;
+   #bool cant_dig true;
+   #bool cant_switch true;
+   @game_field
+   {
+      @ground
+      {
+         #string name "stone";
+         #string texground_name "grass_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level14_entry]
+      @event
+      {
+         #string name "l14_init";
+         @action
+         {
+            #string type "set sun";
+            #string data "7 100";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_start";
+            #float delay 2000;
+         }
+      }
+      @event
+      {
+         #string name "l14_find_manager";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_turnoff_light";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "switch 1";
+         }
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l14_dark_coming";
+         #bool player_task true;
+         @action
+         {
+            #string type "kill all people";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "manager 20.0 1.5";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 20.0 2.0";
+         }
+         @action
+         {
+            #string type "overload generator";
+            #string data "big_generator";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_find_manager";
+         }
+         @condition
+         {
+            #string type "switches on";
+            #string data ">=5";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l14_find_manager";
+         }
+      }
+      @event
+      {
+         #string name "l14_find_dumb_manager";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to field";
+            #string data "mobilephone 4.0 19.0";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_find_phone";
+         }
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l14_dark_coming";
+         }
+      }
+      @event
+      {
+         #string name "l14_find_mobile";
+         #bool player_task true;
+         @action
+         {
+            #string type "kill all people";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "manager 29.0 18.0";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 28.5 18.0";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_find_manager_again";
+         }
+         @condition
+         {
+            #string type "take mobilephone";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l14_find_dumb_manager";
+         }
+      }
+      @event
+      {
+         #string name "l14_find_megadumb_manager";
+         #bool player_task true;
+         @action
+         {
+            #string type "fix generator";
+            #string data "big_generator";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 20.0 1.0";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_run_away";
+         }
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l14_find_mobile";
+         }
+      }
+      @event
+      {
+         #string name "l14_wanted";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_victory";
+         }
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "time";
+            #string data "<=20000";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l14_find_megadumb_manager";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l14_dumb_police";
+         }
+      }
+      @event
+      {
+         #string name "l14_dumb_police";
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l14_dumb_victory";
+         }
+         @condition
+         {
+            #string type "time";
+            #string data ">20000";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l14_find_megadumb_manager";
+         }
+      }
+      @event
+      {
+         #string name "l14_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l14_victory";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l14_victory2";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l14_dumb_victory";
+            #string data ">=1";
+         }
+      }
+   }
+}
+
+>>

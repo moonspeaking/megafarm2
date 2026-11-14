@@ -1,0 +1,420 @@
+
+<<
+
+@level
+{
+   #string level_name "level18";
+   #point level_size 40, 32;
+   #string level_env "winter";
+   #float level_time 2700;
+   #string name_emb_music "music_emb_winter_day.ogg";
+   #string name_pri_music "music_pri_winter.ogg";
+   #float plant_thirst_growth 0.15;
+   #float plant_fruit_growth 2;
+   #float plant_growth 2;
+   #float health_reduction_after_harvest 10;
+   #float health_reduction_when_thirsty 0.15;
+   #float plant_fertilizer_strength 2.5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 66;
+   #float plant_minimal_health 0;
+   #float sunset_angle 20;
+   @game_field
+   {
+      @ground
+      {
+         #string name "winter";
+         #string texground_name "winter_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level18_entry]
+      @pattern
+      {
+         #string name "l18_first_ahtung";
+         @action
+         {
+            #string type "overload generator";
+            #string data "generator";
+         }
+         @action
+         {
+            #string type "add event from pattern";
+            #string data "l18_ahtung";
+         }
+         @condition
+         {
+            #string type "time";
+            #string data ">=360000";
+         }
+		 @action
+		 {
+			#string type "add dialogue";
+			#string data "l18_first_breakdown";
+		 }
+      }
+      @pattern
+      {
+         #string name "l18_ahtung";
+         @action
+         {
+            #string type "overload generator";
+            #string data "generator";
+         }
+         @action
+         {
+            #string type "add event from pattern";
+            #string data "l18_ahtung";
+         }
+         @condition
+         {
+            #string type "time";
+            #string data ">=180000";
+         }
+
+		 @action
+		 {
+			#string type "add dialogue";
+			#string data "l18_breakdown";
+		 }
+      }
+      @event
+      {
+         #string name "l18e_init";
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "water_sprinkler";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterpump";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "destructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "bulldozer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "constructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_pig";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_chicken";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_cow";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_sheep";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_pig 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_cow 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_sheep 1 3";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "herder";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_cabbage";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_carrot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_wheat";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_corn";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_beetroot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_tomato";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_mushroom";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_onion";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "streetlamp";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "generator";
+         }
+         @action
+         {
+            #string type "set money";
+            #string data "500";
+         }
+         @action
+         {
+            #string type "add event from pattern";
+            #string data "l18_first_ahtung";
+         }
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l18_intro";
+		}
+      }
+      @event
+      {
+         #string name "l18_dark_in_our_souls";
+         @action
+         {
+            #string type "set sun";
+            #string data "7 180000";
+         }
+		 @action
+		{
+			#float delay 90000;
+			#string type "add dialogue";
+			#string data "l18_night_comes";
+		}
+      }
+      @event
+      {
+         #string name "l18_global_consignment";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell house_pig";
+            #string data ">=5";
+         }
+         @condition
+         {
+            #string type "sell house_sheep";
+            #string data ">=5";
+         }
+         @condition
+         {
+            #string type "sell house_cow";
+            #string data ">=5";
+         }
+         @condition
+         {
+            #string type "sell house_chicken";
+            #string data ">=5";
+         }
+         @condition
+         {
+            #string type "sell plant_onion";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sell plant_mushroom";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l18_timer";
+         }
+
+		 @action
+		{
+			#string type "add dialogue";
+			#string data "l18_victory";
+		}
+      }
+      @event
+      {
+         #string name "l18_timer";
+         #bool player_task true;
+         @action
+         {
+            #string type "set money";
+            #string data "1";
+         }
+         @condition
+         {
+            #string type "time";
+            #string data ">1200000";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l18_global_consignment";
+         }
+
+		 @action
+		{
+			#string type "add dialogue";
+			#string data "l18_failed";
+		}
+      }
+      @event
+      {
+         #string name "l18_penalty";
+         #bool player_task true;
+         @condition
+         {
+            #string type "money";
+            #string data ">=5000";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l18_timer";
+         }
+		 @action
+		{
+			#string type "add dialogue";
+			#string data "l18_victory2";
+		}
+      }
+      @event
+      {
+         #string name "l18_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l18_victory";
+            #string data ">=1";
+         }         
+      }
+	  @event
+      {
+         #string name "l18_victory2";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l18_victory2";
+            #string data ">=1";
+         }         
+      }
+   }
+}
+
+>>

@@ -1,0 +1,2089 @@
+<<
+@obstacle
+{
+	#string name "keyldo_stone_path";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 128.00, 128.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 64.00, 64.00;
+}
+@obstacle
+{
+	#string name "keyldo_border_left";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 64.00, 192.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 60.00;
+}
+@obstacle
+{
+	#string name "keyldo_border_right";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 64.00, 192.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 60.00;
+}
+@obstacle
+{
+	#string name "keyldo_border_down";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 192.00, 64.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 60.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_border_up";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 192.00, 64.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 60.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_bench_left";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 128.00, 256.00;
+	#point zbase -3.00, -8.00;
+	#bool solid true;
+
+	#bool destructable false;
+	#point base_center -3.00, -8.00;
+	#point base_radius 40.00, 80.00;
+}
+@obstacle
+{
+	#string name "keyldo_bench_right";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 128.00, 256.00;
+	#point zbase -3.00, -8.00;
+	#bool solid true;
+
+	#bool destructable false;
+	#point base_center -3.00, -8.00;
+	#point base_radius 40.00, 80.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bigstone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -3.00, -8.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -3.00, -8.00;
+	#point base_radius 38.00, 19.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bigstone2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -4.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -4.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_flower1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bigflower1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 13.00, -23.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 13.00, -23.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bareground1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 15.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 25.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 23.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -3.00;
+	#point base_radius 26.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 25.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft6";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft7";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_branches1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft8";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 26.00, 26.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_puddle1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 17.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft9";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 23.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_branches2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stub1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -5.00, -14.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -5.00, -14.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_branches3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_clover1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_clover2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_flower2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_flower3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_branches4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft10";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bigflower2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 42.00, 26.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft11";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_flower4";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -3.00, -16.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -15.00;
+	#point base_radius 16.00, 8.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_flower5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone6";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 2.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 15.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone7";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 12.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone8";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 15.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bush1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -22.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -22.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bigflower3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -18.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -18.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_branches5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 35.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bigstone3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -10.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -10.00;
+	#point base_radius 30.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_branches6";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_bareground2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 3.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 2.00;
+	#point base_radius 26.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_stone9";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -10.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -10.00;
+	#point base_radius 22.00, 11.00;
+}
+@obstacle
+{
+	#string name "keyldo_grass_tuft12";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -2.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 25.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_cactus1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -32.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -32.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_cactus2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 2.00, -35.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 2.00, -35.00;
+	#point base_radius 24.00, 12.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_branch1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 35.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_crack1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 17.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 4.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 4.00, 0.00;
+	#point base_radius 24.00, 12.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_flower1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 4.00, -15.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 4.00, -15.00;
+	#point base_radius 22.00, 11.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_flower2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_cactus3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 5.00, -19.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 5.00, -19.00;
+	#point base_radius 30.00, 15.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_bush1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -5.00;
+	#point base_radius 44.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -3.00;
+	#point base_radius 27.00, 50.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 7.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 7.00, -5.00;
+	#point base_radius 22.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone5";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 24.00, 12.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone6";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 22.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_cactus4";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -10.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -10.00;
+	#point base_radius 14.00, 7.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_bigstone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -1.00, 5.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -1.00, 5.00;
+	#point base_radius 34.00, 17.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_bareground1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -2.00;
+	#point base_radius 40.00, 27.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_bareground2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 29.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone7";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 22.00, 11.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_bigstone2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 28.00, 14.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_stone8";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -3.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -3.00;
+	#point base_radius 16.00, 8.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_bareground3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 22.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_desert_flower3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 5.00, -12.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 5.00, -12.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_bigstone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -1.00, -11.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -1.00, -11.00;
+	#point base_radius 46.00, 23.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -5.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -5.00;
+	#point base_radius 36.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_stone1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -2.00, 0.00;
+	#point base_radius 35.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 36.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_leaf1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 16.00, 16.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_leaf2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 36.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_plant1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -5.00, -15.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -5.00, -15.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 22.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 22.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock5";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -5.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -5.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_tree1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -18.00, -52.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -18.00, -52.00;
+	#point base_radius 34.00, 17.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock6";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -20.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -20.00, 0.00;
+	#point base_radius 66.00, 33.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_plant2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 7.00, -8.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 7.00, -8.00;
+	#point base_radius 34.00, 17.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_branch1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 35.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_stone2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -5.00, 0.00;
+	#point base_radius 48.00, 40.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_branch2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -2.00, 0.00;
+	#point base_radius 37.00, 28.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_leaf3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 18.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_leaf4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 18.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_leaf5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 18.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock7";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 55.00, 45.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_hillock8";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 50.00, 40.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_ice1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 10.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 7.00;
+	#point base_radius 50.00, 52.00;
+}
+@obstacle
+{
+	#string name "keyldo_winter_snowman1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -20.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -20.00;
+	#point base_radius 48.00, 24.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_moss1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 28.00, 24.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_stone1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 39.00, 27.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_moss2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 45.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_bigstone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -10.00, -15.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -10.00, -15.00;
+	#point base_radius 42.00, 21.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_bigstone2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -2.00, -10.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -2.00, -10.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_stone2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable false;
+	#point base_center 0.00, 0.00;
+	#point base_radius 50.00, 33.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_plant1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -4.00, 0.00;
+	#point base_radius 30.00, 40.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_plant2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 35.00, 30.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_plant3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -20.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -20.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_moss3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 32.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_moss4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 18.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_moss5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 50.00, 38.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_thorn1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -10.00, 7.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -10.00, 7.00;
+	#point base_radius 64.00, 32.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_stone3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 60.00, 50.00;
+}
+@obstacle
+{
+	#string name "keyldo_stone_drawwell1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -10.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -10.00;
+	#point base_radius 84.00, 42.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -6.00, -18.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -6.00, -18.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -22.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -22.00;
+	#point base_radius 25.00, 12.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_stone1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_flower1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -3.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_bigflower1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -30.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -30.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_bigstone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 64.00, 32.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_hillock1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 40.00, 45.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_stone2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -4.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -4.00;
+	#point base_radius 34.00, 17.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_flower2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_flower3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 20.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 1.00;
+	#point base_radius 27.00, 20.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 30.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant6";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -5.00, -10.00;
+	#point base_radius 27.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_hillock2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 5.00, 5.00;
+	#point base_radius 40.00, 42.00;
+}
+@obstacle
+{
+	#string name "keyldo_jungle_plant7";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 35.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_totem1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -8.00, -16.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -8.00, -16.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_bigstone1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -5.00, -10.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -5.00, -10.00;
+	#point base_radius 46.00, 23.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_dune1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 50.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_stone1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -3.00;
+	#point base_radius 40.00, 40.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_stone2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -4.00, 0.00;
+	#point base_radius 45.00, 25.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_bigstone2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -4.00;
+	#point base_radius 55.00, 34.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_dune2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 50.00, 40.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_stone3";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 55.00, 45.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_plant1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -25.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -25.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_totem2";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -14.00, -30.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -14.00, -30.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_bigstone3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 62.00, 31.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_cactus1";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -4.00, -28.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center -4.00, -28.00;
+	#point base_radius 20.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_stone4";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -5.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 14.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_plant2";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase -3.00, -15.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, -20.00;
+	#point base_radius 15.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_footstep1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 26.00, 13.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_stone5";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable false;
+	#point base_center 0.00, 0.00;
+	#point base_radius 28.00, 22.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_stone6";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center 0.00, 0.00;
+	#point base_radius 60.00, 65.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_totem3";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -20.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -20.00;
+	#point base_radius 16.00, 10.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_skeleton1";
+	#string type_goods "stuff";
+	#string layers "debug ground";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, 0.00;
+	#bool solid false;
+
+	#bool destructable true;
+	#point base_center -2.00, -3.00;
+	#point base_radius 50.00, 28.00;
+}
+@obstacle
+{
+	#string name "keyldo_sand_bigstone4";
+	#string type_goods "stuff";
+	#string layers "debug surface";
+	#point pos 0.00, 0.00;
+	#point size 32.00, 32.00;
+	#point zbase 0.00, -15.00;
+	#bool solid true;
+
+	#bool destructable true;
+	#point base_center 0.00, -15.00;
+	#point base_radius 34.00, 17.00;
+}
+>>
+

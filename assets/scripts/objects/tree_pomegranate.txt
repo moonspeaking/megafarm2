@@ -1,0 +1,32 @@
+<<
+@tree 3
+{
+	#string name "tree_pomegranate";
+	#string type_goods "trees";
+	#int price 180;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase -10, -75;
+	
+	#int harvest 15;
+	#int cost_fruit 40;
+	
+	#string texpicture_name "tree_pomegranate.tga";
+	#string texhighlight_name "tree_pomegranate.tga";
+	#string texmask_name "tree_pomegranate.tga";
+
+	
+	#point base_center -10, -75;
+	#point base_radius 43, 27;
+	#point dock_center -10, -102;
+	#point dock_radius 8, 8;
+
+	#point ready_icon_pos 0, 118;
+	#point ready_notify_pos 0, 118;
+
+	#point fruit_size 256, 256;
+	#point fruit_pos 1, 33;
+}
+>>
+

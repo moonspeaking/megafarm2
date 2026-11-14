@@ -1,0 +1,22 @@
+<<
+@worker 1
+{
+	#string name "guard";
+	#string job "guard";
+	#string type_goods "workers";
+	#int price 0;
+	#point pos 0, 0;
+	#point size 32, 32;
+	#bool solid false;
+	#point zbase 0, -10;
+	#int work_time -1;
+	#int pay 0;
+	#float speed 80;
+
+	#point base_center 0, -10;
+	#point base_radius 2, 2;
+	#point dock_center 16, -32;
+	#point dock_radius 8, 8;
+}
+>>
+

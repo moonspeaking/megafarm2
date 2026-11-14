@@ -1,0 +1,467 @@
+
+<<
+
+@level
+{
+   #string level_name "level4";
+   #point level_size 32, 24;
+   #string level_env "jungle";
+   #float level_time 1200;
+   #string name_emb_music "music_emb_jungle_day.ogg";
+   #string name_pri_music "music_pri_jungle.ogg";
+   #float plant_thirst_growth 0.15;
+   #float plant_fruit_growth 4;
+   #float plant_growth 4;
+   #float health_reduction_after_harvest 7;
+   #float health_reduction_when_thirsty 0.15;
+   #float plant_fertilizer_strength 2.5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 100;
+   #float plant_minimal_health 0;
+   @game_field
+   {
+      @ground
+      {
+         #string name "jungle";
+         #string texground_name "jungle_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level4_entry]
+      @event
+      {
+         #string name "l4_init";
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterpump";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+         @action
+         {
+            #string type "add money";
+            #string data "10";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_sell_bananas_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_switch_harvester_done";
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "harvester";
+         }
+      }
+      @event
+      {
+         #string name "l4_switch_waterboy_done";
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "waterboy";
+         }
+      }
+      @event
+      {
+         #string name "l4_switch_poor";
+         @condition
+         {
+            #string type "money";
+            #string data "<100";
+         }
+         @condition
+         {
+            #string type "end dialogue l4_destroy_trash_dialog";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_sow_dahlia";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l4_earning_uno_Roosevelt";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_switch_poor_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_switch_store_deny";
+         @condition
+         {
+            #string type "store deny hangar_vegetables";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l4_sell_bananas";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "hangar_vegetables";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_switch_store_deny_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_sell_bananas";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell tree_banana";
+            #string data ">=2";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "hangar_vegetables";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_transported_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_transported";
+         #bool player_task true;
+         @condition
+         {
+            #string type "transported hangar_vegetables";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_sell_bananas";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_dahlia";
+         }
+		 @action
+		 {
+			#string type "open shop tab";
+			#string data "seeds_tab";
+		 }
+         @action
+         {
+            #string type "center view";
+            #string data "keyldo_grass_stone8";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_sow_dahlia_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_sow_dahlia";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sow seed_dahlia";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_transported";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "bulldozer";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_destroy_trash_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_earning_uno_Roosevelt";
+         #bool player_task true;
+         @condition
+         {
+            #string type "money";
+            #string data ">=100";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_sow_dahlia";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "decor_brokentree";
+            #float delay 100;
+         }
+      }
+      @event
+      {
+         #string name "l4_destroy_trash";
+         #bool player_task true;
+         @condition
+         {
+            #string type "kill decor_bog";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "kill decor_brokentree";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_earning_uno_Roosevelt";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_rose";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_sow_rose_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_sow_rose";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sow seed_rose";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_destroy_trash";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_hiring_of_manpower_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_hiring_of_manpower";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_sow_rose";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_banana";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_mango";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_beehive";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_buy_beehive_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_buy_beehive";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place house_beehive";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_hiring_of_manpower";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_refrigerator";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_buy_hangar_refrigerator_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_buy_hangar_refrigerator";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place hangar_refrigerator";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_buy_beehive";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_sell_honey_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_sell_honey";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell house_beehive";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_buy_hangar_refrigerator";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l4_victory_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l4_victory";
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l4_sell_honey";
+         }
+         @condition
+         {
+            #string type "end dialogue l4_victory_dialog";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "victory";
+         }
+      }
+   }
+}
+
+>>

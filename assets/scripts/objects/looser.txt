@@ -1,0 +1,24 @@
+<<
+@worker 1
+{
+	#string name "looser";
+	#string job "waterboy";
+	#string type_goods "workers";
+	#string texmask_name "waterboy_mask.tga";
+	#int price 300;
+	#point pos 0, 0;
+	#point size 128, 256;
+	#bool solid false;
+	#point zbase 0, 0;
+	#float speed 150;
+	#int work_time -1;
+	#int pay 0;
+	#point display_center -10, 60;
+	#point base_radius 2, 2;
+	#point dock_center 16, -32;
+	#point dock_radius 8, 8;
+
+	#string allow_actions "towater fillcan";
+}
+>>
+

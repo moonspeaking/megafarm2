@@ -1,0 +1,387 @@
+<<
+
+	begin_lower_char = a
+	end_lower_char = z
+	begin_upper_char = A
+	end_upper_char = Z
+	start_caption = Start
+	freemode = Test
+	options_caption = Options
+	change_player = Change Player
+	credits_caption = Credits
+	help_caption = Help
+	exit_caption = Exit
+	back_caption = Back
+
+	musics = Music
+	fullscreen_caption = Full Screen Mode
+	windowed_caption = Windowed Mode
+	vsync = Vertical Synch
+	
+	new_profile_caption = New Player
+	delete_profile_caption = Delete Player
+
+	music_on = MUSIC ON
+	music_off = MUSIC OFF
+	sound_on = SFX ON
+	sound_off = SFX OFF
+	cursor_on_caption = Game Cursor On
+	cursor_off_caption = Game Cursor Off
+	
+	cheatmodeon = Cheat mode activated!
+	cheatmodeoff = Cheat mode deactivated!
+
+	set_volume_caption = Volume
+	sound_volume = SFX VOLUME
+	music_volume = MUSIC VOLUME
+
+	languages_caption = Select Language
+	russian_caption = Русский
+	english_caption = English
+	french_caption = FRANÇAIS
+	italian_caption = Italiano
+	german_caption = Deutsch
+	spanish_caption = ESPAÑOL
+
+	change_player_label = (Change player)
+	ok = OK
+	cancel = CANCEL
+	yes = YES
+	no = NO
+	game_saved = Game saved!
+	game_loaded = Finished loading.
+	question_save_game = Save the current game?
+	question_load_game = Load a previously saved game?
+	question_exit_game = Are you sure you want to quit?
+	question_replay_game = Are you sure you want to replay this level?
+	question_end_game = Are you sure you want to exit to the main menu?
+	question_saveandexit_game = Save this game before you quit?
+	tasks = Tasks
+	mainmenu = Menu
+	continue_caption = Continue
+	restart_caption = Replay
+	exitgame_caption = Quit
+	profit_hint = You have earned %i dollars.
+	current_task = Current task
+	click_to_continue = CONTINUE
+	patent_buy_confirm = Are you sure you want to place that order?
+	notify_you_cant_place = You can't put that here!
+	notify_you_cant_gowhere = You can't go there!
+		
+	
+	control_help_1 = The left mouse button controls the characters, while the right mouse button cancels commands. They arrow keys move the field.
+	control_help_2 = A single-click performs basic functions, while a double-click will dig and till the soil or set down an object.
+	
+	text_enter_name = Please enter your name
+	welcome_message = Welcome,
+
+	dig_squares = Till the soil
+	water_plants = Water the plants
+
+	menu_time = Time:
+	menu_best_time = Best:
+		
+	trophy_announce_header = You won a trophy!
+	
+	trophy_hint0 = The cuckoo clock was awarded to you for excellent work during the training level.
+	trophy_hint1 = The Farmer's Piggy Bank was awarded to you because saving capital is the road to riches.
+	trophy_hint2 = The Finding Time for the Pigs statuette was awarded to you for going whole hog and saving the pigs.
+	trophy_hint3 = This palm tree was a gift from the villagers for saving their homes form the factory's gigantic fan.
+	trophy_hint4 = The Floriculture Gold Medal was awarded to you for your amazing work in the flower business.
+	trophy_hint5 = The Good Worker Bee Award was awarded to you for restoring old-time beekeeping traditions.
+	trophy_hint6 = The Grand Prize from the Country Fair.
+	trophy_hint7 = The Statue of Farmer Freedom was awarded to you for maintaining your independence in the face of aggression. Liberté, l'agriculture, fraternité.
+	trophy_hint8 = The receipt from the bank is your best trophy yet. The farmers treated you to some ice cream!
+	trophy_hint9 = The Silver Water Bucket was awarded to you for helping the farm survivng the drought.
+	trophy_hint10 = The Golden Ear was awarded to you for establishing the farm of future!
+	trophy_hint11 = A certificate naming you the best produce supplier. You won the tender!
+	trophy_hint12 = The Best Farmer in the History of Agriculture Trophy.
+	
+	level_not_finished = You didn't pass this level.
+    level_completed = Level Complete
+    level_completed_with_trophy = Award Winning Work!
+    level_time = Time
+    level_money = Money
+    best_time = Record Time:
+    best_money = Record Profit:
+
+	inventory_tab = SUPPLIES
+	buildings_tab = BUILDINGS
+	seeds_tab = SEEDS
+	sprouts_tab = PLANTS
+	trees_tab = TREES
+	workers_tab = WORKERS
+
+	seed_aubergine = Eggplants
+	seed_beetroot = Beets
+	seed_cabbage = Cabbage
+	seed_carrot = Carrots
+	seed_corn = Corn
+	seed_cucumber = Cucumbers
+	seed_dahlia = Dahlias
+	seed_mushroom = Mushrooms
+	seed_pepper = Peppers
+	seed_pumpkin = Pumpkins
+	seed_radish = Radishes
+	seed_strawberries = Strawberries
+	seed_sunflower = Sunflowers
+	seed_tomato = Tomatoes
+	seed_tulip = Tulips
+	seed_watermelon = Watermelons
+	
+	task_separator = to
+	task_sow = plant
+	task_sell = sell
+	task_fertilize = fertilize
+	task_buy = buy
+	
+	water_sprinkler = Water sprinklers
+	time = Time
+
+	
+	house_chicken_product = Eggs
+	house_cow_product = Milk
+	house_pig_product = Piglets
+	house_sheep_product = Wool
+	beehive_product = Honey
+	
+	house_chicken = Chicken coops
+	house_cow = Cow barns
+	house_pig = Pigpens
+	house_sheep = Sheep shacks
+	hangar_refrigerator = Refrigerated warehouses
+	hangar_flowers = Greenhouses
+	beehive = Beehives
+	
+	helper = Gardeners
+	harvester = Fruit and Vegetable Pickers
+	
+	patent_for_tulip = Tulip bulb orders
+	patent_for_dahlia = Dahlia bulb orders
+	patent_for_sunflower = Sunflower seed orders
+	patent_for_cucumber = Cucumber seedling orders
+	patent_for_tomato = Tomato seedling orders
+	patent_for_aubergine = Eggplant seedling orders
+	patent_for_pepper = Pepper seedling orders
+	patent_for_watermelon = Watermelon seed orders
+	patent_for_hangar_flowers = Greenhouse building permits
+	patent_for_beehive = Beekeeping licenses
+	patent_for_cabbage = Cabbage seed orders
+	patent_for_beetroot = Beet seed orders
+	patent_for_house_pig = Pigpen building permits
+	patent_for_carrot = Carrot seed orders
+	patent_for_corn = Corn seed orders
+	patent_for_hangar_vegetables = Barn building permits
+	patent_for_mushroom = Mushroom spore orders
+	patent_for_pumpkin = Pumpkin seed orders
+	patent_for_strawberries = Strawberry seedling orders
+	patent_for_hangar_refrigerator = Refrigerated warehouse building permits
+	patent_for_house_sheep = Sheep raising licnenses
+	patent_for_house_chicken = Chicken farming licenses
+	patent_for_house_cow = Dairy farming licenses
+	patent_for_radish = Radish seed orders
+	
+	plant_aubergine = Eggplants
+	plant_beetroot = Beets
+	plant_cabbage = Cabbages
+	plant_carrot = Carrots
+	plant_corn = Corn
+	plant_cucumber = Cucumbers
+	plant_dahlia = Dahlias
+	plant_mushroom = Mushrooms
+	plant_pepper = Peppers
+	plant_pumpkin = Pumpkins
+	plant_radish = Radishes
+	plant_strawberries = Strawberries
+	plant_sunflower = Sunflowers
+	plant_tomato = Tomatoes
+	plant_tulip = Tulips
+	plant_watermelon = Watermelons
+	
+	money = Money
+
+	cost_goods = You can sell a crate of this product for %i dollars.
+	cost_work = A farm hand's salary is %i dollars.
+
+	box_shop_hint = A crate for collecting your harvest.
+	fivebox_shop_hint = A package of five crates
+	tenbox_shop_hint = A package of 10 crates
+
+	watercan_shop_hint = A small watering can
+	big_watercan_shop_hint = A big watering can
+
+	destructor_shop_hint = This tool is for killing weeds or retilling an existing vegetable patch.
+	transporter_shop_hint = The crane can be used to move buildings on your farm.
+	
+	hangar_vegetables_shop_hint = Barns are for storing non-perishable fruits and vegetables.
+	hangar_flowers_shop_hint = Greenhouses are for storing flowers.
+	hangar_refrigerator_shop_hint = Refrigerated warehouses are for storing perishable goods.
+
+	beehive_shop_hint = Beehives are for beekeeping so you can sell delicious honey.
+	house_sheep_shop_hint = Sheep shacks are for raising sheep so you can sell wool.
+	house_pig_shop_hint = Pigpen ares for raising piglets.
+	house_cow_shop_hint = Cow barns are for raising dairy cows so you can sell milk.
+	house_chicken_shop_hint = Chicken coops are for raising chickens so you can sell eggs.
+	
+	
+	waterpump_shop_hint = If you're walking a long way to get water you might want to drill another well.
+	water_sprinkler_shop_hint = Sprinklers are indispensable items on any large farm.
+	fertilizer_shop_hint = A small bag of fertilizer
+	big_fertilizer_shop_hint = A big bag of fertilizer
+	
+	harvester_shop_hint = Fruit and vegetable pickers are hired hands who collect the fruits and vegetables off your plants.
+	helper_shop_hint = Gardening assistants are hired hands who keep your plants fertilized.
+	
+	aubergine_shop_hint = Packet of eggplant seedlings.
+	beetroot_shop_hint = Packet of beet seeds.
+	cabbage_shop_hint = Packet of seed_cabbage seeds.
+	carrot_shop_hint = Packet of seed_carrot seeds.
+	corn_shop_hint = Packet of seed_corn seeds.
+	cucumber_shop_hint = Packet of seed_cucumber seedlings.
+	dahlia_shop_hint = Packet of seed_dahlia bulbs.
+	mushroom_shop_hint = Packet of seed_mushroom spores.
+	pepper_shop_hint = Packet of seed_pepper seedlings.
+	pumpkin_shop_hint = Packet of pumpkins seeds.
+	radish_shop_hint = Packet of radishes seeds.
+	strawberries_shop_hint = Packet of strawberry seedlings.
+	sunflower_shop_hint = Packet of seed_sunflower seeds.
+	tomato_shop_hint = Packet of seed_tomato seedlings.
+	tulip_shop_hint = Packet of seed_tulip bulbs.
+	watermelon_shop_hint = Packet of seed_watermelon seeds.
+	
+	patent_for_tulip_shop_hint = Order seed_tulip bulbs. Once the order arrives you can purchase seed_tulip bulbs from the store.
+	patent_for_dahlia_shop_hint = Order seed_dahlia bulbs. Once the order arrives you can purchase seed_dahlia bulbs from the store.
+	patent_for_sunflower_shop_hint = Order seed_sunflower seeds. Once the order arrives you can purchase seed_sunflower seeds from the store.
+	patent_for_cucumber_shop_hint =  Order seed_cucumber seedlings. Once the order arrives you can purchase seed_cucumber seedlings from the store.
+	patent_for_tomato_shop_hint =  Order seed_tomato seedlings. Once the order arrives you can purchase seed_tomato seedlings from the store.
+	patent_for_aubergine_shop_hint =  Order eggplant seedlings. Once the order arrives you can purchase eggplant seedlings from the store.
+	patent_for_pepper_shop_hint =  Order seed_pepper seedlings. Once the order arrives you can purchase seed_pepper seedlings from the store.
+	patent_for_watermelon_shop_hint =  Order seed_watermelon seeds. Once the order arrives you can purchase seed_watermelon seeds from the store.
+	patent_for_hangar_flowers_shop_hint =  Purchase a floriculture license and a building permit to build a greenhouse. With a floriculture license you can grow and sell flowers.
+	patent_for_beehive_shop_hint = Purchase a beekeeping license. With this license you can make and sell honey.
+	patent_for_beetroot_shop_hint = Order beet seeds. Once the order arrives you can purchase beet seeds from the store.
+	patent_for_cabbage_shop_hint = Order seed_cabbage seeds. Once the order arrives you can purchase seed_cabbage seeds from the store.
+	patent_for_carrot_shop_hint = Order seed_carrot seeds. Once the order arrives you can purchase seed_carrot seeds from the store.
+	patent_for_corn_shop_hint = Order seed_corn seeds. Once the order arrives you can purchase seed_corn seeds from the store.
+	patent_for_hangar_refrigerator_shop_hint = Purchase a building permit to build a refrigerated warehouse and a license to operate it.
+	patent_for_hangar_vegetables_shop_hint = Purchase a barn building permit. With this permit you can build another barn in a more convenient location on the farm.
+	patent_for_house_chicken_shop_hint = Purchase a chicken farming license. With this license you can raise chickens and sell eggs.
+	patent_for_house_cow_shop_hint = Purchase a dairy farming license. With this license you can breed cows and sell milk.
+	patent_for_house_pig_shop_hint = Purchase a pig farming license. With this license you can raise and sell pigs. 
+	patent_for_house_sheep_shop_hint = Purchase a sheep farming license. With this license you can raise sheep and sell their wool.
+	patent_for_mushroom_shop_hint = Order seed_mushroom spores. Once the order arrives you can purchase seed_mushroom spores from the store.
+	patent_for_pumpkin_shop_hint = Order seed_pumpkin seeds. Once the order arrives you can purchase seed_pumpkin seeds from the store.
+	patent_for_radish_shop_hint = Order seed_radish seeds. Once the order arrives you can purchase seed_radish seeds from the store.
+	patent_for_strawberries_shop_hint = Order strawberry seedlings. Once the order arrives you can purchase strawberry seedlings from the store.
+	
+	notify_add_shop_harvester = You can now hire a fruit and vegetable picker to help you with your harvest.
+	notify_add_shop_helper = You can now hire a gardener to help you water and fertilize your crops.
+	notify_add_shop_box = Crates are now available in the store.
+	notify_add_shop_fivebox = Packages of five crates available in the store.
+	notify_add_shop_tenbox = Packages of 10 crates available in the store.
+	notify_add_shop_aubergine = Eggplant seedlings are now available in the store.
+	notify_add_shop_beetroot = Beet seeds are now available in the store.
+	notify_add_shop_cabbage = Cabbage seeds are now available in the store.
+	notify_add_shop_carrot = Carrot seeds are now available in the store.
+	notify_add_shop_corn = Corn seeds are now available in the store.
+	notify_add_shop_cucumber = Cucumber seedlings are now available in the store.
+	notify_add_shop_dahlia = Dahlia bulbs are now available in the store.
+	notify_add_shop_mushroom = Mushroom spores are now available in the store.
+	notify_add_shop_pepper = Pepper seedlings are now available in the store.
+	notify_add_shop_pumpkin = Pumpkin seeds are now available in the store.
+	notify_add_shop_radish = Radish seeds are now available in the store.
+	notify_add_shop_strawberries = Strawberry seedlings are now available in the store.
+	notify_add_shop_sunflower = Sunflower seeds are now available in the store.
+	notify_add_shop_tomato = Tomato seedlings are now available in the store.
+	notify_add_shop_tulip = Tulip bulbs are now available in the store.
+	notify_add_shop_watermelon = Watermelon seeds are now available in the store.
+	notify_add_shop_watercan = Watering cans are now available in the store. 
+	notify_add_shop_big_watercan = Big watering cans are now available in the store.
+	notify_add_shop_transporter = You can now rent a crane from the store.
+
+	notify_add_shop_beehive = Beehives are now available in the store.
+	notify_add_shop_house_sheep = Sheep are now available in the store.
+	notify_add_shop_house_pig = Pigs are now available in the store.
+	notify_add_shop_house_cow = Cows are now available in the store.
+	notify_add_shop_house_chicken = Chickens are now available in the store.
+
+	notify_add_shop_waterpump = Wells with water pumps are now available in the store.
+	notify_add_shop_water_sprinkler = Sprinklers are now available in the store.
+	notify_add_shop_fertilizer = Fertilizer is now available at the store.
+	notify_add_shop_big_fertilizer = Big packages of fertilizer are now available in the store.
+
+	notify_add_shop_patent_for_tulip = You can now place an order with the store to get seed_tulip bulbs.
+	notify_add_shop_patent_for_dahlia = You can now place an order with the store to get dahila bulbs.
+	notify_add_shop_patent_for_sunflower = You can now place an order with the store to get seed_sunflower seeds.
+	notify_add_shop_patent_for_cucumber = You can now place an order with the store to get seed_cucumber seedlings.
+	notify_add_shop_patent_for_tomato = You can now place an order with the store to get seed_tomato seedlings.
+	notify_add_shop_patent_for_aubergine = You can now place an order with the store to get eggplant seedlings.
+	notify_add_shop_patent_for_pepper = You can now place an order with the store to get seed_pepper seedlings.
+	notify_add_shop_patent_for_watermelon = You can now place an order with the store to get seed_watermelon seeds.
+	notify_add_shop_patent_for_hangar_flowers = You can apply for a building permit and order the materials to build a greenhouse.
+	notify_add_shop_patent_for_beehive = You can now place an order with the store to get a beehive.
+	notify_add_shop_patent_for_cabbage = You can now place an order with the store to get seed_cabbage seeds.
+	notify_add_shop_patent_for_beetroot = You can now place an order with the store to get beet seeds.
+	notify_add_shop_patent_for_carrot = You can now place an order with the store to get seed_carrot seeds.
+	notify_add_shop_patent_for_house_pig = You can now place an order with the store to get a pigpen.
+	notify_add_shop_patent_for_corn = You can now place an order with the store to get seed_corn seed.
+	notify_add_shop_patent_for_mushroom = You can now place an order with the store to get seed_mushroom spores.
+	notify_add_shop_patent_for_strawberries = You can now place an order with the store to get strawberry seedlings.
+	notify_add_shop_patent_for_pumpkin = You can now place an order with the store to get seed_pumpkin seeds.
+	notify_add_shop_patent_for_radish = You can now place an order with the store to get seed_radish seeds.
+	
+	notify_add_shop_hangar_vegetables = Barns are now available at the store.
+	notify_add_shop_hangar_flowers = Greenhouses are now available at the store.
+	notify_add_shop_hangar_refrigerator = Refrigerated warehouses are now available at the store.
+	notify_add_shop_patent_for_house_chicken = You can now apply for a building permit and order the materials to build a chicken coop.
+	notify_add_shop_patent_for_house_cow = You can now apply for a building permit and order the materials to build a cow barn.
+	notify_add_shop_patent_for_house_pig = You can now apply for a building permit and order the materials to build a pigpen.
+ 	notify_add_shop_patent_for_house_sheep = You can now apply for a building permit and order the materials to build a sheep shack.
+	notify_add_shop_patent_for_house_beehive = You can now apply for a building permit and order the materials to build a beehive.
+	notify_add_shop_patent_for_hangar_flowers = You can now apply for a building permit and order the materials to build a greenhouse.
+	notify_add_shop_patent_for_hangar_vegetables = You can now apply for a building permit and order the materials to build a barn.
+	notify_add_shop_patent_for_hangar_refrigerator = You can now apply for a building permit and order the materials to build a refrigerated warehouse.
+	
+	notify_no_more_money = You don't have enough money to buy that!
+	notify_you_cant_put = You can't put that here!
+	notify_you_cant_storebox = This needs to be stored somewhere else!
+	notify_store_in_hangar = You can't store that here! Take it to the barn.
+	notify_store_in_fridge = You can't store that here! Take it to the refrigerated warehouse.
+	notify_store_in_flower = You can't store that here! Take it to the greenhouse.
+	notify_box_nomore_full = That crate isn't full yet!
+	notify_only_for_this_type = You're filling this crate with %s. Fill it with only this item!
+	notify_box_full = This crate is full. Take it to the barn!
+	
+	notify_cant_feed_house_sheep = Sheep only eat seed_cabbage and carrots.
+	notify_cant_feed_house_pig = Pigs only eat beets and tomatoes.
+	notify_cant_feed_house_cow = Cows only eat seed_cabbage and carrots.
+	notify_cant_feed_house_chicken = Chickens only eat seed_corn feed.
+	
+	message_complete_sell_plant_tomato = Great! You fulfilled your seed_tomato order!
+	message_complete_sell_plant_aubergine = Wonderful! You fulfilled your eggplant order!
+	message_complete_sell_plant_pepper = Excellent! You fulfilled your seed_pepper order!
+	message_complete_sell_plant_cucumber = Terrific! You fulfilled your seed_cucumber order!
+	message_complete_sell_plant_dahlia = Splendid! You fulfilled your seed_dahlia order!
+	message_complete_sell_plant_sunflower = Fabulous! You fulfilled your seed_sunflower order!
+	message_complete_sell_plant_tulip = Marvelous! You fulfilled your seed_tulip order!
+	message_complete_sell_beehive = Great! You fulfilled your honey order!
+	message_complete_sell_plant_mushroom = Wonderful! You fulfilled your seed_mushroom order!
+	message_complete_sell_plant_cabbage = Excellent! You fulfilled your seed_cabbage order!
+	message_complete_sell_plant_watermelon = Terrific! You fulfilled your seed_watermelon order!
+	message_complete_sell_plant_beetroot = Splendid! You fulfilled your beet order!
+	message_complete_sell_house_pig = Fabulous! You fulfilled your pig order! 
+	message_complete_sell_plant_carrot = Marvelous! You fulfilled your seed_carrot order!
+	message_complete_sell_plant_corn = Great! You fulfilled your seed_corn order!
+	message_complete_sell_plant_pumpkin = Wonderful! You fulfilled your seed_pumpkin order!
+	message_complete_sell_plant_strawberries = Excellent! You fulfilled your strawberry order! 
+	message_complete_sell_house_sheep = Terrific! You fulfilled your wool order! 
+	message_complete_sell_house_chicken = Splendid! You fulfilled your egg order!
+	message_complete_sell_house_cow = Fabulous! You fulfilled your milk order!
+	message_complete_sell_plant_for_radish = Marvelous! You fulfilled your seed_radish order!
+	message_complete_sell_tree_apple = Great! You fulfilled your apple order!
+	message_complete_sell_tree_plum = Wonderful! You fulfilled your plum order!
+	message_complete_sell_tree_cherry = Excellent! You fulfilled your cherry order!
+	message_complete_sell_tree_palm = Terrific! You fulfilled your banana order!
+	
+
+>>

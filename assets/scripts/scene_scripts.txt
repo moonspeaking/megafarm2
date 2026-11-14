@@ -1,0 +1,32 @@
+скрипт все интерфейсы игры
+
+<<
+
+@scene
+{
+	//сначала подсасываем ресурсы
+	@hosts
+	{
+		[texturehost_scripts]
+		[soundhost_scripts]
+		[texthost_scripts]
+		[translatehost_scripts]
+		[guihost_scripts]
+		[menuhost_scripts]
+		[objecthost_scripts]
+		[animationhost_scripts]
+		[imagehost_scripts]
+	}
+
+	//теперь собираем лего-го
+
+	[interfaces/intro]	
+	[interfaces/loader]
+	[interfaces/menu]
+	[interfaces/gameplay]
+	[interfaces/credits]
+	[interfaces/comics]
+	[interfaces/levelmenu]
+}
+
+>>

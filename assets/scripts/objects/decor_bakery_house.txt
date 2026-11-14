@@ -1,0 +1,16 @@
+<<
+@obstacle 1
+{
+	#string name "decor_bakery_house";
+	#string type_goods "decor";
+	#point pos 0, 0;
+	#point size 512, 416;
+	#bool solid true;
+	#int price 0;
+	#point zbase 0, -64;
+
+	#point base_center 0, -64;
+	#point base_radius 256, 128;
+}
+>>
+

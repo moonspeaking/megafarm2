@@ -1,0 +1,438 @@
+html, body {
+  margin: 0; padding: 0; height: 100%;
+  background: #1a1410;
+  font-family: Georgia, 'Times New Roman', serif;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent; /* HUD как в оригинале: без синей подсветки тапа */
+}
+#game {
+  position: relative;
+  width: 1024px; height: 768px;
+  margin: 0 auto;
+  transform-origin: top center;
+  /* касания: без прокрутки/зума жестами и без long-press выделения */
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; user-select: none;
+}
+#screen {
+  position: absolute; left: 0; top: 0;
+  width: 1024px; height: 768px;
+  image-rendering: auto;
+  background: #000;
+  touch-action: none;
+}
+.hidden { display: none !important; }
+
+/* ---------- HUD ---------- */
+#hud { position: absolute; inset: 0; pointer-events: none; }
+#hud > * { pointer-events: auto; }
+
+/* Layout follows the original gameplay interface (menuhost_scripts.txt):
+   a 800x64 top bar drawn by one texture, a 78px blue bottom panel and tabs
+   that stick out above its edge.  Text uses the original white-with-blue-outline look. */
+:root {
+  --ui-font: "Trebuchet MS", "Segoe UI", Verdana, Arial, sans-serif;
+  --outline: #14295c;
+}
+.otext {
+  font-family: var(--ui-font); font-weight: 700; color: #fff;
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+
+#topbar { position: absolute; left: 0; top: 0; width: 1024px; height: 0; }
+/* upmenu_left: 512x128 at x=-42; окно текстуры upbar_left.tga, координаты потомков — от центра окна (214,64), y вверх */
+#upleft {
+  position: absolute; left: -42px; top: 0; width: 512px; height: 128px;
+  background: url('assets/textures/gameplay/levelgui/upbar_left.png') 0 0 / 512px 128px no-repeat;
+}
+/* upmenu_right: 128x128 справа сверху, `money` в (18,44) от центра */
+#upright {
+  position: absolute; right: 0; top: 0; width: 128px; height: 128px;
+  background: url('assets/textures/gameplay/levelgui/upbar_right.png') 0 0 / 128px 128px no-repeat;
+}
+/* upmenu_center: 512x256, pos (138,-98) top right — доска заданий (панель в оригинале выезжает сверху;
+   порт показывает её целиком, см. open-questions) */
+#upcenter {
+  position: absolute; left: 374px; top: 0; width: 512px; height: 256px; pointer-events: none;
+  background: url('assets/textures/gameplay/levelgui/upbar_task.png') 0 0 / 512px 256px no-repeat;
+}
+#btn_menu {
+  /* upmenu_left.menu: центр (96,24), 64x24 */
+  position: absolute; left: 56px; top: 8px; width: 80px; height: 32px; box-sizing: border-box;
+  background: transparent; border: 0; cursor: pointer; padding: 0;
+  font-family: var(--ui-font); font-weight: 700; font-size: 16px; color: #fff;
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill;
+  display: block; text-align: center; line-height: 30px;
+}
+/* upmenu_left.hero: центр (75,70), 40x36 — плитка с героиней: камера на героиню */
+#btn_center {
+  position: absolute; left: 47px; top: 48px; width: 56px; height: 44px; box-sizing: border-box;
+  background: transparent; border: 0; cursor: pointer; padding: 0;
+  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+}
+#btn_center:hover { background: rgba(255,255,255,0.12); border-radius: 6px; }
+#btn_menu:hover { filter: brightness(1.15); }
+#level_name {
+  position: absolute; left: 0; top: 45px; width: 196px; text-align: right; line-height: 16px;
+  font-family: var(--ui-font); font-weight: 700; font-size: 13px; color: #fff;
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill; pointer-events: none;
+}
+/* upmenu_left.timebar: центр (301,21), 288x16 */
+#timebox { position: absolute; left: 157px; top: 13px; width: 288px; height: 16px; }
+#timebar { width: 100%; height: 100%; overflow: hidden; border-radius: 6px; background: transparent; border: 0; }
+#timefill {
+  height: 100%; width: 100%;
+  background: url('assets/textures/gameplay/levelgui/timebar.png') 0 0 / 288px 16px no-repeat;
+  transition: width .3s linear;
+}
+#taskbox {
+  /* upmenu_center.task1..: строки по 14 px на деревянной доске (x 60..465, y 0..115 текстуры) */
+  position: absolute; left: 76px; top: 14px; width: 370px; height: 96px;
+  display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left;
+  font-family: var(--ui-font); font-weight: 700; color: #fff; font-size: 12px; line-height: 14px;
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill; overflow: hidden;
+}
+#task_label { display: none; }
+#task_text { font-weight: 700; width: 100%; text-align: left; }
+#task_text.goals { font-size: 12px; line-height: 14px; }
+#task_text .goal { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#moneybox {
+  /* upmenu_right.money: центр (82,20), 64x32 */
+  position: absolute; left: 50px; top: 4px; width: 64px; height: 32px; line-height: 32px; text-align: center;
+  font-family: var(--ui-font); font-weight: 700; font-size: 16px; color: #fff;
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill;
+}
+#money_icon { display: none; }
+
+/* Bottom panel (menuhost_scripts.txt: popup_window 800x64 at y=-268, its `center` bitmap 800x78 uses downbar.tga
+   texcoord 0,0.39..1,1 and is centred on the form, so the lowest 7 rows are cut off by the screen edge:
+   the panel starts at y=529). All positions below are relative to that edge (529). */
+#bottombar {
+  position: absolute; bottom: 0; left: 0; width: 1024px; height: 71px;
+  background: url('assets/textures/gameplay/levelgui/downbar.png') 0 -50px / 1024px 128px no-repeat;
+}
+/* (not in the original panel) the selected tool stays above the panel's left corner, clear of the tab row */
+#toolslots { position: absolute; left: 4px; bottom: 71px; display: flex; flex-direction: column-reverse; gap: 2px; z-index: 2; }
+#shop { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+/* inventory_menu & co: CPopupMenu 800x100 at (0,-3) inside the form: 58x58 `speed_button`s, margin 0, centred,
+   vertically 542..600 (flush with the screen bottom) */
+#shop_items {
+  position: absolute; left: 0; top: 13px; width: 1024px; height: 58px;
+  display: flex; gap: 0; overflow-x: auto; overflow-y: hidden; justify-content: safe center;
+  scrollbar-width: none;
+  touch-action: pan-x; /* #game задал none: разрешаем только горизонтальный скролл ленты */
+}
+#shop_items::-webkit-scrollbar { display: none; }
+/* shop_form: CPopupMenu 800x32 centred at y=520 (504..536); tab_button = checkbox of height 32 whose bitmaps are
+   a stretched centre piece plus 16 px caps outside the body; the checked one is 64 tall, shifted 13 px down
+   (spans 501..565) and so merges with the panel. The caption sits 4 px below the centre in both states. */
+#shop_tabs { position: absolute; left: 0; top: -25px; width: 1024px; height: 32px; z-index: 3; pointer-events: none; }
+.tab {
+  position: absolute; top: 0; height: 32px; margin: 0; padding: 0; border: 0; background: none; cursor: pointer;
+  pointer-events: auto; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+  font-family: var(--ui-font); font-weight: 700; font-size: 14px; color: #fff;
+}
+.tab.active { z-index: 2; }
+.tab i { position: absolute; top: 0; height: 32px; background-repeat: no-repeat; background-size: 100% 100%; pointer-events: none; }
+.tab .tl { left: 0; width: 16px; background-image: url('assets/textures/gui/tab_pas_left.png'); }
+.tab .tc { left: 16px; right: 16px; background-image: url('assets/textures/gui/tab_pas_center.png'); }
+.tab .tr { right: 0; width: 16px; background-image: url('assets/textures/gui/tab_pas_right.png'); }
+.tab.active i { top: -3px; height: 64px; }
+.tab.active .tl { background-image: url('assets/textures/gui/tab_act_left.png'); }
+.tab.active .tc { background-image: url('assets/textures/gui/tab_act_center.png'); }
+.tab.active .tr { background-image: url('assets/textures/gui/tab_act_right.png'); }
+.tab span {
+  position: absolute; left: 50%; top: 4px; line-height: 32px; white-space: nowrap; pointer-events: none;
+  transform: translateX(-50%) scaleX(var(--k, 1));
+  -webkit-text-stroke: 3px var(--outline); paint-order: stroke fill;
+}
+.tab:hover i { filter: brightness(1.12); }
+
+.slot, .shop_item {
+  position: relative; flex: 0 0 auto; width: 58px; height: 58px; cursor: pointer;
+  touch-action: manipulation; /* без двойного тапа/долгого нажатия на HUD-элементах */
+  background: url('assets/textures/gameplay/levelgui/item_shop_menu.png') 0 0 / 58px 116px no-repeat;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 10px; border: 0; border-radius: 6px;
+}
+.slot:hover, .shop_item:hover, .slot.active, .shop_item.active { background-position: 0 -58px; }
+.slot img { width: 42px; height: 42px; margin-top: -6px; }
+/* the item picture fills the whole button (bitmap `image` 100%x100%) */
+.shop_item img { position: absolute; left: 0; top: 0; width: 58px; height: 58px; }
+.slot .badge, .shop_item .price {
+  position: absolute; left: 0; right: 0; top: 38px; text-align: center;
+  font-family: var(--ui-font); font-weight: 700; font-size: 15px; line-height: 16px; color: #fff;
+  -webkit-text-stroke: 3.5px var(--outline); paint-order: stroke fill;
+  background: none; border: 0; padding: 0;
+}
+.shop_item.cant { opacity: .55; }
+
+/* ---------- диалоги (dialogue_form: центр (0,-200) → верх 520; кадр 1024x128) ---------- */
+#dialogue { position: absolute; left: 0; top: 520px; width: 1024px; height: 128px; z-index: 5; cursor: pointer; }
+#dialogue .dl_balloon {
+  position: absolute; left: 192px; top: 0; width: 640px; height: 128px;
+  background: url('assets/textures/gui/dialogue_balloon.png') 0 0 / 1024px 128px no-repeat;
+}
+#dialogue .dl_head { position: absolute; top: 0; width: 128px; height: 128px; transition: transform .3s, opacity .3s; }
+#dialogue .dl_head img { width: 128px; height: 128px; display: block; }
+#dialogue .dl_left { left: 16px; } #dialogue .dl_right { right: 16px; }
+#dialogue .dl_left.off { transform: translateX(-144px); opacity: 0; }
+#dialogue .dl_right.off { transform: translateX(144px); opacity: 0; }
+#dialogue .dl_arrow { position: absolute; top: 48px; width: 32px; height: 32px; background: url('assets/textures/gui/dialogue_tail.png') 0 0 / 32px 32px no-repeat; }
+#dialogue .dl_arrow_l { left: 161px; }
+#dialogue .dl_arrow_r { right: 161px; transform: scaleX(-1); }
+#dl_text {
+  position: absolute; left: 197px; top: 5px; width: 630px; height: 118px; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 14px;
+  font-family: var(--ui-font); font-weight: 700; font-size: 14px; line-height: 17px; color: #1d2c5e; white-space: pre-line;
+}
+#dl_skip { position: absolute; right: 0; top: 80px; width: 32px; height: 32px;
+  background: url('assets/textures/gameplay/levelgui/skip_dialogue_button.png') 0 0 / 32px 64px no-repeat; }
+#dl_skip:hover { background-position: 0 -32px; }
+
+#hint {
+  position: absolute; left: 50%; bottom: 104px; transform: translateX(-50%);
+  background: rgba(20,14,6,.85); color: #ffe9a8; border: 1px solid #6b5a34;
+  border-radius: 6px; padding: 4px 12px; font-size: 13px;
+  opacity: 0; transition: opacity .25s; pointer-events: none; max-width: 90%;
+}
+#hint.show { opacity: 1; }
+
+/* ---------- overlays ---------- */
+.overlay {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.35); z-index: 10;
+}
+/* Message windows use the original frame (blue panel, golden 16px border) and pill buttons. */
+.window {
+  position: relative; box-sizing: border-box;
+  min-width: 320px; max-width: 460px; padding: 6px 8px 4px; color: #fff; text-align: center;
+  border: 16px solid transparent;
+  border-image: url('assets/ui/window.png') 16 fill / 16px stretch;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.55));
+}
+.window button {
+  min-width: 96px; height: 48px; margin: 4px 0 0; border: 0; cursor: pointer; padding: 0 22px;
+  background: url('assets/ui/pill_a.png') center / 100% 100% no-repeat;
+  font-family: var(--ui-font); font-weight: 700; font-size: 15px; color: #fff; text-transform: uppercase;
+  -webkit-text-stroke: 3px #5a4a00; paint-order: stroke fill;
+}
+.window button:hover { background-image: url('assets/ui/pill_b.png'); }
+#msg_text {
+  font-family: var(--ui-font); font-weight: 700; font-size: 13px; line-height: 1.35; color: #fff;
+  -webkit-text-stroke: 2.5px #0b2a5e; paint-order: stroke fill;
+  text-align: justify; text-align-last: center; white-space: pre-line; margin: 4px 4px 8px;
+}
+#end_title {
+  font-family: var(--ui-font); font-weight: 700; font-size: 24px; color: #ffe46a; margin-bottom: 6px;
+  -webkit-text-stroke: 4px #0b2a5e; paint-order: stroke fill;
+}
+#end_stats {
+  font-family: var(--ui-font); font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 8px;
+  -webkit-text-stroke: 2.5px #0b2a5e; paint-order: stroke fill;
+}
+
+#end_stats .end_line { margin: 4px 0; min-height: 18px; }
+#end_stats .end_caption { color: #ffe46a; -webkit-text-stroke: 4px #0b2a5e; }
+#end_stats .end_good { color: #00ff00; }
+
+/* ---------- main menu (original layout, see src/menu.js) ---------- */
+#menu.menu_root { background: #000; padding: 0; overflow: hidden; display: block; }
+#menu.menu_root.ingame { background: rgba(0,0,0,.45); }
+#menu.menu_root.ingame .menu_scene { display: none; }
+.menu_scene, .menu_panel { position: absolute; inset: 0; }
+.menu_scene > div { position: absolute; background-repeat: no-repeat; }
+/* фон menu_background.tga: 1024x768 из файла 1024x1024 (texcoord 0,0,1,0.75) */
+.menu_back { left: 0; top: 0; width: 1024px; height: 768px; background-size: 1024px 1024px; background-position: 0 0; }
+.sway { background-size: 100% 100%; animation: sway ease-in-out infinite alternate; }
+@keyframes sway { from { transform: rotate(calc(var(--amp) * -1)); } to { transform: rotate(var(--amp)); } }
+.eyes { background-size: 1024px 32px; }
+.hand { background-size: 256px 32px; animation: handanim 1.2s steps(6) infinite; }
+@keyframes handanim { from { background-position-x: 0; } to { background-position-x: -192px; } }
+
+.mwin {
+  position: absolute; box-sizing: border-box; padding: 6px 8px;
+  border: 16px solid transparent; border-image: url('assets/ui/window.png') 16 / 16px stretch;
+  background: rgba(22,56,136,.86); background-clip: padding-box;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.55));
+}
+.popup { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+.popup_item {
+  text-align: center; font-size: 27px; line-height: 42px; cursor: pointer; border-radius: 6px; user-select: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.popup_item:hover {
+  background: radial-gradient(ellipse at 50% 35%, #62b8ff 0%, #2a84e6 55%, #1b5fb8 100%);
+  box-shadow: inset 0 0 0 1px rgba(190,225,255,.55), 0 0 6px rgba(80,160,255,.6);
+  border-radius: 21px; margin: 0 6px;
+}
+.popup.profiles .popup_item { font-size: 22px; }
+.popup_item.sel { color: #ffe46a; }
+.pill {
+  min-width: 96px; height: 48px; border: 0; cursor: pointer; padding: 0 22px;
+  background: url('assets/ui/pill_a.png') center / 100% 100% no-repeat;
+  font-size: 15px; text-transform: uppercase; -webkit-text-stroke: 3px #5a4a00;
+}
+.pill:hover { background-image: url('assets/ui/pill_b.png'); }
+.abs_bottom { position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); }
+.btn_row { display: flex; justify-content: center; gap: 16px; position: absolute; left: 0; right: 0; bottom: 14px; }
+.shade { position: absolute; inset: 0; background: rgba(0,0,0,.4); z-index: 5; }
+.msg_line { margin: 8px 6px; text-align: center; font-size: 14px; line-height: 1.35; white-space: pre-line; }
+.msg_line.big { font-size: 24px; } /* шрифт 24: text_enter_name, trophy_announce_header */
+.name_input {
+  display: block; margin: 8px auto 0; width: 260px; height: 30px; box-sizing: border-box; font: 700 16px var(--ui-font);
+  color: #fff; text-align: center; border: 2px solid #7f6bd0; border-radius: 6px; background: #14295c; outline: none;
+}
+.toast { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 16px; z-index: 9; }
+
+/* панель ошибки игрового цикла (Задача 18) */
+.errpanel { left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 30; display: flex; align-items: center; gap: 14px; padding: 8px 12px; }
+.errpanel .err_text { font-size: 14px; line-height: 1.3; max-width: 560px; word-break: break-word; white-space: pre-line; }
+.errpanel .pill { min-width: 0; height: 34px; font-size: 12px; -webkit-text-stroke: 0; padding: 0 16px; }
+
+/* name.tga: центр (-356,-210) -> левый верх (28,562); book.tga: центр (-346,-287) -> (38,639); оба 256x64 */
+.sign { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+.sign_plate, .sign_book { position: absolute; width: 256px; height: 64px; cursor: pointer; pointer-events: auto; background-size: 256px 64px; text-align: center; }
+.sign_plate { left: 28px; top: 562px; background-image: url('assets/textures/menu/name.png'); }
+.sign_book { left: 38px; top: 639px; background-image: url('assets/textures/menu/book.png'); }
+.sign_h, .sign_n, .sign_c { position: absolute; left: 0; width: 256px; color: #fbe581; -webkit-text-stroke: 3px #6a3a10; }
+.sign_h { top: 6px; font-size: 18px; } .sign_n { top: 27px; font-size: 26px; } .sign_c { top: 20px; font-size: 20px; opacity: .9; }
+.sign.hl .sign_c, .sign.hl .sign_n { color: #fff; }
+
+.vol .vol_label { position: absolute; left: 0; right: 0; text-align: center; font-size: 14px; }
+.slider { position: absolute; left: 33px; width: 192px; height: 32px; cursor: pointer; touch-action: none;
+  background: url('assets/textures/gui/slider_back.png') 0 0 / 100% 100% no-repeat; }
+.knob { position: absolute; top: 0; width: 32px; height: 32px; background: url('assets/textures/gui/slider_knob.png') 0 0 / 32px 64px no-repeat; }
+.help .help_pic { position: absolute; background-size: 100% 100%; }
+.help .help_text { position: absolute; left: 0; right: 0; text-align: center; font-size: 14px; line-height: 1.3; padding: 0 10px; } /* font_size 14 */
+
+.page { position: absolute; inset: 0; background-size: 1024px 1024px; background-position: 0 0; background-repeat: no-repeat; overflow: hidden; }
+.page.trophies { background-size: 100% 100%; }
+.page.credits { background-size: 1024px 1024px; }
+.trophy { position: absolute; background-size: 100% 100%; }
+.credits_scroll { position: absolute; left: 212px; width: 600px; top: 768px; text-align: center; animation: credscroll linear 1 forwards; }
+@keyframes credscroll { from { transform: translateY(0); } to { transform: translateY(-120%) translateY(-1400px); } }
+.c_head { font-size: 24px; color: #ffe46a; margin-top: 30px; }
+.c_line { font-size: 18px; margin: 4px 0; }
+.credits_wrap { position: absolute; inset: 0; }
+/* края экрана, как fader_out (сверху) и fader_in (снизу) в credits.txt */
+.credits_fade { position: absolute; left: 0; width: 1024px; height: 128px; background-size: 1024px 128px; background-repeat: no-repeat; pointer-events: none; z-index: 2; }
+
+#loading {
+  position: absolute; inset: 0; z-index: 20; background: #1a1410 url('assets/textures/loader/loadscreen.png') 0 0 / 1024px 1024px no-repeat;
+}
+.ld_bar { position: absolute; left: 255px; top: 724px; width: 512px; height: 32px; overflow: hidden; } /* loader.txt: loadbar (-1,-356) 512x32 */
+.ld_fill { width: 0; height: 100%; background: url('assets/textures/loader/loadbar.png') 0 0 / 512px 32px no-repeat; transition: width .25s; }
+.ld_text { position: absolute; left: 255px; top: 724px; width: 512px; height: 32px; display: flex; align-items: center; justify-content: center; line-height: 1; text-align: center; font: 700 17px var(--ui-font); color: #fff; -webkit-text-stroke: 3px #14295c; paint-order: stroke fill; }
+
+
+.menu_version { position: absolute; font-size: 11px; -webkit-text-stroke: 2px #1b2a52; }
+
+.level_info { z-index: 3; }
+.level_info .li_name { text-align: center; font-size: 15px; }
+.level_info .li_state { text-align: center; font-size: 11px; color: #ffe46a; margin-bottom: 4px; }
+.level_info .li_line { text-align: center; font-size: 11px; }
+.level_hint { position: absolute; width: 216px; height: 126px; box-sizing: border-box; padding: 0; text-align: center; z-index: 5; pointer-events: none;
+  border: 6px solid transparent; border-image: url('assets/ui/window.png') 16 / 6px stretch;
+  background: rgba(22,56,136,.95); background-clip: padding-box; }
+.level_hint .lh_name, .level_hint .lh_line { position: absolute; left: 0; right: 0; margin-top: 6px; white-space: nowrap; line-height: 1.1; }
+.level_hint .lh_name { font-size: 17px; }
+.level_hint .lh_line { font-size: 14px; }
+/* the selected level's coin pulses */
+@keyframes coin_pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+.trophy_hint { position: absolute; width: 268px; box-sizing: border-box; padding: 5px 8px; text-align: center; font-size: 17px; line-height: 1.15;
+  border: 6px solid transparent; border-image: url('assets/ui/window.png') 16 / 6px stretch;
+  background: rgba(22,56,136,.92); background-clip: padding-box; pointer-events: none; z-index: 2; }
+/* окно анонса трофея: слева trophy_pic (центр окна), справа details (align right) */
+.announce_pic { position: absolute; left: 0; top: calc(50% - 128px); width: 256px; height: 256px;
+  background-size: contain; background-repeat: no-repeat; background-position: center; }
+.announce_text { position: absolute; left: calc(50% + 4px); top: calc(50% - 128px); width: calc(50% - 28px); box-sizing: border-box;
+  text-align: right; font-size: 16px; line-height: 1.25; }
+/* @bitbtn из guihost_scripts.txt (стрелка 64x64, вторая половина текстуры — нажатое состояние) */
+.bitbtn { position: absolute; left: 723px; top: 523px; width: 64px; height: 64px;
+  background-size: 64px 128px; background-repeat: no-repeat; cursor: pointer; }
+.bitbtn:hover { background-position: 0 -64px; }
+
+/* comics player (src/comics.js) */
+.comics { position: absolute; inset: 0; z-index: 15; overflow: hidden; }
+.comics_bg { position: absolute; inset: 0; background-size: 1024px 1024px; background-repeat: no-repeat; background-position: 0 0; }
+.comics_stage { position: absolute; inset: 0; }
+.comics_frame { position: absolute; background-size: 1024px 1024px; background-repeat: no-repeat; }
+.comics_balloon { position: absolute; width: 276px; min-height: 46px; box-sizing: border-box; padding: 6px 12px;
+  display: flex; align-items: center; justify-content: center; background: #fff; border: 1.5px solid #8d8d8d; border-radius: 9px; }
+.comics_text { font: 700 12.5px/1.1 var(--ui-font); color: #fff; text-align: center; -webkit-text-stroke: 3px #4d4d4d; paint-order: stroke fill; }
+.comics_arrow { position: absolute; width: 32px; height: 32px; background-size: 100% 100%; pointer-events: none; }
+.comics_btn { position: absolute; left: 723px; top: 523px; width: 64px; height: 64px; background-size: 64px 128px; background-repeat: no-repeat; cursor: pointer; }
+.comics_btn:hover { background-position: 0 -64px; }
+
+/* поля ввода внутри #game должны оставаться редактируемыми (Safari наследует user-select: none) */
+#game input { -webkit-user-select: text; user-select: text; }
+
+/* ---------- level select screen (interfaces/levelmenu.txt, src/menu.js) ---------- */
+/* Экраны меню строятся в логическом холсте (.menu_stage), масштабируемом под панель:
+   часть 1 — 800x600, levelmenu части 2 — 1024x768 (размер задаёт menu.js stageSize). */
+.menu_stage { position: absolute; left: 50%; top: 50%; }
+
+.lmenu_scene { position: absolute; inset: 0; }
+/* levelmenu_back.tga: 1024x768 из файла 1024x1024 (texcoord 0,0,1,0.75) */
+.lmenu_back { position: absolute; left: 0; top: 0; width: 1024px; height: 768px;
+  background-size: 1024px 1024px; background-repeat: no-repeat; }
+/* трофеи trophy1..25 (@image levelmenu.txt): пульсируют, подсказка — .trophy_hint выше;
+   атлас trophies.jpg без альфы — белый фон гасится multiply (прозрачность — задача 7) */
+.lm_trophy { position: absolute; background-size: 1024px 1024px; background-repeat: no-repeat;
+  animation: lm_pulse 1.8s ease-in-out infinite; cursor: default; mix-blend-mode: multiply; }
+@keyframes lm_pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+/* наложение экрана монитора: @bitmap screen_monitor pos 11.5,-172.5 size 283x158 */
+.lm_monitor { position: absolute; left: 382px; top: 478px; width: 283px; height: 158px;
+  background-size: 512px 256px; background-repeat: no-repeat; pointer-events: none; }
+/* строки @text screen_*: цвет 251,229,129, ширина 235, центр */
+.lm_text { position: absolute; text-align: center; color: rgb(251, 229, 129);
+  -webkit-text-stroke: 3px #6a3a10; paint-order: stroke fill; white-space: nowrap; overflow: hidden; }
+/* старт (@text start_game pos 10,-285 size 160x40, ahtung — пульсирует) */
+.lm_start { position: absolute; width: 160px; height: 40px; line-height: 40px; text-align: center;
+  font-size: 28px; color: rgb(251, 229, 129); -webkit-text-stroke: 3px #6a3a10; paint-order: stroke fill;
+  cursor: pointer; animation: lm_pulse 1.2s ease-in-out infinite; }
+.lm_start:hover { color: #fff; }
+/* @buttonex_back / @buttonex_camera: 64x64, в файле 64x128 (верхняя половина —
+   обычное состояние, нижняя — нажатое); белый фон гасится multiply (альфы нет,
+   прозрачность этих текстур — вопрос задачи 7) */
+.lm_bitbtn { position: absolute; width: 64px; height: 64px; background-size: 64px 128px;
+  background-repeat: no-repeat; cursor: pointer; mix-blend-mode: multiply; }
+.lm_bitbtn:hover { background-position: 0 -64px; }
+/* нижняя полка downbar_levels.tga (в файле 1024x256 полка занимает нижние ~136 строк,
+   верх был прозрачным); иконки уровней на ней, между тумбами */
+.lm_bar { position: absolute; left: 0; bottom: 0; width: 1024px; height: 136px;
+  background-size: 1024px 256px; background-repeat: no-repeat; background-position: 0 -120px; }
+.lm_scroller { position: absolute; left: 184px; right: 184px; bottom: 6px; height: 74px;
+  overflow: hidden; touch-action: pan-x; }
+.lm_row { position: absolute; left: 0; top: 0; display: flex; gap: 4px; width: max-content;
+  transition: transform .25s ease-out; }
+.lm_item { position: relative; flex: 0 0 auto; width: 64px; height: 64px; cursor: pointer; }
+.lm_icon { position: absolute; inset: 0; background-size: 100% 100%; background-repeat: no-repeat; }
+.lm_lock { display: none; position: absolute; inset: 0; mix-blend-mode: multiply;
+  background: url('assets/textures/gui/level_lock.png') 0 0 / 100% 100% no-repeat; }
+.lm_item.locked { cursor: default; }
+.lm_item.locked .lm_icon { filter: brightness(.45) grayscale(.8); }
+.lm_item.locked .lm_lock { display: block; }
+/* звезда level_star.png — атлас 2x2 по 32px, звезда в правой верхней клетке;
+   показываем только её (у текстур без альфы фон гасится blend'ом — задача 7) */
+.lm_star { display: none; position: absolute; right: -3px; top: -3px; width: 26px; height: 26px;
+  z-index: 2; background: url('assets/textures/gui/level_star.png') -26px 0 / 52px 52px no-repeat;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }
+.lm_item.done .lm_star { display: block; }
+.lm_item.gold .lm_star { filter: drop-shadow(0 0 4px #ffd75e); animation: lm_pulse 1.6s ease-in-out infinite; }
+.lm_sel { display: none; position: absolute; inset: -3px; mix-blend-mode: multiply;
+  background: url('assets/textures/gui/level_selector.png') 0 0 / 100% 100% no-repeat; }
+.lm_item.sel .lm_sel { display: block; }
+.lm_item:hover:not(.locked):not(.sel) { filter: brightness(1.12); }
+/* указатель (level_arrow.tga 32x32) над выбранным уровнем */
+.lm_arrow { position: absolute; top: -34px; width: 32px; height: 32px; z-index: 3;
+  background: url('assets/textures/gui/level_arrow.png') 0 0 / 100% 100% no-repeat;
+  transition: left .25s ease-out; pointer-events: none; }
+/* стрелки прокрутки levelmenu_left/right.tga: 32x64 обычная + нажатая под ней */
+.lm_nav { position: absolute; bottom: 22px; width: 32px; height: 64px; cursor: pointer;
+  background-size: 32px 128px; background-repeat: no-repeat; }
+.lm_nav:hover { filter: brightness(1.15); }
+.lm_nav:active { background-position: 0 -64px; }

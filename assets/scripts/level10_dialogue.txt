@@ -1,0 +1,140 @@
+<<
+
+@simple_dialogue
+{
+	#string name "l10_intro";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_intro_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l10_pig_upgrade";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_pig_upgrade";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l10_chicken_upgrade";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_chicken_upgrade_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l10_cow_upgrade";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_cow_upgrade_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l10_all_upgrades";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_all_upgrades_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l10_all_upgrades_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";		
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l10_all_upgrades_3";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";		
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l10_all_upgrades_4";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_out true;		
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l10_all_upgrades_5";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l10_buy_houses";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_buy_houses_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l10_victory";
+	#bool pause true;
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l10_victory_1";
+	}
+}
+
+
+
+
+>>
+

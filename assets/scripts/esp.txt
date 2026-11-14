@@ -1,0 +1,23 @@
+<<
+
+	begin_lower_char = a
+	end_lower_char = z
+	begin_upper_char = A
+	end_upper_char = Z
+	click_to_continue = PROLONGAR
+	start = JUGAR
+	options = AGUSTE
+	exit = TERMINAR
+	fullscreen = ENTERO PANTALLA
+	vsync = SINCRONIZACIÓN
+	russian = РУССКИЙ
+	english = ENGLISH
+	french = FRANÇAIS
+	italian = ITALIANO
+	german = DEUTSCH
+	spanish = ESPAÑOL
+	
+>>
+
+
+

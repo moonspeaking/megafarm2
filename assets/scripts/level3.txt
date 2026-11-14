@@ -1,0 +1,424 @@
+
+<<
+
+@level
+{
+   #string level_name "leve3";
+   #point level_size 32, 32;
+   #string level_env "stone";
+   #float level_time 600;
+   #string name_emb_music "music_emb_nihgt.ogg";
+   #string name_pri_music "music_pri_pink_panther.ogg";
+   #float plant_thirst_growth 0;
+   #float plant_fruit_growth 25;
+   #float plant_growth 25;
+   #float health_reduction_after_harvest 1;
+   #float health_reduction_when_thirsty 0;
+   #float plant_fertilizer_strength 2.5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 100;
+   #float plant_minimal_health 50;
+   #bool cant_dig true;
+   #bool cant_water true;
+   #bool cant_fertilize true;
+   #bool cant_weed true;
+   #bool cant_switch true;
+   #bool diablo_mode true;
+   @game_field
+   {
+      @ground
+      {
+         #string name "stone";
+         #string texground_name "stone_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @ground
+      {
+         #string name "jungle";
+         #string texground_name "jungle_center_tile.tga";
+         #string texmask_name "l3_freeze_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level3_entry]
+	   @pattern
+      {
+         #string name "l3_switch_wanted";
+         @condition
+         {
+            #string type "arrested";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_restart_by_scenario_dialog";
+         }
+		 
+      }
+      @pattern
+      {
+         #string name "l3_restart_by_scenario";
+         @action
+         {
+            #string type "show message";
+            #string data "l3_defeat";
+         }
+
+		 @action
+         {
+            #string type "add event from pattern";
+            #string data "l3_switch_wanted";
+         }
+
+		 @action
+         {
+            #string type "add event from pattern";
+            #string data "l3_restart_by_scenario";
+         }
+         //@action
+         //{
+         //   #string type "defeat";
+         //   #float delay 1000;
+         //}
+		 @action
+		 {
+			#string type "reset guards";
+			#float delay 1000;
+		 }
+		 @action
+		 {
+			#string type "set hero pos";
+			#string data "24.418516 28.257111";
+			#float delay 1000;
+		 }
+		 @action
+		 {
+			#string type "center view";
+			#string data "hero";
+			#float delay 1000;
+		 }
+
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_switch_wanted";
+         }
+         @condition
+         {
+            #string type "end dialogue l3_restart_by_scenario_dialog";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l3_init";
+         @action
+         {
+            #string type "set sun";
+            #string data "11 1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_steal_fert_by_scenario_dialog";
+         }
+		 @action
+         {
+            #string type "add event from pattern";
+            #string data "l3_switch_wanted";
+         }
+		 @action
+         {
+            #string type "add event from pattern";
+            #string data "l3_restart_by_scenario";
+         }
+      }
+      @event
+      {
+         #string name "l3_ai_init";
+         @condition
+         {
+            #string type "game time";
+            #string data ">=100";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "8 23 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "1 23 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "1 31 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "8 31 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "2 18.5 serg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "18 18.5 serg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "30 6 mudart";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "23 9 mudart";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "18 5 mudart";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "26 3 mudart";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "7 6 vip";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "2 3 vip";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "7 1 vip";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "14 3 vip";
+         }
+      }
+      @event
+      {
+         #string name "l3_steal_fert_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "steal big_fertilizer";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_steal_orchid_seed_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_steal_orchid_seed_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "steal seed_orchid";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_steal_fert_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_steal_grape_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_steal_grape_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "steal tree_grapes";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_steal_orchid_seed_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_steal_cucumber_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_steal_cucumber_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "steal plant_cucumber";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_steal_grape_by_scenario";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_steal_pineapple_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_steal_pineapple_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "steal tree_pineapple";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_steal_cucumber_by_scenario";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "switch 1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_red_alert_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_red_alert_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "all switches on";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "overload generator";
+            #string data "big_generator";
+         }
+         @action
+         {
+            #string type "kill all people";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_steal_pineapple_by_scenario";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 25.5 25.5";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_escape_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_view_marker_by_scenario";
+         @action
+         {
+            #string type "center view";
+            #string data "marker";
+            #float delay 1000;
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_red_alert_by_scenario";
+         }
+      }
+      @event
+      {
+         #string name "l3_escape_by_scenario";
+         #bool player_task true;
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_view_marker_by_scenario";
+         }
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "visual effect";
+            #string data "start truck";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l3_victory_by_scenario_dialog";
+         }
+      }
+      @event
+      {
+         #string name "l3_victory_by_scenario";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l3_escape_by_scenario";
+         }
+         @condition
+         {
+            #string type "end dialogue l3_victory_by_scenario_dialog";
+            #string data ">=1";
+         }
+      }     
+   }
+}
+
+>>

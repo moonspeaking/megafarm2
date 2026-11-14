@@ -1,0 +1,1333 @@
+
+<<
+
+@level
+{
+   #string level_name "level22";
+   #point level_size 24, 16;
+   #string level_env "grass";
+   #float level_time 400;
+   #string name_emb_music "music_emb_grass_day.ogg";
+   #string name_pri_music "music_pri_neutral2.ogg";
+   #float health_reduction_after_harvest 0;
+   #float health_reduction_when_thirsty 0;
+   #float plant_minimal_health 50;
+   #float plant_thirst_growth 0.15;
+   #float plant_fruit_growth 0;
+   #float plant_growth 2;
+   #float health_reduction_after_harvest 0;
+   #float health_reduction_when_thirsty 0;
+   #float plant_fertilizer_strength 2.5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 66;
+   #float plant_minimal_health 0;
+   #float sunset_angle 15;
+
+   #bool cant_water true;
+   #bool cant_dig true;
+   #bool cant_sell true;
+
+   @game_field
+   {
+      @ground
+      {
+         #string name "grass";
+         #string texground_name "grass_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {	   
+      [level22_entry]
+      @event
+      {
+         #string name "l22_start";
+         @action
+         {
+            #string type "visual effect";
+            #string data "sepia";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l22_start";
+         }
+      }
+      @event
+      {
+         #string name "l22_sow_tomato";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sow seed_tomato";
+            #string data ">=12";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l22_plant_tomatoes";
+         }
+
+		 @action
+		 {
+		 	#string type "add to shop";
+		 	#string data "watercan";
+		 }
+      }
+
+	@event
+	{
+		#string name "l22_help_bur";
+		@condition
+		{
+			#string type "sow seed_lsd";
+			#string data ">=1";
+		}
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_sow_tomato";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_plant_bur";
+		}
+	}
+
+
+	@event
+	{
+		#string name "l22_treasure_dialog";
+		@condition
+		{
+			#string type "end dialogue l22_plant_tomatoes";
+			#string data ">=1";
+		}
+		@action
+		{
+			#float delay 4000;
+			#string type "add dialogue";
+			#string data "l22_find_treasure";
+		}
+	}
+	@event
+	{
+		#string name "l22_init_treasure_hunt";
+		@condition
+		{
+			#string type "end dialogue l22_find_treasure";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "allow action";
+			#string data "dig 1";
+		}
+	}
+
+
+	@event
+	{
+		#string name "l22_treasure_hunt";
+		#bool player_task true;
+		@condition		
+		{
+			#string type "enabled by event";
+			#string data "l22_init_treasure_hunt";
+		}
+		@condition
+		{
+			#string type "money";
+			#string data ">=500";
+		}		
+	}
+
+	@event
+	{
+		#string name "l22_treasure_hunt_1st_dig";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_init_treasure_hunt";
+		}
+		@condition
+		{
+			#string type "dig bed";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_treasure_1st_try";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_treasure_hunt_2nd_dig";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_treasure_hunt_1st_dig";
+		}
+		@condition
+		{
+			#string type "dig bed";
+			#string data ">=1";
+		}
+		@action
+		 {
+		 	#string type "delete from shop";
+		 	#string data "watercan";
+		 }
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_treasure_2nd_try";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_treasure_hunt_3d_dig";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_treasure_hunt_2nd_dig";
+		}
+		@condition
+		{
+			#string type "dig bed";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_treasure_3d_try";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_treasure_hunt_4th_dig";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_treasure_hunt_3d_dig";
+		}
+		@condition
+		{
+			#string type "dig bed";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_treasure_4th_try";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_treasure_hunt_5th_dig";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_treasure_hunt_4th_dig";
+		}
+		@condition
+		{
+			#string type "dig bed";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add money";
+			#string data "499";
+		}
+
+		@action
+		{
+			#string type "add particles";
+			#string data "hero gold_coins 10";
+		}
+
+		@action
+		{
+			#string type "play sound";
+			#string data "profit.ogg";
+		}
+
+		@action
+		{
+			#string type "allow action";
+			#string data "dig 0";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#string data "treasure_hunt_end";
+		}
+	}
+
+
+	@event
+	{
+		#string name "l22_watercan_init";
+		@condition
+		{
+			#string type "end dialogue treasure_hunt_end";
+			#string data ">=1";
+		}
+		@action
+		 {
+		 	#string type "add to shop";
+		 	#string data "watercan";
+		 }
+
+		@action
+		 {
+		 	#string type "open shop tab";
+		 	#string data "inventory_tab";
+		 }
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_buyer_of_watercan";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_watercan_init";
+		}
+		@condition
+		{
+			#string type "place watercan";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_first_watercan";
+		}
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_buyer_of_watercans";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_buyer_of_watercan";
+		}
+		@condition
+		{
+			#string type "place watercan";
+			#string data ">=10";
+		}
+
+		@action
+		{
+			#string type "allow action";
+			#string data "water 1";
+		}
+
+		@action
+		{
+			#string type "delete from shop";
+			#string data "watercan";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_bought_all_watercans";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_first_watercan_dialogue";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_buyer_of_watercan";
+		}
+		@condition
+		{
+			#string type "place watercan";
+			#string data ">=3";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_bought_4_watercans";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_second_watercan_dialogue";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_buyer_of_watercan";
+		}
+		@condition
+		{
+			#string type "place watercan";
+			#string data ">=6";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_bought_7_watercans";
+		}
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_watering_1st_try";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_buyer_of_watercans";
+		}
+		@condition
+		{
+			#string type "plants watered";
+			#string data ">=12";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_first_watering";
+		}
+		@action
+		{
+			#string type "set plant thirst";
+			#string data "50";
+		}
+
+		@action
+		{
+			#float delay 2000;
+			#string type "set plant thirst";
+			#string data "0.15";
+		}
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_watering_2nd_try";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_watering_1st_try";
+		}
+		@condition
+		{
+			#string type "plants watered";
+			#string data ">=12";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_second_watering";
+		}
+		@action
+		{
+			#string type "set plant thirst";
+			#string data "50";
+		}
+
+		@action
+		{
+			#float delay 2000;
+			#string type "set plant thirst";
+			#string data "0.15";
+		}
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_watering_3d_try";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_watering_2nd_try";
+		}
+		@condition
+		{
+			#string type "plants watered";
+			#string data ">=12";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_third_watering";
+		}
+		@action
+		{
+			#string type "set plant thirst";
+			#string data "50";
+		}
+
+		@action
+		{
+			#float delay 2000;
+			#string type "set plant thirst";
+			#string data "0.15";
+		}
+
+		@action
+		{
+			#string type "allow action";
+			#string data "water 0";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_phonecall";
+		@condition
+		{
+			#string type "end dialogue l22_third_watering";
+			#string data ">=1";
+		}
+
+		@action
+		{
+			#float delay 2000;
+			#string type "play sound";
+			#string data "phonering.ogg";
+		}
+
+		@action
+		{
+			#float delay 3500;
+			#string type "add dialogue";
+			#string data "l22_where_is_phone";
+		}
+
+		@action
+		{
+			#string type "allow action";
+			#string data "dig 1";
+		}
+		
+	}
+
+	@event
+	{
+		#string name "l22_phone_hunt_init";
+		@condition
+		{
+			#string type "end dialogue l22_where_is_phone";
+			#string data ">=1";
+		}		
+	}
+
+	@event
+	{
+		#string name "l22_find_cellpfone";
+		#bool player_task true;
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_phone_hunt_init";
+		}
+		@condition
+		{
+			#string type "take mobilephone";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_summon_daemon";
+		}
+	}
+
+	@event
+	{
+		#string type "found_phone";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_phone_hunt_init";
+		}
+		@condition
+		{
+			#string type "dig bed";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add to field";
+			#string data "mobilephone 1 1 near_hero";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_found_phone";
+		}
+		@action
+		{
+			#string type "allow action";
+			#string data "dig 0";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_summon_daemon";
+		@condition
+		{
+			#string type "end dialogue l22_summon_daemon";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add particles";
+			#string data "keyldo_grass_puddle1 add_trophy 30";
+		}
+		@action
+		{
+			#string type "allow action";
+			#string data "water 1";
+		}
+		@action
+		{
+			#string type "add to field";
+			#string data "looser 11.6 4.3 penkoff";
+		}
+		@action
+		{
+			#string type "play sound";
+			#string data "pay_shop.ogg";
+		}
+		@action
+		{
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_satans_minion_summoned";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_summon_daemon";
+		}
+		@action
+		{
+			#float delay 4000;
+			#string type "add dialogue";
+			#string data "l22_water_ok";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_time_to_fertilize";
+		@condition
+		{
+			#string type "end dialogue l22_water_ok";
+			#string data ">=1";
+		}
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_fertilize_plants";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_time_to_fertilize";
+		}
+		@condition
+		{
+			#string type "plants fertilized";
+			#string data ">=12";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_start_harvest";
+		}
+
+		@action
+		{
+			#string type "set fruit growth";
+			#string data "50";
+		}
+		@action
+		{
+			#float delay 3000;
+			#string type "set fruit growth";
+			#string data "1";
+		}
+		@action
+		{
+			#string type "add to shop";
+			#string data "box";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_start_shitstorm";
+		@condition
+		{
+			#string type "end dialogue l22_water_ok";
+			#string data ">=1";
+		}
+
+		@action
+		{
+			#float delay 3000;
+			#string type "add dialogue";
+			#string data "l22_wtf";
+		}
+
+		@action
+		{
+			#float delay 3500;
+			#string type "set sun";
+			#string data "15 5000";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_shitstorm";
+		@condition
+		{
+			#string type "end dialogue l22_wtf";
+			#string data ">=1";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#float delay 500;
+			#string data "l22_omgshitstorm";
+		}
+
+		@action
+		{
+			#float delay 1500;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+
+		@action
+		{
+			#float delay 2500;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 3500;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 4300;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 4800;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 5100;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 5400;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 5700;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 6000;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 6500;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 7500;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+		@action
+		{
+			#float delay 9000;
+			#string type "play sound";
+			#string data "put_bag.ogg";
+		}
+
+		@action
+		{
+			#float delay 1500;
+			#string type "add to field";
+			#string data "fake_fertilizer 6.8 2";
+		}
+
+		@action
+		{
+			#float delay 2500;
+			#string type "add to field";
+			#string data "fake_fertilizer 11.9 10.2";
+		}
+		@action
+		{
+			#float delay 3500;
+			#string type "add to field";
+			#string data "fake_fertilizer 1.6 9";
+		}
+		@action
+		{
+			#float delay 4300;
+			#string type "add to field";
+			#string data "fake_fertilizer 11.7 13.8";
+		}
+		@action
+		{
+			#float delay 4800;
+			#string type "add to field";
+			#string data "fake_fertilizer 14.4 5.3";
+		}
+		@action
+		{
+			#float delay 5100;
+			#string type "add to field";
+			#string data "fake_fertilizer 22.1 1.3";
+		}
+		@action
+		{
+			#float delay 5400;
+			#string type "add to field";
+			#string data "big_fertilizer 0.8 0.6";
+		}
+		@action
+		{
+			#float delay 5700;
+			#string type "add to field";
+			#string data "fake_fertilizer 15.7 5.8";
+		}
+		@action
+		{
+			#float delay 6000;
+			#string type "add to field";
+			#string data "fake_fertilizer 4.7 6.1";
+		}
+		@action
+		{
+			#float delay 6500;
+			#string type "add to field";
+			#string data "fake_fertilizer 17.2 11.2";
+		}
+		@action
+		{
+			#float delay 7500;
+			#string type "add to field";
+			#string data "fake_fertilizer 8.6 10";
+		}
+		@action
+		{
+			#float delay 9000;
+			#string type "add to field";
+			#string data "fake_fertilizer 17.8 8.8";
+		}
+
+		@action
+		{
+			#float delay 8000;
+			#string type "set sun";
+			#string data "90 8000";
+		}
+
+		@action
+		{
+			#float delay 11000;
+			#string type "add dialogue";
+			#string data "l22_shitstorm_end";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_1";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_1";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_2";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=2";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_2";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_3";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=3";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_3";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_4";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=4";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_4";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_5";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=5";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_5";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_6";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=6";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_6";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_7";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=7";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_7";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_8";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=8";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_8";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_9";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=9";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_9";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_10";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=10";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_10";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_fake_fertilizer_info_11";
+		
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take fake_fertilizer";
+			#string data ">=11";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_fake_fertilizer_11";
+		}
+	}
+
+		@event
+	{
+		#string name "l22_real_fertilizer_info";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_fake_fertilizer_info_1";
+		}
+		@condition
+		{
+			#string type "disabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "take big_fertilizer";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_real_fertilizer";
+		}
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_harvesting";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "sell plant_tomato";
+			#string data ">=3";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_victory";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_summon_bees";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_fertilize_plants";
+		}
+		@condition
+		{
+			#string type "harvest plant_tomato";
+			#string data ">=4";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 2.8 4.6";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 4 4.3";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 3.7 4.9";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 3.4 4.1";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 3.2 4.5";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 4 4.9";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 2.7 4";
+		}
+
+		@action
+		{
+			#string type "add to field";
+			#string data "bee 3.4 3.7";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_bees_summoned";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_omg_bees";
+		@condition
+		{
+			#string type "end dialogue l22_bees_summoned";
+			#string data ">=1";
+		}
+
+		@action
+		{
+			#string type "add to shop";
+			#string data "seed_dahlia";
+		}
+		@action
+		{
+			#string type "allow action";
+			#string data "dig 1";
+		}
+		@action
+		{
+			#string type "set plant growth";
+			#string data "50";
+		}		
+		@action
+		{
+			#string type "set fruit growth";
+			#string data "50";
+		}		
+	}
+
+	@event
+	{
+		#bool player_task true;
+		#string name "l22_distract_bees";
+		@condition
+		{
+			#string type "enabled by event";
+			#string data "l22_omg_bees";
+		}
+		@condition
+		{
+			#string type "fruit ready plant_dahlia";
+			#string data ">=1";
+		}
+
+		@action
+		{
+			#string type "add dialogue";
+			#string data "l22_distracted_bees";
+		}
+
+		@action
+		{
+			#string type "distract bees";
+		}
+
+		@action
+		{
+			#string type "allow action";
+			#string data "sell 1";
+		}
+	}
+
+	@event
+	{
+		#string name "l22_we_did_it_yo";
+		@condition
+		{
+			#string type "end dialogue l22_victory";
+			#string data ">=1";
+		}
+		@action
+		{
+			#string type "victory";			
+		}
+	}
+	
+
+   }
+}
+
+>>

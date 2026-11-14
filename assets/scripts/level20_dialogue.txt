@@ -1,0 +1,143 @@
+<<
+@simple_dialogue
+{
+	#string name "l20_start";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_father.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_start_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_father.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l20_start_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_father.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l20_start_3";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_father.tga";
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_start_4";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l20_planted_phone";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_guard.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_planted_phone_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_guard.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l20_planted_phone_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_guard.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l20_planted_phone_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l20_generator_off";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l20_generator_off_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_father.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_generator_off_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l20_victory";
+	#bool pause true;
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_father.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_victory_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_father.tga";
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_victory_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l20_got_caught";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_guard.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l20_got_caught_1";
+	}
+}
+
+
+
+
+>>

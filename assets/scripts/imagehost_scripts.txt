@@ -1,0 +1,2165 @@
+тут список всех изображений
+<<
+
+@imagehost
+{
+	@image
+	{
+		#string name "winter_big_ground";
+		#string texture "winter0.tga";
+		#rect rect 0, 0, 288, 224;
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "winter_middle_ground";
+		#string texture "winter0.tga";
+		#rect rect 512, 224, 768, 416;
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "winter_small_ground";
+		#string texture "winter0.tga";
+		#rect rect 0, 224, 192, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "decor_frozen_ground";
+		#string texture "winter0.tga";
+		#rect rect 512, 0, 768, 224;
+	}
+	@image
+	{
+		#string name "decor_frozen_dirt";
+		#string texture "winter0.tga";
+		#rect rect 768, 0, 1024, 224;
+	}
+	@image
+	{
+		#string name "keyldo_winter_bigstone1";
+		#string texture "winter0.tga";
+		#rect rect 0, 384, 128, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock1";
+		#string texture "winter0.tga";
+		#rect rect 128, 384, 224, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_stone1";
+		#string texture "winter0.tga";
+		#rect rect 224, 384, 320, 448; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock2";
+		#string texture "winter0.tga";
+		#rect rect 224, 448, 320, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_leaf1";
+		#string texture "winter0.tga";
+		#rect rect 192, 224, 224, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_leaf2";
+		#string texture "winter0.tga";
+		#rect rect 224, 224, 288, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_plant1";
+		#string texture "winter0.tga";
+		#rect rect 192, 256, 256, 320; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock3";
+		#string texture "winter0.tga";
+		#rect rect 256, 256, 320, 320; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock4";
+		#string texture "winter0.tga";
+		#rect rect 192, 320, 256, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock5";
+		#string texture "winter0.tga";
+		#rect rect 256, 320, 320, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_tree1";
+		#string texture "winter0.tga";
+		#rect rect 288, 0, 512, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock6";
+		#string texture "winter0.tga";
+		#rect rect 320, 256, 512, 416; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_plant2";
+		#string texture "winter0.tga";
+		#rect rect 320, 416, 416, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_branch1";
+		#string texture "winter0.tga";
+		#rect rect 416, 416, 512, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_stone2";
+		#string texture "winter0.tga";
+		#rect rect 512, 416, 640, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_branch2";
+		#string texture "winter0.tga";
+		#rect rect 640, 416, 768, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_leaf3";
+		#string texture "winter0.tga";
+		#rect rect 768, 224, 832, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_leaf4";
+		#string texture "winter0.tga";
+		#rect rect 832, 224, 864, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_leaf5";
+		#string texture "winter0.tga";
+		#rect rect 864, 224, 896, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock7";
+		#string texture "winter0.tga";
+		#rect rect 768, 256, 896, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_hillock8";
+		#string texture "winter0.tga";
+		#rect rect 768, 384, 896, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_ice1";
+		#string texture "winter0.tga";
+		#rect rect 896, 384, 1024, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_winter_snowman1";
+		#string texture "winter0.tga";
+		#rect rect 896, 224, 1024, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "stone_big_ground";
+		#string texture "stone0.tga";
+		#rect rect 0, 288, 288, 512;
+		#point shift 0, 15;
+	}
+	@image
+	{
+		#string name "stone_middle_ground";
+		#string texture "stone0.tga";
+		#rect rect 768, 0, 1024, 192;
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "stone_small_ground";
+		#string texture "stone0.tga";
+		#rect rect 832, 352, 1024, 512;
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "decor_pit";
+		#string texture "stone0.tga";
+		#rect rect 0, 0, 384, 288;
+	}
+	@image
+	{
+		#string name "decor_stones";
+		#string texture "stone0.tga";
+		#rect rect 512, 0, 704, 160;
+	}
+	@image
+	{
+		#string name "keyldo_stone_moss1";
+		#string texture "stone0.tga";
+		#rect rect 384, 0, 480, 64; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_stone1";
+		#string texture "stone0.tga";
+		#rect rect 384, 64, 480, 128; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_moss2";
+		#string texture "stone0.tga";
+		#rect rect 384, 128, 512, 192; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_bigstone1";
+		#string texture "stone0.tga";
+		#rect rect 384, 192, 512, 288; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_bigstone2";
+		#string texture "stone0.tga";
+		#rect rect 288, 288, 384, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_stone2";
+		#string texture "stone0.tga";
+		#rect rect 384, 288, 512, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_plant1";
+		#string texture "stone0.tga";
+		#rect rect 288, 384, 384, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_plant2";
+		#string texture "stone0.tga";
+		#rect rect 384, 384, 512, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_plant3";
+		#string texture "stone0.tga";
+		#rect rect 512, 384, 672, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_moss3";
+		#string texture "stone0.tga";
+		#rect rect 512, 224, 608, 288; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_moss4";
+		#string texture "stone0.tga";
+		#rect rect 608, 224, 672, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_moss5";
+		#string texture "stone0.tga";
+		#rect rect 512, 288, 704, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_thorn1";
+		#string texture "stone0.tga";
+		#rect rect 672, 192, 832, 352; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_stone3";
+		#string texture "stone0.tga";
+		#rect rect 672, 384, 832, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_stone_drawwell1";
+		#string texture "stone0.tga";
+		#rect rect 832, 192, 1024, 352; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "jungle_big_ground";
+		#string texture "jungle0.tga";
+		#rect rect 0, 0, 320, 256;
+		#point shift -10, 5;
+	}
+	@image
+	{
+		#string name "jungle_middle_ground";
+		#string texture "jungle0.tga";
+		#rect rect 512, 224, 800, 448;
+		#point shift -10, 5;
+	}
+	@image
+	{
+		#string name "jungle_small_ground";
+		#string texture "jungle0.tga";
+		#rect rect 800, 256, 1024, 416;
+		#point shift -5, 5;
+	}
+	@image
+	{
+		#string name "decor_brokentree";
+		#string texture "jungle0.tga";
+		#rect rect 512, 0, 768, 224;
+	}
+	@image
+	{
+		#string name "decor_bog";
+		#string texture "jungle0.tga";
+		#rect rect 768, 0, 1024, 256;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant1";
+		#string texture "jungle0.tga";
+		#rect rect 0, 256, 160, 448; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant2";
+		#string texture "jungle0.tga";
+		#rect rect 0, 448, 128, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant3";
+		#string texture "jungle0.tga";
+		#rect rect 160, 256, 320, 416; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_stone1";
+		#string texture "jungle0.tga";
+		#rect rect 160, 416, 288, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_flower1";
+		#string texture "jungle0.tga";
+		#rect rect 320, 0, 416, 96; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_bigflower1";
+		#string texture "jungle0.tga";
+		#rect rect 320, 96, 448, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_bigstone1";
+		#string texture "jungle0.tga";
+		#rect rect 320, 256, 480, 384; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_hillock1";
+		#string texture "jungle0.tga";
+		#rect rect 320, 384, 448, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_stone2";
+		#string texture "jungle0.tga";
+		#rect rect 416, 0, 512, 96; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_flower2";
+		#string texture "jungle0.tga";
+		#rect rect 448, 96, 512, 160; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_flower3";
+		#string texture "jungle0.tga";
+		#rect rect 448, 160, 512, 224; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant4";
+		#string texture "jungle0.tga";
+		#rect rect 800, 416, 896, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant5";
+		#string texture "jungle0.tga";
+		#rect rect 896, 416, 1024, 512; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant6";
+		#string texture "jungle1.tga";
+		#rect rect 0, 0, 96, 128; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_hillock2";
+		#string texture "jungle1.tga";
+		#rect rect 0, 128, 128, 256; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "keyldo_jungle_plant7";
+		#string texture "jungle1.tga";
+		#rect rect 128, 0, 256, 96; 
+		#point shift 0, 0;
+	}
+	@image
+	{
+		#string name "grass_big_ground";
+		#string texture "grass0.tga";
+		#rect rect 0, 768, 320, 1024;
+		#point shift 0, 15;
+	}
+	@image
+	{
+		#string name "grass_middle_ground";
+		#string texture "grass1.tga";
+		#rect rect 224, 288, 512, 512;
+		#point shift 10, -15;
+	}
+	@image
+	{
+		#string name "grass_small_ground";
+		#string texture "grass1.tga";
+		#rect rect 160, 0, 384, 160;
+		#point shift 15, -5;
+	}
+	@image
+	{
+		#string name "decor_lake";
+		#string texture "grass0.tga";
+		#rect rect 0, 0, 384, 320;
+	}
+	@image
+	{
+		#string name "decor_ravine";
+		#string texture "grass0.tga";
+		#rect rect 0, 320, 384, 768;
+	}
+	@image
+	{
+		#string name "keyldo_bench_left";
+		#string texture "grass1.tga";
+		#rect rect 512, 0, 640, 256;
+	}
+	@image
+	{
+		#string name "keyldo_bench_right";
+		#string texture "grass1.tga";
+		#rect rect 512, 256, 640, 512;
+	}
+	@image
+	{
+		#string name "keyldo_border_down";
+		#string texture "grass1.tga";
+		#rect rect 640, 0, 832, 64;
+	}
+	@image
+	{
+		#string name "keyldo_border_up";
+		#string texture "grass1.tga";
+		#rect rect 640, 64, 832, 128;
+	}
+	@image
+	{
+		#string name "keyldo_border_left";
+		#string texture "grass1.tga";
+		#rect rect 640, 128, 704, 320;
+	}
+	@image
+	{
+		#string name "keyldo_border_right";
+		#string texture "grass1.tga";
+		#rect rect 704, 128, 768, 320;
+	}
+	@image
+	{
+		#string name "keyldo_stone_path";
+		#string texture "grass1.tga";
+		#rect rect 640, 320, 768, 448;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bigstone1";
+		#string texture "grass0.tga";
+		#rect rect 384, 0, 512, 128;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bigstone2";
+		#string texture "grass0.tga";
+		#rect rect 384, 128, 512, 192;
+	}
+	@image
+	{
+		#string name "keyldo_grass_flower1";
+		#string texture "grass0.tga";
+		#rect rect 384, 192, 448, 256;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone1";
+		#string texture "grass0.tga";
+		#rect rect 448, 192, 512, 256;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bigflower1";
+		#string texture "grass0.tga";
+		#rect rect 384, 256, 512, 384;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bareground1";
+		#string texture "grass0.tga";
+		#rect rect 384, 384, 512, 448;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone2";
+		#string texture "grass0.tga";
+		#rect rect 384, 448, 448, 512;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone3";
+		#string texture "grass0.tga";
+		#rect rect 448, 448, 512, 512;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft1";
+		#string texture "grass0.tga";
+		#rect rect 384, 512, 512, 576;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft2";
+		#string texture "grass0.tga";
+		#rect rect 384, 576, 512, 640;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft3";
+		#string texture "grass0.tga";
+		#rect rect 384, 640, 448, 704;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone4";
+		#string texture "grass0.tga";
+		#rect rect 448, 640, 512, 704;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft4";
+		#string texture "grass0.tga";
+		#rect rect 384, 704, 448, 768;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone5";
+		#string texture "grass0.tga";
+		#rect rect 448, 704, 512, 768;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft5";
+		#string texture "grass0.tga";
+		#rect rect 320, 768, 384, 832;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft6";
+		#string texture "grass0.tga";
+		#rect rect 384, 768, 512, 832;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft7";
+		#string texture "grass0.tga";
+		#rect rect 320, 832, 384, 896;
+	}
+	@image
+	{
+		#string name "keyldo_grass_branches1";
+		#string texture "grass0.tga";
+		#rect rect 384, 832, 512, 896;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft8";
+		#string texture "grass0.tga";
+		#rect rect 320, 896, 384, 960;
+	}
+	@image
+	{
+		#string name "keyldo_grass_puddle1";
+		#string texture "grass0.tga";
+		#rect rect 384, 896, 512, 960;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft9";
+		#string texture "grass0.tga";
+		#rect rect 320, 960, 384, 1024;
+	}
+	@image
+	{
+		#string name "keyldo_grass_branches2";
+		#string texture "grass0.tga";
+		#rect rect 384, 960, 512, 1024;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stub1";
+		#string texture "grass1.tga";
+		#rect rect 0, 0, 128, 128;
+	}
+	@image
+	{
+		#string name "keyldo_grass_branches3";
+		#string texture "grass1.tga";
+		#rect rect 0, 128, 128, 192;
+	}
+	@image
+	{
+		#string name "keyldo_grass_clover1";
+		#string texture "grass1.tga";
+		#rect rect 0, 192, 64, 224;
+	}
+	@image
+	{
+		#string name "keyldo_grass_clover2";
+		#string texture "grass1.tga";
+		#rect rect 64, 192, 128, 224;
+	}
+	@image
+	{
+		#string name "keyldo_grass_flower2";
+		#string texture "grass1.tga";
+		#rect rect 0, 224, 64, 256;
+	}
+	@image
+	{
+		#string name "keyldo_grass_flower3";
+		#string texture "grass1.tga";
+		#rect rect 64, 224, 128, 256;
+	}
+	@image
+	{
+		#string name "keyldo_grass_branches4";
+		#string texture "grass1.tga";
+		#rect rect 0, 256, 128, 320;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft10";
+		#string texture "grass1.tga";
+		#rect rect 0, 320, 128, 384;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bigflower2";
+		#string texture "grass1.tga";
+		#rect rect 0, 384, 128, 448;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft11";
+		#string texture "grass1.tga";
+		#rect rect 0, 448, 128, 512;
+	}
+	@image
+	{
+		#string name "keyldo_grass_flower4";
+		#string texture "grass1.tga";
+		#rect rect 128, 0, 160, 64;
+	}
+	@image
+	{
+		#string name "keyldo_grass_flower5";
+		#string texture "grass1.tga";
+		#rect rect 128, 64, 160, 96;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone6";
+		#string texture "grass1.tga";
+		#rect rect 128, 160, 192, 192;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone7";
+		#string texture "grass1.tga";
+		#rect rect 128, 192, 192, 224;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone8";
+		#string texture "grass1.tga";
+		#rect rect 128, 224, 192, 256;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bush1";
+		#string texture "grass1.tga";
+		#rect rect 128, 256, 224, 384;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bigflower3";
+		#string texture "grass1.tga";
+		#rect rect 128, 384, 224, 512;
+	}
+	@image
+	{
+		#string name "keyldo_grass_branches5";
+		#string texture "grass1.tga";
+		#rect rect 192, 160, 320, 224;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bigstone3";
+		#string texture "grass1.tga";
+		#rect rect 384, 0, 512, 128;
+	}
+	@image
+	{
+		#string name "keyldo_grass_branches6";
+		#string texture "grass1.tga";
+		#rect rect 384, 128, 512, 192;
+	}
+	@image
+	{
+		#string name "keyldo_grass_bareground2";
+		#string texture "grass1.tga";
+		#rect rect 384, 192, 512, 256;
+	}
+	@image
+	{
+		#string name "keyldo_grass_stone9";
+		#string texture "grass1.tga";
+		#rect rect 320, 160, 384, 224;
+	}
+	@image
+	{
+		#string name "keyldo_grass_tuft12";
+		#string texture "grass1.tga";
+		#rect rect 256, 224, 384, 290;
+	}
+	@image
+	{
+		#string name "sand_big_ground";
+		#string texture "sand0.tga";
+		#rect rect 0, 0, 352, 320;
+		#point shift 0, 15;
+	}
+	@image
+	{
+		#string name "sand_middle_ground";
+		#string texture "sand0.tga";
+		#rect rect 512, 224, 800, 480;
+		#point shift 0, 15;
+	}
+	@image
+	{
+		#string name "sand_small_ground";
+		#string texture "sand0.tga";
+		#rect rect 800, 256, 1024, 448;
+		#point shift 5, 15;
+	}
+	@image
+	{
+		#string name "decor_runningsand";
+		#string texture "sand0.tga";
+		#rect rect 512, 0, 768, 224;
+	}
+	@image
+	{
+		#string name "decor_oasis";
+		#string texture "sand0.tga";
+		#rect rect 768, 0, 1024, 256;
+	}
+	@image
+	{
+		#string name "keyldo_sand_totem1";
+		#string texture "sand0.tga";
+		#rect rect 0, 320, 96, 416;
+	}
+	@image
+	{
+		#string name "keyldo_sand_bigstone1";
+		#string texture "sand0.tga";
+		#rect rect 0, 416, 96, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_dune1";
+		#string texture "sand0.tga";
+		#rect rect 96, 320, 224, 384;
+	}
+	@image
+	{
+		#string name "keyldo_sand_stone1";
+		#string texture "sand0.tga";
+		#rect rect 96, 384, 224, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_stone2";
+		#string texture "sand0.tga";
+		#rect rect 224, 320, 352, 416;
+	}
+	@image
+	{
+		#string name "keyldo_sand_bigstone2";
+		#string texture "sand0.tga";
+		#rect rect 224, 416, 352, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_dune2";
+		#string texture "sand0.tga";
+		#rect rect 352, 0, 512, 128;
+	}
+	@image
+	{
+		#string name "keyldo_sand_stone3";
+		#string texture "sand0.tga";
+		#rect rect 352, 128, 512, 256;
+	}
+	@image
+	{
+		#string name "keyldo_sand_plant1";
+		#string texture "sand0.tga";
+		#rect rect 352, 256, 416, 384;
+	}
+	@image
+	{
+		#string name "keyldo_sand_totem2";
+		#string texture "sand0.tga";
+		#rect rect 416, 256, 512, 416;
+	}
+	@image
+	{
+		#string name "keyldo_sand_bigstone3";
+		#string texture "sand0.tga";
+		#rect rect 352, 416, 448, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_cactus1";
+		#string texture "sand0.tga";
+		#rect rect 448, 416, 512, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_stone4";
+		#string texture "sand0.tga";
+		#rect rect 768, 480, 800, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_plant2";
+		#string texture "sand0.tga";
+		#rect rect 800, 448, 864, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_footstep1";
+		#string texture "sand0.tga";
+		#rect rect 864, 448, 928, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_stone5";
+		#string texture "sand0.tga";
+		#rect rect 928, 448, 1024, 512;
+	}
+	@image
+	{
+		#string name "keyldo_sand_stone6";
+		#string texture "sand1.tga";
+		#rect rect 0, 0, 192, 160;
+	}
+	@image
+	{
+		#string name "keyldo_sand_totem3";
+		#string texture "sand1.tga";
+		#rect rect 192, 0, 256, 128;
+	}
+	@image
+	{
+		#string name "keyldo_sand_skeleton1";
+		#string texture "sand1.tga";
+		#rect rect 0, 160, 128, 256;
+	}
+	@image
+	{
+		#string name "keyldo_sand_bigstone4";
+		#string texture "sand1.tga";
+		#rect rect 128, 160, 224, 256;
+	}
+	@image
+	{
+		#string name "desert_big_ground";
+		#string texture "desert0.tga";
+		#rect rect 0, 256, 288, 480;
+		#point shift 0, 10;
+	}
+	@image
+	{
+		#string name "desert_middle_ground";
+		#string texture "desert0.tga";
+		#rect rect 768, 0, 1024, 192;
+		#point shift -5, 5;
+	}
+	@image
+	{
+		#string name "desert_small_ground";
+		#string texture "desert0.tga";
+		#rect rect 320, 256, 512, 416;
+		#point shift 0, -10;
+	}
+	@image
+	{
+		#string name "decor_thorns";
+		#string texture "desert0.tga";
+		#rect rect 0, 0, 256, 256;
+	}
+	@image
+	{
+		#string name "decor_brokenhouse";
+		#string texture "desert0.tga";
+		#rect rect 256, 0, 512, 256;
+	}
+	@image
+	{
+		#string name "keyldo_desert_cactus1";
+		#string texture "desert0.tga";
+		#rect rect 512, 0, 640, 128;
+	}
+	@image
+	{
+		#string name "keyldo_desert_cactus2";
+		#string texture "desert0.tga";
+		#rect rect 512, 128, 640, 256;
+	}
+	@image
+	{
+		#string name "keyldo_desert_branch1";
+		#string texture "desert0.tga";
+		#rect rect 512, 256, 640, 320;
+	}
+	@image
+	{
+		#string name "keyldo_desert_crack1";
+		#string texture "desert0.tga";
+		#rect rect 512, 320, 640, 384;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone1";
+		#string texture "desert0.tga";
+		#rect rect 512, 384, 576, 448;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone2";
+		#string texture "desert0.tga";
+		#rect rect 576, 384, 640, 448;
+	}
+	@image
+	{
+		#string name "keyldo_desert_flower1";
+		#string texture "desert0.tga";
+		#rect rect 512, 448, 576, 512;
+	}
+	@image
+	{
+		#string name "keyldo_desert_flower2";
+		#string texture "desert0.tga";
+		#rect rect 576, 448, 640, 512;
+	}
+	@image
+	{
+		#string name "keyldo_desert_cactus3";
+		#string texture "desert0.tga";
+		#rect rect 640, 0, 768, 128;
+	}
+	@image
+	{
+		#string name "keyldo_desert_bush1";
+		#string texture "desert0.tga";
+		#rect rect 640, 128, 768, 256;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone3";
+		#string texture "desert0.tga";
+		#rect rect 640, 256, 768, 384;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone4";
+		#string texture "desert0.tga";
+		#rect rect 640, 384, 704, 448;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone5";
+		#string texture "desert0.tga";
+		#rect rect 704, 384, 768, 448;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone6";
+		#string texture "desert0.tga";
+		#rect rect 640, 448, 704, 512;
+	}
+	@image
+	{
+		#string name "keyldo_desert_cactus4";
+		#string texture "desert0.tga";
+		#rect rect 704, 448, 736, 512;
+	}
+	@image
+	{
+		#string name "keyldo_desert_bigstone1";
+		#string texture "desert0.tga";
+		#rect rect 768, 192, 896, 256;
+	}
+	@image
+	{
+		#string name "keyldo_desert_bareground1";
+		#string texture "desert0.tga";
+		#rect rect 768, 256, 896, 320;
+	}
+	@image
+	{
+		#string name "keyldo_desert_bareground2";
+		#string texture "desert0.tga";
+		#rect rect 768, 320, 896, 384;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone7";
+		#string texture "desert0.tga";
+		#rect rect 768, 384, 832, 416;
+	}
+	@image
+	{
+		#string name "keyldo_desert_bigstone2";
+		#string texture "desert0.tga";
+		#rect rect 896, 192, 1024, 256;
+	}
+	@image
+	{
+		#string name "keyldo_desert_cactus4";
+		#string texture "desert0.tga";
+		#rect rect 896, 256, 960, 320;
+	}
+	@image
+	{
+		#string name "keyldo_desert_stone8";
+		#string texture "desert0.tga";
+		#rect rect 960, 256, 1024, 320;
+	}
+	@image
+	{
+		#string name "keyldo_desert_bareground3";
+		#string texture "desert0.tga";
+		#rect rect 896, 320, 960, 384;
+	}
+	@image
+	{
+		#string name "keyldo_desert_flower3";
+		#string texture "desert0.tga";
+		#rect rect 960, 320, 1024, 384;
+	}	
+	@image
+	{
+		#string name "unknow_icon";
+		#string texture "icons0.tga";
+		#rect rect 448, 192, 512, 256;
+	}
+	@image
+	{
+		#string name "aubergine_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 0, 64, 64;
+	}
+	@image
+	{
+		#string name "beetroot_icon";
+		#string texture "icons0.tga";
+		#rect rect 64, 0, 128, 64;
+	}
+	@image
+	{
+		#string name "cabbage_icon";
+		#string texture "icons0.tga";
+		#rect rect 128, 0, 192, 64;
+	}
+	@image
+	{
+		#string name "carrot_icon";
+		#string texture "icons0.tga";
+		#rect rect 192, 0, 256, 64;
+	}
+	@image
+	{
+		#string name "corn_icon";
+		#string texture "icons0.tga";
+		#rect rect 256, 0, 320, 64;
+	}
+	@image
+	{
+		#string name "dahlia_icon";
+		#string texture "icons0.tga";
+		#rect rect 320, 0, 384, 64;
+	}
+	@image
+	{
+		#string name "cucumber_icon";
+		#string texture "icons0.tga";
+		#rect rect 384, 0, 448, 64;
+	}
+	@image
+	{
+		#string name "mushroom_icon";
+		#string texture "icons0.tga";
+		#rect rect 448, 0, 512, 64;
+	}
+	@image
+	{
+		#string name "pepper_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 0, 576, 64;
+	}
+	@image
+	{
+		#string name "pumpkin_icon";
+		#string texture "icons0.tga";
+		#rect rect 576, 0, 640, 64;
+	}
+	@image
+	{
+		#string name "strawberries_icon";
+		#string texture "icons0.tga";
+		#rect rect 640, 0, 704, 64;
+	}
+	@image
+	{
+		#string name "tulip_icon";
+		#string texture "icons0.tga";
+		#rect rect 704, 0, 768, 64;
+	}
+	@image
+	{
+		#string name "radish_icon";
+		#string texture "icons0.tga";
+		#rect rect 768, 0, 832, 64;
+	}
+	@image
+	{
+		#string name "sunflower_icon";
+		#string texture "icons0.tga";
+		#rect rect 832, 0, 896, 64;
+	}
+	@image
+	{
+		#string name "tomato_icon";
+		#string texture "icons0.tga";
+		#rect rect 896, 0, 960, 64;
+	}
+	@image
+	{
+		#string name "lsd_icon";
+		#string texture "icons0.tga";
+		#rect rect 896, 0, 960, 64;
+	}
+	@image
+	{
+		#string name "watermelon_icon";
+		#string texture "icons0.tga";
+		#rect rect 960, 0, 1024, 64;
+	}
+	@image
+	{
+		#string name "onion_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 64, 64, 128;
+	}
+	@image
+	{
+		#string name "rose_icon";
+		#string texture "icons0.tga";
+		#rect rect 64, 64, 128, 128;
+	}
+	@image
+	{
+		#string name "yellowlily_icon";
+		#string texture "icons0.tga";
+		#rect rect 128, 64, 192, 128;
+	}
+	@image
+	{
+		#string name "lily_icon";
+		#string texture "icons0.tga";
+		#rect rect 192, 64, 256, 128;
+	}
+	@image
+	{
+		#string name "orchid_icon";
+		#string texture "icons0.tga";
+		#rect rect 256, 64, 320, 128;
+	}
+	@image
+	{
+		#string name "nettle_icon";
+		#string texture "icons0.tga";
+		#rect rect 320, 64, 384, 128;
+	}
+	@image
+	{
+		#string name "bur_icon";
+		#string texture "icons0.tga";
+		#rect rect 384, 64, 448, 128;
+	}
+	@image
+	{
+		#string name "wheat_icon";
+		#string texture "icons0.tga";
+		#rect rect 448, 64, 512, 128;
+	}
+	@image
+	{
+		#string name "heart_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 64, 576, 128;
+	}
+	@image
+	{
+		#string name "drop_icon";
+		#string texture "icons0.tga";
+		#rect rect 576, 64, 640, 128;
+	}
+	@image
+	{
+		#string name "plum_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 128, 64, 192;
+	}
+	@image
+	{
+		#string name "cherry_icon";
+		#string texture "icons0.tga";
+		#rect rect 64, 128, 128, 192;
+	}
+	@image
+	{
+		#string name "banana_icon";
+		#string texture "icons0.tga";
+		#rect rect 128, 128, 192, 192;
+	}
+	@image
+	{
+		#string name "apple_icon";
+		#string texture "icons0.tga";
+		#rect rect 192, 128, 256, 192;
+	}
+	@image
+	{
+		#string name "blackberrybush_icon";
+		#string texture "icons0.tga";
+		#rect rect 256, 128, 320, 192;
+	}
+	@image
+	{
+		#string name "cherryplum_icon";
+		#string texture "icons0.tga";
+		#rect rect 320, 128, 384, 192;
+	}
+	@image
+	{
+		#string name "coconut_icon";
+		#string texture "icons0.tga";
+		#rect rect 384, 128, 448, 192;
+	}
+	@image
+	{
+		#string name "date_icon";
+		#string texture "icons0.tga";
+		#rect rect 448, 128, 512, 192;
+	}
+	@image
+	{
+		#string name "grapes_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 128, 576, 192;
+	}
+	@image
+	{
+		#string name "lemon_icon";
+		#string texture "icons0.tga";
+		#rect rect 576, 128, 640, 192;
+	}
+	@image
+	{
+		#string name "mango_icon";
+		#string texture "icons0.tga";
+		#rect rect 640, 128, 704, 192;
+	}
+	@image
+	{
+		#string name "orange_icon";
+		#string texture "icons0.tga";
+		#rect rect 704, 128, 768, 192;
+	}
+	@image
+	{
+		#string name "peach_icon";
+		#string texture "icons0.tga";
+		#rect rect 768, 128, 832, 192;
+	}
+	@image
+	{
+		#string name "pear_icon";
+		#string texture "icons0.tga";
+		#rect rect 832, 128, 896, 192;
+	}
+	@image
+	{
+		#string name "persimmon_icon";
+		#string texture "icons0.tga";
+		#rect rect 896, 128, 960, 192;
+	}
+	@image
+	{
+		#string name "pineapple_icon";
+		#string texture "icons0.tga";
+		#rect rect 960, 128, 1024, 192;
+	}
+	@image
+	{
+		#string name "pomegranate_icon";
+		#string texture "icons0.tga";
+		#rect rect 320, 192, 384, 256;
+	}
+	@image
+	{
+		#string name "raspberrybush_icon";
+		#string texture "icons0.tga";
+		#rect rect 384, 192, 448, 256;
+	}
+	@image
+	{
+		#string name "chicken_icon";
+		#string texture "icons0.tga";
+		#rect rect 640, 64, 704, 128;
+	}
+	@image
+	{
+		#string name "cow_icon";
+		#string texture "icons0.tga";
+		#rect rect 704, 64, 768, 128;
+	}
+	@image
+	{
+		#string name "sheep_icon";
+		#string texture "icons0.tga";
+		#rect rect 768, 64, 832, 128;
+	}
+	@image
+	{
+		#string name "pig_icon";
+		#string texture "icons0.tga";
+		#rect rect 832, 64, 896, 128;
+	}
+	@image
+	{
+		#string name "beehive_icon";
+		#string texture "icons0.tga";
+		#rect rect 896, 64, 960, 128;
+	}
+	@image
+	{
+		#string name "feed_icon";
+		#string texture "icons0.tga";
+		#rect rect 960, 64, 1024, 128;
+	}
+	@image
+	{
+		#string name "bar_icon";
+		#string texture "icons0.tga";
+		#rect rect 256, 192, 320, 256;
+	}
+	@image
+	{
+		#string name "chicken_complete_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 192, 64, 256;
+	}
+	@image
+	{
+		#string name "cow_complete_icon";
+		#string texture "icons0.tga";
+		#rect rect 64, 192, 128, 256;
+	}
+	@image
+	{
+		#string name "sheep_complete_icon";
+		#string texture "icons0.tga";
+		#rect rect 128, 192, 192, 256;
+	}
+	@image
+	{
+		#string name "pig_complete_icon";
+		#string texture "icons0.tga";
+		#rect rect 192, 192, 256, 256;
+	}
+	@image
+	{
+		#string name "chicken_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 192, 1024, 256;
+	}
+	@image
+	{
+		#string name "pig_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 768, 512, 832;
+	}
+	@image
+	{
+		#string name "sheep_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 832, 512, 896;
+	}
+	@image
+	{
+		#string name "beehive_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 896, 512, 960;
+	}
+	@image
+	{
+		#string name "cow_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 960, 512, 1024;
+	}
+	@image
+	{
+		#string name "yellowlily_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 256, 512, 320;
+	}
+	@image
+	{
+		#string name "yellowlily_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 256, 1024, 320;
+	}
+	@image
+	{
+		#string name "wheat_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 320, 512, 384;
+	}
+	@image
+	{
+		#string name "wheat_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 320, 1024, 384;
+	}
+	@image
+	{
+		#string name "lily_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 384, 512, 448;
+	}
+	@image
+	{
+		#string name "lily_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 384, 1024, 448;
+	}
+	@image
+	{
+		#string name "rose_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 448, 512, 512;
+	}
+	@image
+	{
+		#string name "rose_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 448, 1024, 512;
+	}
+	@image
+	{
+		#string name "orchid_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 512, 512, 576;
+	}
+	@image
+	{
+		#string name "orchid_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 512, 1024, 576;
+	}
+	@image
+	{
+		#string name "onion_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 576, 512, 640;
+	}
+	@image
+	{
+		#string name "onion_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 576, 1024, 640;
+	}
+	@image
+	{
+		#string name "watermelon_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 640, 512, 704;
+	}
+	@image
+	{
+		#string name "watermelon_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 640, 1024, 704;
+	}
+	@image
+	{
+		#string name "strawberries_halfstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 0, 704, 512, 768;
+	}
+	@image
+	{
+		#string name "strawberries_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 704, 1024, 768;
+	}
+	@image
+	{
+		#string name "carrot_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 0, 512, 64;
+	}
+	@image
+	{
+		#string name "carrot_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 0, 1024, 64;
+	}
+	@image
+	{
+		#string name "aubergine_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 64, 512, 128;
+	}
+	@image
+	{
+		#string name "aubergine_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 64, 1024, 128;
+	}
+	@image
+	{
+		#string name "beetroot_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 128, 512, 192;
+	}
+	@image
+	{
+		#string name "beetroot_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 128, 1024, 192;
+	}
+	@image
+	{
+		#string name "cabbage_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 192, 512, 256;
+	}
+	@image
+	{
+		#string name "cabbage_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 192, 1024, 256;
+	}
+	@image
+	{
+		#string name "corn_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 256, 512, 320;
+	}
+	@image
+	{
+		#string name "corn_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 256, 1024, 320;
+	}
+	@image
+	{
+		#string name "cucumber_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 320, 512, 384;
+	}
+	@image
+	{
+		#string name "cucumber_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 320, 1024, 384;
+	}
+	@image
+	{
+		#string name "dahlia_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 384, 512, 448;
+	}
+	@image
+	{
+		#string name "dahlia_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 384, 1024, 448;
+	}
+	@image
+	{
+		#string name "mushroom_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 448, 512, 512;
+	}
+	@image
+	{
+		#string name "mushroom_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 448, 1024, 512;
+	}
+	@image
+	{
+		#string name "pepper_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 512, 512, 576;
+	}
+	@image
+	{
+		#string name "pepper_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 512, 1024, 576;
+	}
+	@image
+	{
+		#string name "pumpkin_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 576, 512, 640;
+	}
+	@image
+	{
+		#string name "pumpkin_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 576, 1024, 640;
+	}
+	@image
+	{
+		#string name "radish_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 640, 512, 704;
+	}
+	@image
+	{
+		#string name "radish_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 640, 1024, 704;
+	}
+	@image
+	{
+		#string name "sunflower_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 704, 512, 768;
+	}
+	@image
+	{
+		#string name "sunflower_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 704, 1024, 768;
+	}
+	@image
+	{
+		#string name "tomato_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 768, 512, 832;
+	}
+	@image
+	{
+		#string name "tomato_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 768, 1024, 832;
+	}
+	@image
+	{
+		#string name "tulip_halfstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 832, 512, 896;
+	}
+	@image
+	{
+		#string name "tulip_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 832, 1024, 896;
+	}
+	/////////////////////////////////////////
+	@image
+	{
+		#string name "apple_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 768, 1024, 832;
+	}
+	@image
+	{
+		#string name "plum_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 832, 1024, 896;
+	}
+	@image
+	{
+		#string name "cherry_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 896, 1024, 960;
+	}
+	@image
+	{
+		#string name "banana_fullstuff_icon";
+		#string texture "icons0.tga";
+		#rect rect 512, 960, 1024, 1024;
+	}
+	@image
+	{
+		#string name "raspberrybush_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 896, 512, 960;
+	}
+	@image
+	{
+		#string name "pomegranate_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 0, 960, 512, 1024;
+	}
+	@image
+	{
+		#string name "pineapple_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 896, 1024, 960;
+	}
+	@image
+	{
+		#string name "persimmon_fullstuff_icon";
+		#string texture "icons1.tga";
+		#rect rect 512, 960, 1024, 1024;
+	}	
+	@image
+	{
+		#string name "pear_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 64, 512, 128;
+	}	
+	@image
+	{
+		#string name "peach_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 128, 512, 192;
+	}	
+	@image
+	{
+		#string name "orange_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 192, 512, 256;
+	}	
+	@image
+	{
+		#string name "mango_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 256, 512, 320;
+	}	
+	@image
+	{
+		#string name "lemon_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 320, 512, 384;
+	}	
+	@image
+	{
+		#string name "grapes_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 512, 64, 1024, 128;
+	}	
+	@image
+	{
+		#string name "date_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 512, 128, 1024, 192;
+	}	
+	@image
+	{
+		#string name "coconut_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 512, 192, 1024, 256;
+	}	
+	@image
+	{
+		#string name "cherryplum_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 512, 256, 1024, 320;
+	}	
+	@image
+	{
+		#string name "blackberrybush_fullstuff_icon";
+		#string texture "icons2.tga";
+		#rect rect 512, 320, 1024, 384;
+	}
+	@image
+	{
+		#string name "sandglass_empty_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 0, 64, 64;
+	}
+	@image
+	{
+		#string name "question_mark_icon";
+		#string texture "icons2.tga";
+		#rect rect 64, 0, 128, 64;
+	}
+	@image
+	{
+		#string name "coin_icon";
+		#string texture "icons2.tga";
+		#rect rect 128, 0, 192, 64;
+	}
+	@image
+	{
+		#string name "sandglass_full_icon";
+		#string texture "icons2.tga";
+		#rect rect 192, 0, 256, 64;
+	}
+	@image
+	{
+		#string name "sheep_upgrade1_icon";
+		#string texture "icons2.tga";
+		#rect rect 256, 0, 320, 64;
+	}
+	@image
+	{
+		#string name "sheep_upgrade2_icon";
+		#string texture "icons2.tga";
+		#rect rect 320, 0, 384, 64;
+	}
+	@image
+	{
+		#string name "sheep_upgrade3_icon";
+		#string texture "icons2.tga";
+		#rect rect 384, 0, 448, 64;
+	}
+	@image
+	{
+		#string name "pig_upgrade1_icon";
+		#string texture "icons2.tga";
+		#rect rect 448, 0, 512, 64;
+	}
+	@image
+	{
+		#string name "pig_upgrade2_icon";
+		#string texture "icons2.tga";
+		#rect rect 512, 0, 576, 64;
+	}
+	@image
+	{
+		#string name "pig_upgrade3_icon";
+		#string texture "icons2.tga";
+		#rect rect 576, 0, 640, 64;
+	}
+	@image
+	{
+		#string name "cow_upgrade1_icon";
+		#string texture "icons2.tga";
+		#rect rect 640, 0, 704, 64;
+	}
+	@image
+	{
+		#string name "cow_upgrade2_icon";
+		#string texture "icons2.tga";
+		#rect rect 704, 0, 768, 64;
+	}
+	@image
+	{
+		#string name "cow_upgrade3_icon";
+		#string texture "icons2.tga";
+		#rect rect 768, 0, 832, 64;
+	}
+	@image
+	{
+		#string name "chicken_upgrade1_icon";
+		#string texture "icons2.tga";
+		#rect rect 832, 0, 896, 64;
+	}
+	@image
+	{
+		#string name "chicken_upgrade2_icon";
+		#string texture "icons2.tga";
+		#rect rect 896, 0, 960, 64;
+	}
+	@image
+	{
+		#string name "chicken_upgrade3_icon";
+		#string texture "icons2.tga";
+		#rect rect 960, 0, 1024, 64;
+	}
+	@image
+	{
+		#string name "weed_icon";
+		#string texture "icons2.tga";
+		#rect rect 0, 384, 64, 448;
+	}
+	@image
+	{
+		#string name "decor_altar";
+		#string texture "altar.tga";
+		#rect rect 0, 0, 256, 256;
+	}
+	@image
+	{
+		#string name "trophy1";
+		#string texture "trophies.tga";
+		#rect rect 64, 0, 256, 128;
+	}
+	@image
+	{
+		#string name "trophy2";
+		#string texture "trophies.tga";
+		#rect rect 512, 64, 576, 128;
+	}
+	@image
+	{
+		#string name "trophy3";
+		#string texture "trophies.tga";
+		#rect rect 448, 0, 576, 64;
+	}
+	@image
+	{
+		#string name "trophy4";
+		#string texture "trophies.tga";
+		#rect rect 704, 0, 832, 128;
+	}
+	@image
+	{
+		#string name "trophy5";
+		#string texture "trophies.tga";
+		#rect rect 896, 0, 1024, 192;
+	}
+	@image
+	{
+		#string name "trophy6";
+		#string texture "trophies.tga";
+		#rect rect 384, 128, 512, 320;
+	}
+	@image
+	{
+		#string name "trophy7";
+		#string texture "trophies.tga";
+		#rect rect 832, 192, 960, 256;
+	}
+	@image
+	{
+		#string name "trophy8";
+		#string texture "trophies.tga";
+		#rect rect 512, 128, 704, 256;
+	}
+	@image
+	{
+		#string name "trophy9";
+		#string texture "trophies.tga";
+		#rect rect 576, 256, 800, 448;
+	}
+	@image
+	{
+		#string name "trophy10";
+		#string texture "trophies.tga";
+		#rect rect 384, 0, 448, 128;
+	}
+	@image
+	{
+		#string name "trophy11";
+		#string texture "trophies.tga";
+		#rect rect 256, 0, 384, 128;
+	}
+	@image
+	{
+		#string name "trophy12";
+		#string texture "trophies.tga";
+		#rect rect 576, 0, 704, 128;
+	}
+	@image
+	{
+		#string name "trophy13";
+		#string texture "trophies.tga";
+		#rect rect 0, 0, 64, 128;
+	}
+	@image
+	{
+		#string name "trophy14";
+		#string texture "trophies.tga";
+		#rect rect 128, 256, 256, 384;
+	}
+	@image
+	{
+		#string name "trophy15";
+		#string texture "trophies.tga";
+		#rect rect 0, 128, 128, 448;
+	}
+	@image
+	{
+		#string name "trophy16";
+		#string texture "trophies.tga";
+		#rect rect 128, 128, 256, 256;
+	}
+	@image
+	{
+		#string name "trophy17";
+		#string texture "trophies.tga";
+		#rect rect 384, 320, 512, 640;
+	}
+	@image
+	{
+		#string name "trophy18";
+		#string texture "trophies.tga";
+		#rect rect 448, 64, 512, 128;
+	}
+	@image
+	{
+		#string name "trophy19";
+		#string texture "trophies.tga";
+		#rect rect 576, 448, 704, 640;
+	}
+	@image
+	{
+		#string name "trophy20";
+		#string texture "trophies.tga";
+		#rect rect 704, 128, 832, 256;
+	}
+	@image
+	{
+		#string name "trophy21";
+		#string texture "trophies.tga";
+		#rect rect 832, 128, 896, 192;
+	}
+	@image
+	{
+		#string name "trophy22";
+		#string texture "trophies.tga";
+		#rect rect 256, 256, 384, 384;
+	}
+	@image
+	{
+		#string name "trophy23";
+		#string texture "trophies.tga";
+		#rect rect 256, 128, 384, 256;
+	}
+	@image
+	{
+		#string name "trophy24";
+		#string texture "trophies.tga";
+		#rect rect 832, 0, 896, 128;
+	}
+	@image
+	{
+		#string name "trophy25";
+		#string texture "trophies.tga";
+		#rect rect 0, 448, 384, 768;
+	}
+	
+}
+
+>>
+

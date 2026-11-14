@@ -1,0 +1,456 @@
+
+<<
+
+@level
+{
+   #string level_name "level15";
+   #point level_size 40, 40;
+   #string level_env "sand";
+   #float level_time 2884;
+   #string name_emb_music "music_emb_sand_day.ogg";
+   #string name_pri_music "music_pri_indian.ogg";
+   #float plant_thirst_growth 0.25;
+   #float plant_fruit_growth 6;
+   #float plant_growth 6;
+   #float health_reduction_after_harvest 13;
+   #float health_reduction_when_thirsty 0.25;
+   #float plant_fertilizer_strength 5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 33;
+   #float plant_minimal_health 0;
+   @game_field
+   {
+      @ground
+      {
+         #string name "sand";
+         #string texground_name "sand_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level15_entry]
+      @pattern
+      {
+         #string name "l15_end_rain";
+         @condition
+         {
+            #string type "end rain";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "set plant thirst";
+            #string data "0.25";
+         }
+         @action
+         {
+            #string type "add event from pattern";
+            #string data "l15_start_rain";
+            #float delay 1000;
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l15_buy_megawaterpump";
+         }
+      }
+      @pattern
+      {
+         #string name "l15_start_rain";
+         @action
+         {
+            #string type "start rain";
+            #string data "monsoon_rain";
+         }
+         @action
+         {
+            #string type "water all";
+            #string data "0";
+         }
+         @action
+         {
+            #string type "set plant thirst";
+            #string data "0";
+         }
+         @action
+         {
+            #string type "add event from pattern";
+            #string data "l15_end_rain";
+         }
+         @condition
+         {
+            #string type "thirsty plants";
+            #string data ">=4";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l15_buy_megawaterpump";
+         }
+      }
+      @event
+      {
+         #string name "l15_init";
+         @action
+         {
+            #string type "set money";
+            #string data "30";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_carrot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_cabbage";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_corn";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_wheat";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_beetroot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_tomato";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "add event from pattern";
+            #string data "l15_start_rain";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l15_intro";
+            #float delay 3000;
+         }
+      }
+      @event
+      {
+         #string name "l15_great_seeding";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sow seed_beetroot";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sow seed_cabbage";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sow seed_corn";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sow seed_tomato";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sow seed_wheat";
+            #string data ">=12";
+         }
+         @condition
+         {
+            #string type "sow seed_carrot";
+            #string data ">=12";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "megawaterpump";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l15_watering";
+         }
+      }
+      @event
+      {
+         #string name "l15_buy_megawaterpump";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_sheep";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_pig";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_cow";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_chicken";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "water_sprinkler";
+         }
+         @condition
+         {
+            #string type "place megawaterpump";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l15_great_seeding";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l15_build_houses";
+         }
+      }
+      @event
+      {
+         #string name "l15_construct_marta_construct";
+         #bool player_task true;
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_pig 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_sheep 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_cow 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 1 3";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "herder";
+         }
+         @condition
+         {
+            #string type "place house_sheep";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place house_pig";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place house_cow";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place house_chicken";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l15_buy_megawaterpump";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l15_upgrade_houses";
+         }
+      }
+      @event
+      {
+         #string name "l15_upgrade_marta_upgrade";
+         #bool player_task true;
+         @condition
+         {
+            #string type "upgraded house_pig 3";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "upgraded house_cow 3";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "upgraded house_chicken 3";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "upgraded house_sheep 3";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l15_construct_marta_construct";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l15_victory";
+         }
+      }
+      @event
+      {
+         #string name "l15_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l15_victory";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l15_max_herder";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "herder";
+         }
+         @condition
+         {
+            #string type "place herder";
+            #string data ">=2";
+         }
+      }
+      @event
+      {
+         #string name "l15_max_waterboy";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "waterboy";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=4";
+         }
+      }
+      @event
+      {
+         #string name "l15_max_harvester";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "harvester";
+         }
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=4";
+         }
+      }
+      @event
+      {
+         #string name "l15_max_helper";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "helper";
+         }
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=3";
+         }
+      }
+   }
+}
+
+>>

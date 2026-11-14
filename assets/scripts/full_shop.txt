@@ -1,0 +1,622 @@
+<<
+@event
+{
+	#string name "full shop";
+	
+	@action
+	{
+		#string type "add money";
+		#string data "100000";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_altar";
+	}
+	@action
+	{
+		#string type "add collection to shop";
+		#string data "keyldo";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "map_piece";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "spare";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "mushroom";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "mobilephone";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fake_fertilizer";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "constructor";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "switch";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "marker";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "lightbug";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_down_right_lock";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_up_right_lock";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_down_center";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_up_center";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_left_center";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_right_center";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_left_up";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_left_up_lock";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_left_down";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_right_up";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_right_up_lock";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fence_right_down";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "harvester";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "herder";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "helper";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "guard";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "generator";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "big_generator";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "manager";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "waterboy";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "looser";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "bee";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "truck";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "box";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fivebox";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tenbox";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "multibox";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_aubergine";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_beetroot";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_cabbage";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_carrot";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_corn";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_cucumber";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_dahlia";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_mushroom";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_pepper";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_pumpkin";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_radish";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_strawberries";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_sunflower";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_tomato";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_tulip";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_watermelon";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_wheat";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_bur";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_lsd";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_onion";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_nettle";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_lily";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_yellowlily";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_rose";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "seed_orchid";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "streetlamp";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "terra_irrigator";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "watercan";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "big_watercan";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "hangar_vegetables";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "hangar_flowers";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "hangar_refrigerator";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "house_beehive";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "house_sheep";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "house_pig";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "house_cow";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "house_chicken";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "waterpump";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "water_sprinkler";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "fertilizer";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "big_fertilizer";
+	}
+	
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_blackberrybush";
+	}
+	
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_cherryplum";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_grapes";
+	}	
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_coconut";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_pomegranate";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_date";
+	}
+
+	
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_lemon";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_pineapple";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_orange";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_mango";
+	}
+	
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_banana";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_persimmon";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_peach";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_pear";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_cherry";
+	}
+
+	
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_apple";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_plum";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "tree_raspberrybush";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "destructor";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "transporter";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "bulldozer";
+	}
+
+	@action
+	{
+		#string type "add to shop";
+		#string data "factory_clothes";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "factory_sausage";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "factory_sweeties";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "respawn";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "airplane_cockpit";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "airplane_tail";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_bog";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_brokenhouse";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_brokentree";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_frozen_dirt";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_frozen_ground";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_lake";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_oasis";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_pit";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_ravine";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_runningsand";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_stones";
+	}
+	@action
+	{
+		#string type "add to shop";
+		#string data "decor_thorns";
+	}
+}
+
+
+>>

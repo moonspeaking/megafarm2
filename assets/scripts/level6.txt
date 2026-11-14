@@ -1,0 +1,569 @@
+
+<<
+
+@level
+{
+   #string level_name "level6";
+   #point level_size 32, 24;
+   #string level_env "winter";
+   #float level_time 2400;
+   #string name_emb_music "music_emb_winter_day.ogg";
+   #string name_pri_music "music_pri_winter.ogg";
+   #float plant_thirst_growth 0.15;
+   #float plant_fruit_growth 2;
+   #float plant_growth 2;
+   #float health_reduction_after_harvest 10;
+   #float health_reduction_when_thirsty 0.15;
+   #float plant_fertilizer_strength 2.5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 66;
+   #float plant_minimal_health 0;
+   @game_field
+   {
+      @ground
+      {
+         #string name "winter";
+         #string texground_name "winter_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level6_entry]
+      @event
+      {
+         #string name "l6_init";
+         @action
+         {
+            #string type "add money";
+            #string data "315";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_intro";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_sweeties 0";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_flowers";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterpump";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "destructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "bulldozer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+      }
+      @event
+      {
+         #string name "l6_construct_hangar_flowers";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_sell_orchids";
+         }
+         @condition
+         {
+            #string type "place hangar_flowers";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l6_switch_kill_orchid";
+         @action
+         {
+            #string type "add to shop";
+            #string data "patent_for_dahlia";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "patent_for_sunflower";
+         }
+         @condition
+         {
+            #string type "kill plant_orchid";
+            #string data ">=9";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l6_sell_orchid";
+         }
+      }
+      @event
+      {
+         #string name "l6_sell_orchid";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "patent_for_dahlia";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "patent_for_sunflower";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_buy_patents";
+         }
+         @condition
+         {
+            #string type "sell plant_orchid";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_construct_hangar_flowers";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l6_switch_kill_orchid";
+         }
+      }
+      @event
+      {
+         #string name "l6_buy_patent_for_dahlia";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place patent_for_dahlia";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_switch_kill_orchid";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_orchid";
+         }
+      }
+      @event
+      {
+         #string name "l6_buy_patent_for_sunflower";
+         #bool player_task true;
+         @condition
+         {
+            #string type "place patent_for_sunflower";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_switch_kill_orchid";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_orchid";
+         }
+      }
+      @event
+      {
+         #string name "l6_sell_dahlia";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell plant_dahlia";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_buy_patent_for_dahlia";
+         }
+      }
+      @event
+      {
+         #string name "l6_sell_sunflower";
+         #bool player_task true;
+         @condition
+         {
+            #string type "sell plant_sunflower";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_buy_patent_for_sunflower";
+         }
+      }
+      @event
+      {
+         #string name "l6_switch_add_helper";
+         @action
+         {
+            #string type "add to shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_buy_1st_worker";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_dahlia, l6_sell_sunflower";
+         }
+      }
+      @event
+      {
+         #string name "l6_first_helper";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_buy_workers";
+         }
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_dahlia, l6_sell_sunflower";
+         }
+      }
+      @event
+      {
+         #string name "l6_hiring_time";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_plum";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_raspberrybush";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_sell_trees";
+         }
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_first_helper";
+         }
+      }
+      @event
+      {
+         #string name "l6_sell_from_trees";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_refrigerator";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_beehive";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_build_beehive_1";
+         }
+         @condition
+         {
+            #string type "sell tree_plum";
+            #string data ">=2";
+         }
+         @condition
+         {
+            #string type "sell tree_raspberrybush";
+            #string data ">=3";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_hiring_time";
+         }
+      }
+      @event
+      {
+         #string name "l6_sell_honey";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to shop";
+            #string data "herder";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "patent_for_strawberries";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_sell_strawberry";
+         }
+         @condition
+         {
+            #string type "sell house_beehive";
+            #string data ">=3";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_from_trees";
+         }
+      }
+      @event
+      {
+         #string name "l6_sow_strawberries";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l6_victory";
+            #float delay 5000;
+         }
+         @condition
+         {
+            #string type "sow seed_strawberries";
+            #string data ">=4";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_honey";
+         }
+      }
+      @event
+      {
+         #string name "l6_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l6_victory";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l6_max_harvester";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "harvester";
+         }
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=2";
+         }
+      }
+      @event
+      {
+         #string name "l6_max_helper";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "helper";
+         }
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=2";
+         }
+      }
+      @event
+      {
+         #string name "l6_max_waterboy";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "waterboy";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l6_max_herder";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "herder";
+         }
+         @condition
+         {
+            #string type "place herder";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l6_switch_take_seed_dahlia";
+         @action
+         {
+            #string type "spawn object";
+            #string data "seed_dahlia";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_sell_dahlia, l6_sell_sunflower";
+         }
+      }
+      @event
+      {
+         #string name "l6_switch_center_view_on_respawn";
+         @action
+         {
+            #string type "center view";
+            #string data "respawn";
+         }
+         @condition
+         {
+            #string type "end dialogue l6_buy_1st_worker";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l6_switch_take_seed_sunflower";
+         @action
+         {
+            #string type "spawn object";
+            #string data "seed_sunflower";
+            #float delay 500;
+         }
+         @condition
+         {
+            #string type "take from respawn";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l6_switch_take_seed_dahlia";
+         }
+      }
+   }
+}
+
+>>

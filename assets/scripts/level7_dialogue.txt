@@ -1,0 +1,105 @@
+<<
+@simple_dialogue
+{
+	#string name "l7_intro";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;	
+		#bool left_arrow true;
+		#string text "l7_intro_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l7_constructor_intro";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;	
+		#bool right_arrow true;
+		#string text "l7_constructor_intro_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l7_workers";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#string text "l7_workers_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l7_manager";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#string text "l7_manager_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l7_upgrades";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#string text "l7_upgrades_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l7_money";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#string text "l7_money_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l7_victory";
+	#bool pause true;
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#string text "l7_victory_1";
+	}	
+}
+
+
+
+
+>>
+

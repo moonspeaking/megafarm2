@@ -1,0 +1,25 @@
+<<
+@generator 1
+{
+	#string name "generator";
+	#string type_goods "inventory";
+	#int price 300;
+	#point pos 0, 0;
+	#point size 128, 128;
+	#bool solid true;
+	#point zbase 0, -15;
+
+	#string texpicture_name "generator.tga";
+	#string texhighlight_name "generator.tga";
+	#string texmask_name "generator.tga";
+
+	#int power_production 3;
+
+	#point base_center 0, -15;
+	#point base_radius 60, 45;
+	#point dock_center 0, -62;
+	#point dock_radius 8, 8;
+	#bool cant_fix false;
+}
+>>
+

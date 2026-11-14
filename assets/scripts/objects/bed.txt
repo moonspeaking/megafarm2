@@ -1,0 +1,9 @@
+<<
+@square 1
+{
+	#string name "bed";
+	#string type_goods "inventory";
+	#int price 0;
+}
+>>
+

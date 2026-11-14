@@ -1,0 +1,20 @@
+<<
+@obstacle 1
+{
+	#string name "decor_stones";
+	#string type_goods "decor";
+	#point pos 0, 0;
+	#point size 192, 160;
+	#bool solid true;
+	#int price 0;
+	#point zbase 0, 0;
+
+	#bool destructable true;
+	
+	#point base_center 0, 0;
+	#point base_radius 96, 80;
+
+	#string name_view_sfx "stone_view.ogg";
+}
+>>
+

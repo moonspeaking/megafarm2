@@ -1,0 +1,53 @@
+<<
+@house 4
+{
+	#string name "house_chicken";
+	#string type_goods "buildings";
+	#int price 600;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase 0, -50;
+
+	#int cost_good 200;
+	#float time_complete_1 90;
+	#float time_complete_2 65;
+	#float time_complete_3 45;
+	#float time_spoil_good 0;
+	#float time_feed 50;
+
+	#string imgground_type "middle";
+	#string texupgrade_name0 "house_chicken0.tga";
+	#string texupgrade_name1 "house_chicken1.tga";
+	#string texupgrade_name2 "house_chicken2.tga";
+	#string texupgrade_name3 "house_chicken3.tga";
+
+	#string name_sfx "chicken_sfx.ogg";
+	#float length_sfx 3500
+	
+	#point base_center 0, -50;
+	#point base_radius 128, 96;
+	#point dock_center -54, -137;
+	#point dock_radius 8, 8;
+
+	#point ready_icon_pos 48, 64;
+	#point feed_icon_pos -48, 64;
+	#point complete_icon_pos -10, -96;
+	
+	#point upgrade_button_pos 68, -60;
+	
+	#int cost_upgrade_0 300;
+	#int cost_upgrade_1 500;
+	#int cost_upgrade_2 600;	
+
+	#bool animal true;
+	#point animal_pos 33, -42;
+
+	@accept_feed_list
+	{
+		plant_corn;
+		plant_wheat;
+	}
+}
+>>
+

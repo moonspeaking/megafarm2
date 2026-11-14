@@ -1,0 +1,72 @@
+<<
+
+@icredits
+{
+	#string name "credits";
+	#string texture_pack "credits_pack";
+	#string sound_pack "credits_pack";
+	#string onmessage "credits";
+
+	
+	@bitmap
+	{
+		#string name "main_layer";
+		#point pos 0, 0;
+		#point size 1024, 768;
+		#rect texcoord 0, 0, 1, 0.75;
+		#rect color 210, 210, 210, 255;
+		#string texture_name "credits_back.tga";
+	}	
+	@bitmap
+	{
+		#string name "wide_right";
+		#point pos 598, 0;
+		#point size 172, 768;
+		#rect texcoord 0, 0, 0.6719, 0.75;
+		#rect color 210, 210, 210, 255;
+		#string texture_name "credits_back_right.tga";
+	}
+	@bitmap
+	{
+		#string name "wide_left";
+		#point pos -598, 0;
+		#point size 172, 768;
+		#rect texcoord 0.3281, 0, 1, 0.75;
+		#rect color 210, 210, 210, 255;
+		#string texture_name "credits_back_left.tga";
+	}
+
+	@simple_credits
+	{
+		#string name "inagalaxyfaraway";
+
+		[credits_rus]
+		[credits_eng]
+		[credits_fra]
+		[credits_deu]
+		[credits_esp]
+		[credits_kor]
+		[credits_jap]
+		[credits_ita]
+	}
+	
+	@bitmap
+	{
+		#string name "up_gag";
+		#point pos 0, 320;
+		#point size 1024, 128;
+		#string texture_name "up_gag.tga";
+	}
+	@bitmap
+	{
+		#string name "down_gag";
+		#point pos 0, -320;
+		#point size 1024, 128;
+		#string texture_name "down_gag.tga";
+	}	
+	
+	@cursor;
+}
+
+>>
+

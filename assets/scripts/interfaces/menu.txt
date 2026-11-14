@@ -1,0 +1,175 @@
+<<
+
+	@imenu
+	{
+		#string name "menu";
+		#string texture_pack "menu_pack";
+		#string sound_pack "menu_pack";
+		
+		@bitmap
+		{
+			#string name "main_layer";
+			#point pos 0, 0;
+			#point size 1024, 768;
+			#rect texcoord 0, 0, 1, 0.75;
+			#string texture_name "menu_background.tga";
+		}
+		@bitmap
+		{
+			#string name "wide_right";
+			#point pos 598, 0;
+			#point size 172, 768;
+			#rect texcoord 0, 0, 0.6719, 0.75;
+			#string texture_name "menu_background_right.tga";
+		}
+		@bitmap
+		{
+			#string name "wide_left";
+			#point pos -598, 0;
+			#point size 172, 768;
+			#rect texcoord 0.3281, 0, 1, 0.75;
+			#string texture_name "menu_background_left.tga";
+		}
+
+// 		@text
+// 		{
+// 			#string name "welcome_header";
+// 			#point pos -346, 0;
+// 			#point size 0, 0;
+// 			#float font_size 20;
+// 			#rect color 251, 229, 129, 255;
+// 			#string text_align "center";
+// 			#string text_key "welcome_message";
+// 		}
+		@text
+		{
+			#string name "welcome_message";
+			#point pos -356, -210;
+			#point size 240, 0;
+			#float font_size 26;
+			#rect color 251, 229, 129, 255;
+			#string text_align "center";
+			#string text_key "welcome_message";
+			#bool font_scale true;		
+		}
+		@bitmap
+		{
+			#string name "name";
+			#point pos -356, -210;
+			#point size 256, 64;
+			#string texture_name "name.tga";
+		}
+		
+		@sprite
+		{
+			#string name "sprite_eyes";
+			#point pos -342, 59;
+			#point size 64, 32;
+			#bool random true;
+			#float repeat_value 3000;
+			#float random_value 2000;
+			#string anim_name "eyes";
+		}
+
+		@sprite
+		{
+			#string name "sprite_hand";
+			#point pos -274, -84;
+			#point size 32, 32;
+			#bool random true;
+			#float repeat_value 4000;
+			#float random_value 1000;
+			#string anim_name "hand";
+		}
+
+		@text
+		{
+			#string name "change_label";
+			#point pos -346, -287;
+			#point size 256, 32;
+			#float font_size 20;
+			#rect color 251, 229, 129, 224;
+			#bool highlightable true;
+			#string text_align "center";
+			#string text_key "change_player_label";
+		}
+
+		@bitmap
+		{
+			#string name "book";
+			#point pos -346, -287;
+			#point size 256, 64;
+			#string texture_name "book.tga";
+		}
+
+		@virtual_window
+		{
+			#string name "player_label";
+			#point pos -346, -287;
+			#point size 256, 32;
+		}
+
+		@text
+		{
+			#string name "version";
+			#point pos 495, -370;
+			#point size 128, 32;
+			#float font_size 12;
+			#string text_align "left";
+			#string text_key "version";
+		}
+					
+		@main_menu;
+			
+		@option_menu
+		{
+			#bool visible false;
+			#bool alive false;
+		}
+
+		@language_menu
+		{
+			#bool visible false;
+			#bool alive false;
+			#bool autosize true;	
+		}
+		
+		@profiles_menu
+		{
+			#bool visible false;
+			#bool alive false;
+			#bool autosize true;
+		}
+		
+		@delete_profile_dialog
+		{
+			#bool visible false;
+			#bool alive false;
+			#bool autosize true;
+		}
+				
+		@enter_name_dialog
+		{#bool show false;}
+		
+		@volume_dialog;
+		
+		@loadgame_dialog
+		{#bool visible false;}
+		
+		@exitgame_dialog
+		{#bool visible false;}
+		
+		@deleteplayer_dialog
+		{#bool visible false;}
+				
+		@help_dialog;	
+		
+
+		@cursor;
+		
+	}
+
+
+>>
+
+

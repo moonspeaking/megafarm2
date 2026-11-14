@@ -1,0 +1,143 @@
+<<
+@simple_dialogue
+{
+	#string name "l19_intro";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l19_intro_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l19_intro_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#string left_picture "face_marta.tga";		
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l19_intro_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l19_built_first_factory";
+	
+	@simple_dialogue_frame
+	{		
+		#string left_picture "face_marta.tga";		
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#float time 10000;
+		#string text "l19_built_first_factory_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l19_built_second_factory";
+	
+	@simple_dialogue_frame
+	{		
+		#string left_picture "face_marta.tga";		
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#float time 10000;
+		#string text "l19_built_second_factory_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l19_sold_textile";
+	
+	@simple_dialogue_frame
+	{		
+		#string right_picture "face_silvy2.tga";		
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#bool right_slide_in true;
+		#float time 10000;
+		#string text "l19_sold_textile_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l19_sold_sausages";
+	
+	@simple_dialogue_frame
+	{		
+		#string right_picture "face_silvy2.tga";		
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#bool right_slide_in true;
+		#float time 10000;
+		#string text "l19_sold_sausages_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l19_victory";
+	#bool pause true;
+	
+	@simple_dialogue_frame
+	{		
+		#string right_picture "face_silvy2.tga";		
+		#bool right_arrow true;		
+		#bool right_slide_in true;
+		#float time 10000;
+		#string text "l19_victory_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#string left_picture "face_marta.tga";		
+		#bool left_arrow true;
+		#bool left_slide_in true;		
+		#float time 10000;
+		#string text "l19_victory_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#string left_picture "face_marta.tga";		
+		#bool right_arrow true;			
+		#float time 10000;
+		#string text "l19_victory_3";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#string left_picture "face_marta3.tga";		
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l19_victory_4";
+	}
+}
+
+
+
+>>

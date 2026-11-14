@@ -1,0 +1,31 @@
+<<
+@tree 3
+{
+	#string name "tree_plum";
+	#string type_goods "trees";
+	#int price 225;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase 5, -102;
+	
+	#int harvest 37.5;
+	#int cost_fruit 20;
+	
+	#string texpicture_name "tree_plum.tga";
+	#string texhighlight_name "tree_plum.tga";
+	#string texmask_name "tree_plum.tga";
+	
+	#point base_center 6, -102;
+	#point base_radius 41, 27;
+	#point dock_center 6, -129;
+	#point dock_radius 8, 8;
+
+	#point ready_icon_pos 0, 153;
+	#point ready_notify_pos 0, 153;
+
+	#point fruit_size 256, 256;
+	#point fruit_pos 5, 16;
+}
+>>
+

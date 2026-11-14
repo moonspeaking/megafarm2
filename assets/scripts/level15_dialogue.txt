@@ -1,0 +1,163 @@
+<<
+@simple_dialogue
+{
+	#string name "l15_intro";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l15_intro_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_chief.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_intro_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_chief.tga";
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l15_intro_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l15_watering";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_watering_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_watering_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l15_build_houses";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_build_houses_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l15_build_houses_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";		
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l15_build_houses_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l15_upgrade_houses";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_upgrade_houses_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l15_upgrade_houses_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";		
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l15_upgrade_houses_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l15_victory";
+	#bool pause true;
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#bool right_slide_in true;	
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_victory_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#string left_picture "face_marta5.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l15_victory_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_chief.tga";
+		#string left_picture "face_marta5.tga";
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l15_victory_3";
+	}
+}
+
+
+
+
+
+
+
+>>

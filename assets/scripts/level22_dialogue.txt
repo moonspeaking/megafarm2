@@ -1,0 +1,804 @@
+<<
+
+@simple_dialogue
+{
+	#string name "l22_start";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_start_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_grandmother.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_start_2";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_grandmother.tga";
+		#bool right_arrow true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l22_start_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_plant_tomatoes";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandmother.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_plant_tomatoes_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandmother.tga";
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_plant_tomatoes_2";
+	}
+
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandmother.tga";
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_plant_tomatoes_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_plant_bur";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_plant_bur_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#float time 10000;
+		#string text "l22_plant_bur_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_find_treasure";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_find_treasure_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l22_find_treasure_2";
+	}
+
+}
+
+@simple_dialogue
+{
+	#string name "l22_treasure_1st_try";
+
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_treasure_1st_try_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_treasure_2nd_try";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandmother.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_treasure_2nd_try_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_treasure_3d_try";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_treasure_3d_try_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_treasure_4th_try";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_treasure_4th_try_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "treasure_hunt_end";
+	
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_treasure_hunt_end_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_grandfather.tga";
+		#string left_picture "face_marta3.tga"
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_treasure_hunt_end_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_first_watercan";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_first_watercan_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_first_watercan_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_first_watercan_3";
+	}
+}
+
+
+@simple_dialogue
+{
+	#string name "l22_bought_4_watercans";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_bought_4_watercans_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l22_bought_4_watercans_2";
+	}
+
+
+
+}
+
+@simple_dialogue
+{
+	#string name "l22_bought_7_watercans";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_bought_7_watercans_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l22_bought_7_watercans_2";
+	}
+}
+
+
+@simple_dialogue
+{
+	#string name "l22_bought_all_watercans";
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_bought_all_watercans_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_bought_all_watercans_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_watercan.tga";
+		#string left_picture "face_marta5.tga";
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_bought_all_watercans_3";
+	}
+}
+
+
+@simple_dialogue
+{
+	#string name "l22_first_watering";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta5.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_first_watering_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta5.tga";
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_first_watering_2";
+	}
+
+}
+
+@simple_dialogue
+{
+	#string name "l22_second_watering";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_second_watering_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_second_watering_2";
+	}
+
+}
+
+@simple_dialogue
+{
+	#string name "l22_third_watering";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_third_watering_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_where_is_phone";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_where_is_phone_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#float time 10000;
+		#string text "l22_where_is_phone_2";
+	}
+
+}
+
+@simple_dialogue
+{
+	#string name "l22_found_phone";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta3.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#bool left_slide_out true;
+		#float time 10000;
+		#string text "l22_found_phone_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_summon_daemon";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta4.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_summon_daemon_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta4.tga";
+		#string right_picture "face_looser.tga";
+		#bool right_arrow true;
+		#bool right_slide_in true;
+		#float time 10000;
+		#string text "l22_summon_daemon_2";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta4.tga";
+		#string right_picture "face_looser.tga";
+		#bool left_arrow true;		
+		#float time 10000;
+		#string text "l22_summon_daemon_3";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta4.tga";
+		#string right_picture "face_looser.tga";
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#float time 10000;
+		#string text "l22_summon_daemon_4";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_water_ok";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;	
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_water_ok_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_water_ok_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_wtf";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_wtf_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_omgshitstorm";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_omgshitstorm_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_shitstorm_end";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta3.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_shitstorm_end_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_start_harvest";
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_start_harvest_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_victory";
+	#bool pause true;
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_grandmother.tga";
+		#bool left_slide_in true;
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_victory_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#string right_picture "face_grandmother.tga";
+		#bool left_slide_out true;
+		#bool right_slide_out true;		
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l22_victory_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_1";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_2";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_3";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_4";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_4";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_5";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_5";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_6";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_6";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_7";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_7";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_8";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_8";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_9";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_9";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_10";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_10";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_fake_fertilizer_11";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_fake_fertilizer_11";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_real_fertilizer";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_real_fertilizer";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_bees_summoned";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_bees_summoned_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#string right_picture "face_grandfather.tga";
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#bool left_slide_out true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l22_bees_summoned_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l22_distracted_bees";
+	
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l22_distracted_bees_1";
+	}
+}
+
+
+
+
+>>

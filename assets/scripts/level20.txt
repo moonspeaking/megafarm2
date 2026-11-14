@@ -1,0 +1,329 @@
+
+<<
+
+@level
+{
+   #string level_name "level20";
+   #point level_size 16, 48;
+   #string level_env "grass";
+   #float level_time 60;
+   #string name_emb_music "music_emb_nihgt.ogg";
+   #string name_pri_music "music_pri_pink_panther.ogg";
+   #bool cant_dig true;
+   #bool cant_switch true;
+   #bool diablo_mode true;
+   @game_field
+   {
+      @ground
+      {
+         #string name "grass";
+         #string texground_name "grass_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level20_entry]
+      @event
+      {
+         #string name "l20_init";
+         @action
+         {
+            #string type "start night";
+            #string data "100";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l20_start";
+            #float delay 2000;
+         }
+      }
+      @event
+      {
+         #string name "l20_init_ai";
+         @condition
+         {
+            #string type "game time";
+            #string data ">=100";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "12.5 5 sergy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "2.5 2 sergy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "14 14 lexy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "2 14 lexy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "14 15 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "2 15 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "7 19 mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "1 19 mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "1 27 mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "8 27 mudy";
+         }
+      }
+      @event
+      {
+         #string name "l20_intro";
+         @condition
+         {
+            #string type "end dialogue l20_start";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 2.288246 31.335510";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "marker";
+            #float delay 1000;
+         }
+      }
+      @event
+      {
+         #string name "l20_operation_partisans";
+         #bool player_task true;
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         //@condition
+         //{
+         //  #string type "enabled by event";
+         //   #string data "l20_intro";
+         //}
+         @action
+         {
+            #string type "add to field";
+            #string data "mobilephone 2.3 31.3";
+         }
+         @action
+         {
+            #string type "clear guard waypoints";
+            #string data "mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "14 31 mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "1 36 mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "12 41 mudy";
+         }
+         @action
+         {
+            #string type "allow action";
+            #string data "switch 1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l20_planted_phone";
+         }
+      }
+      @event
+      {
+         #string name "l20_overload_generator";
+         #bool player_task true;
+         @condition
+         {
+            #string type "switches on";
+            #string data ">=6";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l20_operation_partisans";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 8.5 14";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "marker";
+            #float delay 100;
+         }
+         @action
+         {
+            #string type "clear guard waypoints";
+            #string data "lexy";
+         }
+         @action
+         {
+            #string type "clear guard waypoints";
+            #string data "oleg";
+         }
+         @action
+         {
+            #string type "clear guard waypoints";
+            #string data "sergy";
+         }
+         @action
+         {
+            #string type "clear guard waypoints";
+            #string data "mudy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "12 4.5 oleg";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "3 4.5 lexy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "6.5 5 sergy";
+         }
+         @action
+         {
+            #string type "add guard waypoint";
+            #string data "2.3 30.9 mudy";
+         }
+         @action
+         {
+            #string type "overload generator";
+            #string data "big_generator";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l20_generator_off";
+         }
+      }
+      @event
+      {
+         #string name "l20_freeway";
+         #bool player_task true;
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+	
+		 @condition
+         {
+            #string type "disabled by event";
+            #string data "l20_arrest";
+         }	
+
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l20_overload_generator";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l20_victory";
+         }
+      }
+      @event
+      {
+         #string name "l20_victory";
+         @condition
+         {
+            #string type "end dialogue l20_victory";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "victory";
+         }
+      }
+      @event
+      {
+         #string name "l20_arrest";
+         @condition
+         {
+            #string type "arrested";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l20_got_caught";
+         }
+      }
+      @event
+      {
+         #string name "l20_fail";
+         @action
+         {
+            #string type "defeat";
+         }
+         @condition
+         {
+            #string type "end dialogue l20_got_caught";
+            #string data ">=1";
+         }
+      }
+   }
+}
+
+>>

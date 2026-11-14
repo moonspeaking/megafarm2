@@ -1,0 +1,152 @@
+<<
+@simple_dialogue
+{
+	#string name "l18_intro";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_intro_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_intro_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta5.tga";
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_intro_3";
+	}
+
+}
+
+@simple_dialogue
+{
+	#string name "l18_first_breakdown";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_first_breakdown_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l18_breakdown";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta5.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_breakdown_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l18_night_comes";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta2.tga";
+		#bool left_slide_in true;		
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_night_comes_1";
+	}
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";		
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_night_comes_2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l18_failed";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_manager.tga";
+		#bool right_slide_in true;		
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l18_failed_1";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_manager.tga";				
+		#bool right_arrow true;
+		#bool right_slide_out true;
+		#float time 10000;
+		#string text "l18_failed_2";
+	}
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta5.tga";
+		#bool left_arrow true;
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#float time 10000;
+		#string text "l18_failed_3";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l18_victory";
+	#bool pause true;
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta3.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_victory_1";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l18_victory2";
+	#bool pause true;
+
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l18_victory2_1";
+	}
+}
+
+>>
+
+
+
+
+
+

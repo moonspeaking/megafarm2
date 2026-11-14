@@ -1,0 +1,224 @@
+<<
+@simple_dialogue
+{
+	#string name "l2_add_fivebox_by_switch_dialog";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_add_fivebox_by_switch_phrase1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_add_fivebox_by_switch_phrase2";
+	}
+}
+
+@simple_dialogue
+{
+	#string name "l2_watering_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_watering_by_scenario_phrase1";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_sell_fruits_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_sell_fruits_by_scenario_phrase1";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_buy_seeds_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_buy_seeds_by_scenario_phrase1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_buy_seeds_by_scenario_phrase2";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_sow_seeds_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_sow_seeds_by_scenario_phrase1";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_sell_vegetables_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_sell_vegetables_by_scenario_phrase1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_sell_vegetables_by_scenario_phrase2";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_fertilize_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_fertilize_by_scenario_phrase1";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_repair_house_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_repair_house_by_scenario_phrase1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_repair_house_by_scenario_phrase2";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_feed_sheep_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string left_picture "face_marta.tga";
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_feed_sheep_by_scenario_phrase1";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_sell_fur_by_scenario_dialog";
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_sell_fur_by_scenario_phrase1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_silvy.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_sell_fur_by_scenario_phrase2";
+	}
+}
+@simple_dialogue
+{
+	#string name "l2_victory_dialog";
+	#bool pause true;
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_manager.tga";
+		#bool right_slide_in true;
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_victory_pharse1";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_manager.tga";			
+		#string left_picture "face_marta.tga";
+		#bool left_slide_in true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_victory_pharse2";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_manager.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_arrow true;
+		#float time 10000;
+		#string text "l2_victory_pharse3";
+	}
+	@simple_dialogue_frame
+	{
+		#string right_picture "face_manager.tga";			
+		#string left_picture "face_marta.tga";
+		#bool right_slide_out true;
+		#bool left_slide_out true;
+		#bool left_arrow true;
+		#float time 10000;
+		#string text "l2_victory_pharse4";
+	}
+}
+
+>>

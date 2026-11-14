@@ -1,0 +1,134 @@
+
+<<
+
+@level
+{
+   #string level_name "level16";
+   #point level_size 40, 16;
+   #string level_env "jungle";
+   #float level_time 60;
+   #string name_emb_music "music_emb_jungle_night.ogg";
+   #string name_pri_music "music_pri_jungle_night.ogg";
+   @game_field
+   {
+      @ground
+      {
+         #string name "jungle";
+         #string texground_name "jungle_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level16_entry]	 ]
+      @event
+      {
+         #string name "l16e1";
+         @action
+         {
+            #string type "set sun";
+            #string data "11 2000";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l16_start";
+            #float delay 2000;
+         }
+      }
+      @event
+      {
+         #string name "l16_first_piece";
+         @condition
+         {
+            #string type "take map_piece";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l16_first_map";
+         }
+      }
+      @event
+      {
+         #string name "l16e2";
+         #bool player_task true;
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 26 14";
+         }
+         @condition
+         {
+            #string type "take map_piece";
+            #string data ">=10";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l16_got_map";
+            #float delay 700;
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l16e1";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "marker";
+            #float delay 3000;
+         }
+      }
+      @event
+      {
+         #string name "l16e3";
+         #bool player_task true;
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l16e2";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l16_victory";
+            #float delay 800;
+         }
+      }
+      @event
+      {
+         #string name "l16e4";
+         @condition
+         {
+            #string type "end dialogue l16_victory";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "victory";
+         }
+      }
+   }
+}
+
+>>

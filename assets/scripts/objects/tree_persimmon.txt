@@ -1,0 +1,31 @@
+<<
+@tree 3
+{
+	#string name "tree_persimmon";
+	#string type_goods "trees";
+	#int price 180;
+	#point pos 0, 0;
+	#point size 256, 512;
+	#bool solid true;
+	#point zbase -5, -108;
+	
+	#int harvest 15;
+	#int cost_fruit 40;
+	
+	#string texpicture_name "tree_persimmon.tga";
+	#string texhighlight_name "tree_persimmon.tga";
+	#string texmask_name "tree_persimmon.tga";
+
+	#point base_center -9, -108;
+	#point base_radius 53, 37;
+	#point dock_center -9, -145;
+	#point dock_radius 8, 8;
+
+	#point ready_icon_pos 0, 168;
+	#point ready_notify_pos 0, 168;
+
+	#point fruit_size 256, 256;
+	#point fruit_pos -6, 28;
+}
+>>
+

@@ -1,0 +1,26 @@
+<<
+@switch 1
+{
+	#string name "switch";
+	#string type_goods "inventory";
+	#point pos 0, 0;
+	#point size 64, 128;
+	#bool solid true;
+	#int price 0;
+	#point zbase -8, -46;
+
+	#point base_center -8, -46;
+	#point base_radius 20, 10;
+
+	#point dock_center 0, -80;
+	#point dock_radius 8, 8;
+
+	#string texpicture_name "switch_off.tga";
+	#string texhighlight_name "switch_off.tga";
+	#string texmask_name "switch_off.tga";
+
+	#string texture_on "switch_on.tga";
+	#string texture_off "switch_off.tga";
+}
+>>
+

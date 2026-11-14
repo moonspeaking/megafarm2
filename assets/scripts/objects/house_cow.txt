@@ -1,0 +1,54 @@
+<<
+@house 3
+{
+	#string name "house_cow";
+	#string type_goods "buildings";
+	#int price 500;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase 0, -44;
+
+	#int cost_good 380;
+	#float time_complete_1 200;
+	#float time_complete_2 150;
+	#float time_complete_3 100;
+	#float time_spoil_good 0;
+	#float time_feed 105;
+
+	#string imgground_type "big";
+	#string texupgrade_name0 "house_cow0.tga";
+	#string texupgrade_name1 "house_cow1.tga";
+	#string texupgrade_name2 "house_cow2.tga";
+	#string texupgrade_name3 "house_cow3.tga";
+
+	#string name_sfx "cow_sfx.ogg";
+	#float length_sfx 8500
+	
+	#point base_center 0, -44;
+	#point base_radius 144, 112;
+	#point dock_center -61, -146;
+	#point dock_radius 8, 8;
+
+	#point ready_icon_pos 48, 48;
+	#point feed_icon_pos -48, 48;
+	#point complete_icon_pos -37, -102; 
+
+	#point upgrade_button_pos 100, -70;
+	
+	#int cost_upgrade_0 250;
+	#int cost_upgrade_1 400;
+	#int cost_upgrade_2 500;	
+
+	#bool animal true;
+	#point animal_pos 10, -60;
+
+	@accept_feed_list
+	{
+		plant_carrot;
+		plant_cabbage;
+		
+	}
+}
+>>
+

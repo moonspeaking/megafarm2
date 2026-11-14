@@ -1,0 +1,48 @@
+<<
+
+	@iloader
+	{
+		#string name "loader";
+		#string texture_pack "loader_pack";
+		#string sound_pack "loader_pack";
+		
+		@bitmap
+		{
+			#string name "loadscreen";
+			#point pos 0, 0;
+			#point size 1024, 768;
+			#rect texcoord 0, 0, 1, 0.75;
+			#string texture_name "loadscreen.tga";
+		}
+		@bitmap
+		{
+			#string name "wide_right";
+			#point pos 598, 0;
+			#point size 172, 768;
+			#rect texcoord 0, 0, 0.6719, 0.75;
+			#string texture_name "loadscreen_right.tga";
+		}
+		@bitmap
+		{
+			#string name "wide_left";
+			#point pos -598, 0;
+			#point size 172, 768;
+			#rect texcoord 0.3281, 0, 1, 0.75;
+			#string texture_name "loadscreen_left.tga";
+		}
+		@bitmap
+		{
+			#string name "loadbar";
+			#point pos -1, -356;
+			#point size 512, 32;
+			#rect texcoord 0, 0, 0, 1;
+			#string texture_name "loadbar.tga";
+		}
+		@cursor;
+	}
+
+
+
+>>
+
+

@@ -1,0 +1,148 @@
+
+<<
+
+@level
+{
+   #string level_name "level24";
+   #point level_size 32, 24;
+   #string level_env "jungle";
+   #float level_time 99;
+   #string name_emb_music "music_emb_nihgt.ogg";
+   #string name_pri_music "music_pri_japan.ogg";
+   #bool cant_dig true;
+   @game_field
+   {
+      @ground
+      {
+         #string name "jungle";
+         #string texground_name "jungle_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level24_entry]
+      @event
+      {
+         #string name "l24_init";
+         @action
+         {
+            #string type "set sun";
+            #string data "7 1";
+         }
+         @action
+         {
+            #string type "start moon";
+            #string data "1000";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l24_init";
+            #float delay 3000;
+         }
+      }
+      @event
+      {
+         #string name "l24_first_mushroom";
+         @condition
+         {
+            #string type "take mushroom";
+            #string data ">=1";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l24_first_toke";
+            #float delay 500;
+         }
+      }
+      @event
+      {
+         #string name "l24_eat_mushroom";
+         #bool player_task true;
+         @condition
+         {
+            #string type "take mushroom";
+            #string data ">=15";
+         }
+         @action
+         {
+            #string type "effect show";
+            #string data "decor_altar";
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "decor_altar";
+         }
+         @action
+         {
+            #string type "play loop music";
+            #string data "music_pri_final.ogg";
+         }
+         @action
+         {
+            #string type "add to field";
+            #string data "marker 16.12 8.26";
+         }
+         @action
+         {
+            #string type "start moon";
+            #string data "1000";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l24_all_shrooms";
+         }
+      }
+      @event
+      {
+         #string name "l24_listen_the_god";
+         #bool player_task true;
+         @condition
+         {
+            #string type "enter marker";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l24_eat_mushroom";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l24_victory";
+         }
+      }
+      @event
+      {
+         #string name "l24_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l24_victory";
+            #string data ">=1";
+         }
+      }
+   }
+}
+
+>>

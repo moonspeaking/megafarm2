@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Farm Craft 2 — веб-версия</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2b4a1c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+</head>
+<body>
+<div id="game">
+  <canvas id="screen" width="1024" height="768"></canvas>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <!-- верх: три панели (menuhost_scripts.txt: upmenu_left / upmenu_center / upmenu_right) -->
+    <div id="topbar">
+      <div id="upleft">
+        <button id="btn_menu" title="Меню">Меню</button>
+        <button id="btn_center" title="Центрировать на героине" aria-label="Центрировать на героине"></button>
+        <div id="timebox"><div id="timebar"><div id="timefill"></div></div></div>
+        <div id="level_name"></div>
+      </div>
+      <div id="upright"><div id="moneybox"><span id="money_icon"></span><span id="money">0</span></div></div>
+      <div id="upcenter">
+        <div id="taskbox">
+          <div id="task_label">Задание</div>
+          <div id="task_text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bottombar">
+      <div id="toolslots"></div>
+      <div id="shop">
+        <div id="shop_tabs"></div>
+        <div id="shop_items"></div>
+      </div>
+    </div>
+
+    <!-- диалог (simple_dialogue_frame из guihost_scripts.txt: 1024x128 над нижней панелью) -->
+    <div id="dialogue" class="hidden">
+      <div class="dl_head dl_left"><img alt=""></div>
+      <div class="dl_head dl_right"><img alt=""></div>
+      <div class="dl_balloon"></div>
+      <div class="dl_arrow dl_arrow_l"></div>
+      <div class="dl_arrow dl_arrow_r"></div>
+      <div id="dl_text"></div>
+      <div id="dl_skip" title="Пропустить"></div>
+    </div>
+
+    <div id="hint"></div>
+  </div>
+
+  <!-- message box -->
+  <div id="msgbox" class="overlay hidden">
+    <div class="window">
+      <div id="msg_text"></div>
+      <button id="msg_ok">ОК</button>
+    </div>
+  </div>
+
+  <!-- level end -->
+  <div id="endbox" class="overlay hidden">
+    <div class="window">
+      <div id="end_title"></div>
+      <div id="end_stats"></div>
+      <button id="end_next">Продолжить</button>
+    </div>
+  </div>
+
+  <!-- main menu (built by src/menu.js) -->
+  <div id="menu" class="overlay"></div>
+
+  <div id="loading"><div class="ld_bar"><div class="ld_fill"></div></div><div class="ld_text">Загрузка…</div></div>
+</div>
+<script type="module" src="src/main.js"></script>
+<script>
+if ('serviceWorker' in navigator && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

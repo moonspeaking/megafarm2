@@ -1,0 +1,23 @@
+<<
+
+	begin_lower_char = a
+	end_lower_char = z
+	begin_upper_char = A
+	end_upper_char = Z
+	click_to_continue = FORTSETZEN
+	start = BEGINNEN
+	options = OPTION
+	exit = BEENDEN
+	fullscreen = VOLL BILDSCHIRM
+	vsync = SYNCHRONISATION
+	russian = РУССКИЙ
+	english = ENGLISH
+	french = FRANÇAIS
+	italian = ITALIANO
+	german = DEUTSCH
+	spanish = ESPAÑOL
+	
+>>
+
+
+

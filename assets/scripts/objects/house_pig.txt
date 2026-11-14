@@ -1,0 +1,53 @@
+<<
+@house 2
+{
+	#string name "house_pig";
+	#string type_goods "buildings";
+	#int price 700;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase -8, -34;
+	
+	#int cost_good 580;
+	#float time_complete_1 300;
+	#float time_complete_2 225;
+	#float time_complete_3 150;
+	#float time_spoil_good 0;
+	#float time_feed 105;
+
+	#string imgground_type "big";
+	#string texupgrade_name0 "house_pig0.tga";
+	#string texupgrade_name1 "house_pig1.tga";
+	#string texupgrade_name2 "house_pig2.tga";
+	#string texupgrade_name3 "house_pig3.tga";
+
+	#string name_sfx "pig_sfx.ogg";
+	#float length_sfx 5500
+
+	#point base_center -8, -34;
+	#point base_radius 144, 112;
+	#point dock_center -80, -131;
+	#point dock_radius 8, 8;
+	
+	#point ready_icon_pos 48, 64;
+	#point feed_icon_pos -48, 64;
+	#point complete_icon_pos -58, -91;
+
+	#point upgrade_button_pos 77, -50;
+	
+	#int cost_upgrade_0 350;
+	#int cost_upgrade_1 600;
+	#int cost_upgrade_2 700;	
+
+	#bool animal true;
+	#point animal_pos -11, -25;
+
+	@accept_feed_list
+	{
+		plant_tomato;
+		plant_beetroot;
+	}
+}
+>>
+

@@ -1,0 +1,526 @@
+
+<<
+
+@level
+{
+   #string level_name "level8";
+   #point level_size 32, 32;
+   #string level_env "sand";
+   #float level_time 2278;
+   #string name_emb_music "music_emb_sand_day.ogg";
+   #string name_pri_music "music_pri_desert.ogg";
+   #float plant_thirst_growth 0.25;
+   #float plant_fruit_growth 6;
+   #float plant_growth 6;
+   #float health_reduction_after_harvest 13;
+   #float health_reduction_when_thirsty 0.25;
+   #float plant_fertilizer_strength 5;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 33;
+   #float plant_minimal_health 0;
+   @game_field
+   {
+      @ground
+      {
+         #string name "sand";
+         #string texground_name "sand_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level8_entry]
+      @event
+      {
+         #string name "l8_init";
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterpump";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "destructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "constructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "bulldozer";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_intro";
+            #float delay 3000;
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_sheep 1 2";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 1 2";
+         }
+         @action
+         {
+            #string type "set money";
+            #string data "250";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "herder";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_cabbage";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_carrot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_corn";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_wheat";
+         }
+		 @action
+         {
+            #string type "add to shop";
+            #string data "seed_aubergine";
+         }
+		  @action
+         {
+            #string type "add to shop";
+            #string data "seed_watermelon";
+         }
+		  @action
+         {
+            #string type "add to shop";
+            #string data "seed_pumpkin";
+         }
+      }
+      @event
+      {
+         #string name "l8_great_hiring";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_sell_wool_eggs";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_sheep 1 3";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 1 3";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_chicken";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_sheep";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_refrigerator";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_flowers";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=2";
+         }
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=4";
+         }
+         @condition
+         {
+            #string type "place herder";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=2";
+         }
+      }
+      @event
+      {
+         #string name "l8_fur_and_egg";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_manager";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "manager";
+         }
+         @condition
+         {
+            #string type "sell house_chicken";
+            #string data ">=3";
+         }
+         @condition
+         {
+            #string type "sell house_sheep";
+            #string data ">=2";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l8_great_hiring";
+         }
+      }
+      @event
+      {
+         #string name "l8_cool_manager";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_honey";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_beehive";
+            #float delay 3000;
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_tulip";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_rose";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_yellowlily";
+         }
+         @condition
+         {
+            #string type "place manager";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l8_fur_and_egg";
+         }
+      }
+      @event
+      {
+         #string name "l8_honey_work";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_money";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "factory_sweeties";
+         }
+         @condition
+         {
+            #string type "sell house_beehive";
+            #string data ">=2";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l8_cool_manager";
+         }
+      }
+      @event
+      {
+         #string name "l8_dreams_dreams";
+         #bool player_task true;
+         @condition
+         {
+            #string type "money";
+            #string data ">=8000";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l8_honey_work";
+         }
+         @condition
+         {
+            #string type "disabled by event";
+            #string data "l8_snatch";
+         }
+      }
+      @event
+      {
+         #string name "l8_snatch";
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_disaster";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "kill all people";
+         }
+         @action
+         {
+            #string type "set money";
+            #string data "1";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "herder";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "manager";
+         }
+         @action
+         {
+            #string type "delete from shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "water_sprinkler";
+         }
+         @condition
+         {
+            #string type "money";
+            #string data ">=7500";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l8_honey_work";
+         }
+      }
+      @event
+      {
+         #string name "l8_last_chance";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l8_victory";
+         }
+         @condition
+         {
+            #string type "place water_sprinkler";
+            #string data ">=2";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l8_snatch";
+         }
+      }
+      @event
+      {
+         #string name "l8_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l8_victory";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l8_max_harvester";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "harvester";
+         }
+         @condition
+         {
+            #string type "place harvester";
+            #string data ">=5";
+         }
+      }
+      @event
+      {
+         #string name "l8_max_herder";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "herder";
+         }
+         @condition
+         {
+            #string type "place herder";
+            #string data ">=2";
+         }
+      }
+      @event
+      {
+         #string name "l8_max_hepler";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "helper";
+         }
+         @condition
+         {
+            #string type "place helper";
+            #string data ">=3";
+         }
+      }
+      @event
+      {
+         #string name "l8_max_manager";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "manager";
+         }
+         @condition
+         {
+            #string type "place manager";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l8_max_waterboy";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "waterboy";
+         }
+         @condition
+         {
+            #string type "place waterboy";
+            #string data ">=4";
+         }
+      }
+   }
+}
+
+>>

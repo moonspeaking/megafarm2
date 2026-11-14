@@ -1,0 +1,25 @@
+<<
+@truck 1
+{
+	#string name "truck";
+	#string type_goods "inventory";
+	#int price 500;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase 10, -34;
+
+	#point wheel_pos1 2, -69;
+	#point wheel_pos2 102, -28;
+
+	#string texpicture_name "truck.tga";
+	#string texhighlight_name "truck.tga";
+	#string texmask_name "truck.tga";
+
+	#point base_center 0, -20;
+	#point base_radius 150, 75;
+	#point dock_center -65, -90;
+	#point dock_radius 8, 8;
+}
+>>
+

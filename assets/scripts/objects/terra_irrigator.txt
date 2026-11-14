@@ -1,0 +1,20 @@
+<<
+@terramorpher 1
+{
+	#string name "terra_irrigator";
+	#string type_goods "inventory";
+	#point pos 0, 0;
+	#point size 128, 128;
+	#bool solid true;
+	#int price 3000;
+	#point zbase 0, 0;
+
+	#point base_center 0, 0;
+	#point base_radius 56, 56;
+
+	#string texpicture_name "terra_irrigator.tga";
+	#string texhighlight_name "terra_irrigator.tga";
+	#string texmask_name "terra_irrigator.tga";
+}
+>>
+

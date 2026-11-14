@@ -1,0 +1,155 @@
+<<
+@factory 1
+{
+	#string name "factory_sweeties";
+	#string type_goods "buildings";
+	
+	#int price 8000;
+	#point pos 0, 0;
+	#point size 512, 512;
+	#bool solid true;
+	#point zbase 0, 0;
+	#int profit 20;	
+
+	#point base_center -11, -40;
+	#point base_radius 245, 183;
+	#point dock_center -198, -158;
+	#point dock_radius 15, 15;
+	
+	#string texpicture_name "factory_sweeties.tga";
+	#string texhighlight_name "factory_sweeties.tga";
+	#string texmask_name "factory_sweeties.tga";
+	
+	#string empty_indicator_texture "indicator_empty.tga";
+	#string full_indicator_texture "indicator_full.tga";
+	#point indicator_icon_pos 0, 192;
+	
+	#float max_resource 3;
+	#float resource_time 60000;
+	
+	#point profit_source 10, -140;
+	
+	@accept_feed_list
+	{
+		plant_corn;
+		plant_strawberries;
+		house_beehive;
+	}
+	
+	@phase0
+	{
+		@anim
+		{
+			#string name "candy_factory_broken_mixer";			
+		}		
+		@anim
+		{
+			#string name "candy_factory_door1";
+		}
+		@anim
+		{
+			#string name "candy_factory_door2";
+		}
+	}
+	
+	@phase1
+	{
+		@anim
+		{
+			#string name "candy_factory_broken_mixer";			
+		}
+		@anim
+		{
+			#string name "candy_factory_transporter2";
+		}
+		@anim
+		{
+			#string name "candy_factory_door2";
+		}
+	}
+	
+	@phase2
+	{
+		@anim
+		{
+			#string name "candy_factory_mixer";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_transporter2";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_door2";
+		}
+	}
+	
+	@phase3
+	{
+		@anim
+		{
+			#string name "candy_factory_mixer";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_transporter2";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_transporter1";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_steam1";			
+		}		
+	}
+	
+	@phase4
+	{
+		@anim
+		{
+			#string name "candy_factory_mixer";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_transporter2";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_transporter1";
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_steam1";			
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_steam2";			
+		}
+		
+		@anim
+		{
+			#string name "candy_factory_candy";
+			#bool gives_money true;
+		}
+
+		@anim
+		{
+			#string name "candy_factory_boxes";			
+		}
+
+	}
+	
+	
+}
+>>
+

@@ -1,0 +1,865 @@
+<<
+@event
+{
+	#string name "default placement";
+	@action
+	{
+		#string type "add to field";
+		#string data "hero 10.714324 2.218750";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "30 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "31 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "32 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "30 11 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "30 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "31 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "32 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "32 13 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "32 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "31 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "30 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "34 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "34 11 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "34 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "34 13 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "34 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "35 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "36 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "37 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "37 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "37 11 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "37 13 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "37 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "36 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "35 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "39 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "39 11 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "39 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "40 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "41 12 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "41 13 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "41 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "40 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "39 14 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "40 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add bed";
+		#string data "41 10 1 1";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "airplane_tail 4.437500 0.593750";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_bog 8.426756 3.383725";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_brokentree 11.301756 0.417869";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 3.959362 3.633142 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 17.133591 11.945850 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 10.958562 14.242725 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 5.350565 12.133350 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 1.112204 15.358680 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 44.757423 -2.174553 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 35.469490 0.551428 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 24.440739 -1.189472 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_mango 18.041822 0.486814 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 13.826953 3.155404 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 12.039378 9.068509 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 15.336253 15.267064 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 6.852116 15.940128 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 28.656712 -0.845828 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_banana 20.330214 14.573422 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_coconut 24.451624 16.415180 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_coconut 48.088310 2.848067 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_coconut 45.385185 12.914774 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pineapple 34.594910 7.736203 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pineapple 48.172791 7.439328 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pineapple 43.925507 16.008951 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_pineapple 27.529552 12.760756 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune2 37.613300 16.552765";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune2 26.032970 13.974640";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 48.724331 0.721696";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_stone2 42.140625 4.212603";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_bigstone2 46.859375 2.212603";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_bigstone2 49.184502 0.310833";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 45.448074 2.652147";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 47.432449 1.136522";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 47.979324 -0.910454";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 45.573074 1.136421";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 41.119949 -0.660454";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 43.682449 3.433296";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 42.194885 1.191249";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant5 40.489243 4.125791";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 39.411118 4.063291";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant4 38.739243 2.309440";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant4 40.504868 2.809440";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant4 38.426743 -0.473326";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 38.368011 5.150052";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune2 36.727386 5.681302";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 35.384487 5.804404";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_bigstone2 33.895317 6.163779";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigstone1 32.045906 6.038779";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant1 24.001850 11.903965";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant1 13.887865 11.511981";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_stone2 23.800194 13.092800";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigstone1 22.550194 13.874050";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigflower1 22.545921 12.263754";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_stone_bigstone2 23.702171 14.863700";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 22.440161 15.582450";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 16.549896 18.421875";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_bigstone1 13.674896 18.375000";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 15.003021 17.953125";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 8.397034 12.366632";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 1.500708 10.482052";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 8.188208 -0.649498";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 0.422583 2.944252";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 43.796875 10.906250";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_sand_dune1 35.888878 11.593750";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "airplane_cockpit 25.082340 7.332025";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_brokentree 31.141685 2.564423";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 33.341499 4.647981";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 26.626949 2.006171";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant3 15.588404 8.473964";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigstone1 16.979029 5.302089";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigstone1 4.164333 15.996871";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 1.433874 12.106644";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 3.746374 14.450394";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 0.340124 5.006967";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 11.052124 3.397592";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 15.587358 3.256967";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 21.643581 0.211100";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 36.433498 4.523600";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_flower3 39.430016 0.820475";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant1 6.506153 7.199545";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigflower1 6.769180 8.407763";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_stone1 21.720999 3.098058";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 17.809650 5.644295 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 10.066886 5.066413 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "tree_persimmon 2.740910 7.377192 no_fruits";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 8.749724 9.189523";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 8.687224 0.531657";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 0.880901 -0.406740";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 20.513498 3.105120";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 21.466623 2.042620";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_plant6 31.711088 -0.377351";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "keyldo_jungle_bigflower1 32.674141 -1.104422";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "seed_lily 5.040991 13.235749";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "seed_lily 14.020233 11.088384";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_bog -1.378105 6.966267";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_runningsand 20.102901 18.096367";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "decor_brokenhouse 41.899559 6.106092";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "generator 32.278538 7.711881";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "seed_lily 27.400908 1.851175";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 33.819477 9.096797";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 35.913227 12.630938";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 40.346046 5.217664";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 45.131409 12.481771";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 24.980978 12.072737";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 25.652853 15.103987";
+	}
+
+	@action
+	{
+		#string type "add to field";
+		#string data "spare 47.417847 3.167730";
+	}
+
+}
+>>
+that's it, folks!

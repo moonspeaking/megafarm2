@@ -1,0 +1,19 @@
+<<
+@fence 1
+{
+	#string name "fence_left_center";
+	#string type_goods "decor";
+	#point pos 0, 0;
+	#point size 128, 512;
+	#bool solid false;
+	#bool decor true;
+	#int price 0;
+	#point zbase 0, 0;
+
+	#point base_center 0, 0;
+	#point base_radius 0, 0;
+
+	#string texpicture_name "left_center.tga";
+}
+>>
+

@@ -1,0 +1,16 @@
+<<
+@destructor 1
+{
+	#string name "constructor";
+	#string type_goods "inventory";
+	#int price 100;
+	#point pos 0, 0;
+	#point size 64, 64;
+	#bool solid false;
+	#point zbase 0, 0;
+	#string texpicture_name "cultivator.tga";
+	#string texhighlight_name "cultivator.tga";
+	#string texmask_name "cultivator.tga";
+}
+>>
+

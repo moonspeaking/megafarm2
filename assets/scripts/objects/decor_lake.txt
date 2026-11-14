@@ -1,0 +1,18 @@
+<<
+@obstacle 1
+{
+	#string name "decor_lake";
+	#string type_goods "decor";
+	#point pos 0, 0;
+	#point size 384, 320;
+	#bool solid true;
+	#int price 0;
+	#point zbase 0, 0;
+
+	#point base_center 0, 0;
+	#point base_radius 192, 160;
+
+	#string name_view_sfx "lake_view.ogg";
+}
+>>
+

@@ -1,0 +1,534 @@
+
+<<
+
+@level
+{
+   #string level_name "level11";
+   #point level_size 40, 32;
+   #string level_env "stone";
+   #float level_time 3610;
+   #string name_emb_music "music_emb_forest.ogg";
+   #string name_pri_music "music_pri_neutral1.ogg";
+   #float plant_thirst_growth 0.2;
+   #float plant_fruit_growth 4;
+   #float plant_growth 4;
+   #float health_reduction_after_harvest 13;
+   #float health_reduction_when_thirsty 0.2;
+   #float plant_fertilizer_strength 10;
+   #float plant_fertilizer_time 10;
+   #float plant_starting_health 66;
+   #float plant_minimal_health 0;
+   @game_field
+   {
+      @ground
+      {
+         #string name "stone";
+         #string texground_name "stone_center_tile.tga";
+         #string texmask_name "lx_fill_mask.tga";
+      }
+      @object_list
+      {
+      }
+      @render_list
+      {
+      }
+      @physics_list
+      {
+      }
+      @object_map
+      {
+      }
+   }
+   @scenario
+   {
+      [level11_entry]
+      @event
+      {
+         #string name "l11_init";
+         @action
+         {
+            #string type "add to shop";
+            #string data "box";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fivebox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tenbox";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_watercan";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterpump";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "destructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "transporter";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "bulldozer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "big_fertilizer";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_vegetables";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_flowers";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "hangar_refrigerator";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_pig";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_chicken";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_cow";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "house_sheep";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_pig 1 2";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_cow 1 2";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_chicken 1 2";
+         }
+         @action
+         {
+            #string type "set upgrade";
+            #string data "house_sheep 1 2";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "harvester";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "herder";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "waterboy";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "helper";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "manager";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_cabbage";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_carrot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_wheat";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_corn";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_beetroot";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_tomato";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_tulip";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_mushroom";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "seed_strawberries";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "constructor";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_blackberrybush";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_cherryplum";
+         }
+         @action
+         {
+            #string type "add to shop";
+            #string data "tree_grapes";
+         }
+         @action
+         {
+            #string type "set money";
+            #string data "500";
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l11_intro";
+            #float delay 3000;
+         }
+      }
+      @event
+      {
+         #string name "l11_refuel1";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l11_sell_sausage";
+         }
+         @condition
+         {
+            #string type "refuel factory_sausage";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l11_sausage_bigpack";
+         #bool player_task true;
+         @action
+         {
+            #string type "center view";
+            #string data "factory_clothes";
+         }
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_clothes 3";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l11_fuel_textile";
+         }
+         @condition
+         {
+            #string type "sell factory_sausage";
+            #string data ">=60";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_refuel1";
+         }
+      }
+      @event
+      {
+         #string name "l11_refuel2";
+         #bool player_task true;
+         @condition
+         {
+            #string type "refuel factory_clothes";
+            #string data ">=1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_sausage_bigpack";
+         }
+      }
+      @event
+      {
+         #string name "l11_clothes_bigpack";
+         #bool player_task true;
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l11_victory";
+         }
+         @condition
+         {
+            #string type "sell factory_clothes";
+            #string data ">=90";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_refuel2";
+         }
+      }
+      @event
+      {
+         #string name "l11_export_pig";
+         #bool player_task true;
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_clothes -1";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "factory_clothes";
+         }
+         @condition
+         {
+            #string type "sell house_pig";
+            #string data ">=2";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_factory_clothes_broken";
+         }
+      }
+      @event
+      {
+         #string name "l11_export_milk";
+         #bool player_task true;
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_clothes -1";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "factory_clothes";
+         }
+         @condition
+         {
+            #string type "sell house_cow";
+            #string data ">=3";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_factory_clothes_broken";
+         }
+      }
+      @event
+      {
+         #string name "l11_export_egg";
+         #bool player_task true;
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_clothes -1";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "center view";
+            #string data "factory_clothes";
+         }
+         @condition
+         {
+            #string type "sell house_chicken";
+            #string data ">=4";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_factory_clothes_broken";
+         }
+      }
+      @event
+      {
+         #string name "l11_export";
+         @action
+         {
+            #string data "l11_export_done";
+         }
+         @condition
+         {
+            #string data "l11_export_milk, l11_export_egg, l11_export_pig";
+         }
+      }
+      @event
+      {
+         #string name "l11_factory_sausage_broken_case1";
+         @condition
+         {
+            #string type "sell factory_sausage";
+            #string data ">=77";
+         }
+      }
+      @event
+      {
+         #string name "l11_factory_sausage_broken_case2";
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_refuel2";
+         }
+      }
+      @event
+      {
+         #string name "l11_factory_sausage_broken";
+         @action
+         {
+            #string type "center view";
+            #string data "factory_sausage";
+         }
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_sausage 0";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l11_sausage_broken";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_factory_sausage_broken_case1";
+         }
+         @condition
+         {
+            #string type "enabled by event";
+            #string data "l11_factory_sausage_broken_case2";
+         }
+      }
+      @event
+      {
+         #string name "l11_factory_clothes_broken";
+         @action
+         {
+            #string type "center view";
+            #string data "factory_clothes";
+         }
+         @action
+         {
+            #string type "upgrade factory";
+            #string data "factory_clothes 0";
+            #float delay 2000;
+         }
+         @action
+         {
+            #string type "add dialogue";
+            #string data "l11_clothes_broken";
+         }
+         @action
+         {
+            #string type "set money";
+            #string data "777";
+         }
+         @condition
+         {
+            #string type "sell factory_clothes";
+            #string data ">=66";
+         }
+      }
+      @event
+      {
+         #string name "l11_victory";
+         @action
+         {
+            #string type "victory";
+         }
+         @condition
+         {
+            #string type "end dialogue l11_victory";
+            #string data ">=1";
+         }
+      }
+      @event
+      {
+         #string name "l11_max_manager";
+         @action
+         {
+            #string type "delete from shop";
+            #string data "manager";
+         }
+         @condition
+         {
+            #string type "place manager";
+            #string data ">=1";
+         }
+      }
+   }
+}
+
+>>

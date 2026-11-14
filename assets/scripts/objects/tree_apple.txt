@@ -1,0 +1,31 @@
+<<
+@tree 2
+{
+	#string name "tree_apple";
+	#string type_goods "trees";
+	#int price 180;
+	#point pos 0, 0;
+	#point size 256, 256;
+	#bool solid true;
+	#point zbase 10, -100;
+	
+	#int harvest 40;
+	#int cost_fruit 15;
+	
+	#string texpicture_name "tree_apple.tga";
+	#string texhighlight_name "tree_apple.tga";
+	#string texmask_name "tree_apple.tga";
+	
+	#point base_center 10, -100;
+	#point base_radius 58, 38;
+	#point dock_center 10, -138;
+	#point dock_radius 8, 8;
+
+	#point ready_icon_pos 0, 168;
+	#point ready_notify_pos 0, 168;
+	
+	#point fruit_size 256, 256;
+	#point fruit_pos 0, 26;
+}
+>>
+

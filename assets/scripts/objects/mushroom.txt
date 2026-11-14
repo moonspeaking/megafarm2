@@ -1,0 +1,23 @@
+<<
+@piece 1
+{
+	#string name "mushroom";
+	#string type_goods "inventory";
+	#int price 1;
+	#point pos 0, 0;
+	#point size 32, 32;
+	#bool solid false;
+	#point zbase -1, -17;
+	
+	#string texpicture_name "mushroom.tga";
+	#string texhighlight_name "mushroom.tga";
+	#string texmask_name "mushroom.tga";
+	
+	#point base_center 0, 0;
+	#point base_radius 16, 16;
+	
+	#point dock_center 0, -16;
+	#point dock_radius 16, 16;
+}
+>>
+
