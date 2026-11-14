@@ -357,14 +357,14 @@ html, body {
 
 /* comics player (src/comics.js) */
 .comics { position: absolute; inset: 0; z-index: 15; overflow: hidden; }
-.comics_bg { position: absolute; inset: 0; background-size: 1024px 1024px; background-repeat: no-repeat; background-position: 0 0; }
+.comics_bg { position: absolute; inset: 0; background-size: 1310.72px 1310.72px; background-repeat: no-repeat; background-position: 0 0; } /* main_layer: texcoord 0,0,0.78125,0.58594 растянут на 1024x768 */
 .comics_stage { position: absolute; inset: 0; }
 .comics_frame { position: absolute; background-size: 1024px 1024px; background-repeat: no-repeat; }
 .comics_balloon { position: absolute; width: 276px; min-height: 46px; box-sizing: border-box; padding: 6px 12px;
   display: flex; align-items: center; justify-content: center; background: #fff; border: 1.5px solid #8d8d8d; border-radius: 9px; }
 .comics_text { font: 700 12.5px/1.1 var(--ui-font); color: #fff; text-align: center; -webkit-text-stroke: 3px #4d4d4d; paint-order: stroke fill; }
 .comics_arrow { position: absolute; width: 32px; height: 32px; background-size: 100% 100%; pointer-events: none; }
-.comics_btn { position: absolute; left: 723px; top: 523px; width: 64px; height: 64px; background-size: 64px 128px; background-repeat: no-repeat; cursor: pointer; }
+.comics_btn { position: absolute; left: 922px; top: 681px; width: 64px; height: 64px; background-size: 64px 128px; background-repeat: no-repeat; cursor: pointer; }
 .comics_btn:hover { background-position: 0 -64px; }
 
 /* поля ввода внутри #game должны оставаться редактируемыми (Safari наследует user-select: none) */
@@ -401,38 +401,29 @@ html, body {
 .lm_bitbtn { position: absolute; z-index: 2; width: 64px; height: 64px; background-size: 64px 128px;
   background-repeat: no-repeat; cursor: pointer; mix-blend-mode: multiply; }
 .lm_bitbtn:hover { background-position: 0 -64px; }
-/* нижняя полка downbar_levels.tga (в файле 1024x256 полка занимает нижние ~136 строк,
-   верх был прозрачным); иконки уровней на ней, между тумбами */
-.lm_bar { position: absolute; left: 0; bottom: 0; width: 1024px; height: 136px;
-  background-size: 1024px 256px; background-repeat: no-repeat; background-position: 0 -120px; }
-.lm_scroller { position: absolute; left: 184px; right: 184px; bottom: 6px; height: 74px;
-  overflow: hidden; touch-action: pan-x; }
-.lm_row { position: absolute; left: 0; top: 0; display: flex; gap: 4px; width: max-content;
-  transition: transform .25s ease-out; }
-.lm_item { position: relative; flex: 0 0 auto; width: 64px; height: 64px; cursor: pointer; }
+/* нижняя полка: @toolbar levelselector — фон downbar_levels.tga 1024x256 (низ экрана), кнопки уровней 58x58 */
+.lm_bar { position: absolute; left: 0; top: 512px; width: 1024px; height: 256px; background-size: 1024px 256px;
+  background-repeat: no-repeat; pointer-events: none; }
+.lm_item { position: absolute; width: 58px; height: 58px; cursor: pointer; }
 .lm_icon { position: absolute; inset: 0; background-size: 100% 100%; background-repeat: no-repeat; }
-.lm_lock { display: none; position: absolute; inset: 0; mix-blend-mode: multiply;
+.lm_lock { display: none; position: absolute; inset: 0;
   background: url('assets/textures/gui/level_lock.png') 0 0 / 100% 100% no-repeat; }
 .lm_item.locked { cursor: default; }
-.lm_item.locked .lm_icon { filter: brightness(.45) grayscale(.8); }
 .lm_item.locked .lm_lock { display: block; }
-/* звезда level_star.png — атлас 2x2 по 32px, звезда в правой верхней клетке;
-   показываем только её (у текстур без альфы фон гасится blend'ом — задача 7) */
-.lm_star { display: none; position: absolute; right: -3px; top: -3px; width: 26px; height: 26px;
-  z-index: 2; background: url('assets/textures/gui/level_star.png') -26px 0 / 52px 52px no-repeat;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }
+/* номер уровня: @text number pos -24,-15, по правому краю, кегль 12 */
+.lm_num { position: absolute; right: 53px; top: 36px; font-size: 12px; text-align: right; pointer-events: none; }
+/* звезда level_star.tga на всю кнопку (звезда в правом верхнем углу текстуры) */
+.lm_star { display: none; position: absolute; inset: 0; z-index: 2;
+  background: url('assets/textures/gui/level_star.png') 0 0 / 100% 100% no-repeat; }
 .lm_item.done .lm_star { display: block; }
 .lm_item.gold .lm_star { filter: drop-shadow(0 0 4px #ffd75e); animation: lm_pulse 1.6s ease-in-out infinite; }
-.lm_sel { display: none; position: absolute; inset: -3px; mix-blend-mode: multiply;
-  background: url('assets/textures/gui/level_selector.png') 0 0 / 100% 100% no-repeat; }
+/* рамка выбора level_selector.tga: 105% кнопки */
+.lm_sel { display: none; position: absolute; left: -1.5px; top: -1.5px; width: 61px; height: 61px;
+  background: url('assets/textures/gui/level_selector.png') 0 0 / 100% 100% no-repeat; pointer-events: none; }
 .lm_item.sel .lm_sel { display: block; }
 .lm_item:hover:not(.locked):not(.sel) { filter: brightness(1.12); }
-/* указатель (level_arrow.tga 32x32) над выбранным уровнем */
-.lm_arrow { position: absolute; top: -34px; width: 32px; height: 32px; z-index: 3;
-  background: url('assets/textures/gui/level_arrow.png') 0 0 / 100% 100% no-repeat;
-  transition: left .25s ease-out; pointer-events: none; }
 /* стрелки прокрутки levelmenu_left/right.tga: 32x64 обычная + нажатая под ней */
-.lm_nav { position: absolute; bottom: 22px; width: 32px; height: 64px; cursor: pointer;
+.lm_nav { position: absolute; width: 32px; height: 64px; cursor: pointer; z-index: 2;
   background-size: 32px 128px; background-repeat: no-repeat; }
 .lm_nav:hover { filter: brightness(1.15); }
 .lm_nav:active { background-position: 0 -64px; }

@@ -685,25 +685,27 @@ export class Menu {
     bitbtn(-430, 'button_back.png', () => this.go('main'));
     bitbtn(430, 'button_camera.png', () => this.hooks.playComics(this.selected - 1, () => this.audio.playMusic('music_levelmenu')));
 
-    // --- лента уровней на нижней полке
-    const bar = this.el('div', 'lm_bar', s);
-    const scroller = this.el('div', 'lm_scroller', bar);
-    const row = this.el('div', 'lm_row', scroller);
-    const arrow = this.el('div', 'lm_arrow', row);   // указатель над выбранным уровнем
+    // --- нижняя полка уровней: @toolbar levelselector (guihost_scripts.txt) — pos 0,-256, 900x256, фон downbar_levels 1024x256;
+    // кнопки 58x58 (@menulevelbutton), промежуток indent 4, центр по y = центр панели − pitch (−96), поля scroll_margin 36
+    // (ширина окна = 900 − 2·36), по центру (center_items); прокрутка по одному уровню (sub_1005C1BD, sub_1005BAF0).
+    const BAR_CY = cy(-256), ITEM = 58, GAP = 4, AREA = 900 - 2 * 36;
+    const back = this.el('div', 'lm_bar', s);
+    back.style.backgroundImage = `url('${this.tex('levelmenu/downbar_levels')}')`;
     const items = new Map();
+    const order = this.db.levelNumbers();
     const mark = (el, n) => {
       el.classList.toggle('locked', !this.progress.unlocked(n));
       el.classList.toggle('done', this.progress.done(n));
       el.classList.toggle('gold', this.progress.gold(n));
     };
-    const PITCH = 68; // иконка 64px + зазор 4px
-    for (const n of this.db.levelNumbers()) {
-      const it = this.el('div', 'lm_item', row);
+    for (const n of order) {
+      const it = this.el('div', 'lm_item', s);
       const ic = this.el('div', 'lm_icon', it);
       ic.style.backgroundImage = `url('${this.tex(`icons/levels/level${n}_icon`)}')`;
       this.el('div', 'lm_lock', it);
       this.el('div', 'lm_star', it);
       this.el('div', 'lm_sel', it);
+      this.el('div', 'lm_num otext', it, String(n));
       mark(it, n);
       it.addEventListener('mouseenter', () => {
         if (it.classList.contains('locked')) return;
@@ -713,24 +715,48 @@ export class Menu {
       it.addEventListener('dblclick', () => { if (!it.classList.contains('locked')) this.begin(n); });
       items.set(n, it);
     }
-    let scroll = 0;
-    const maxScroll = () => Math.max(0, row.offsetWidth - scroller.clientWidth);
-    const setScroll = (v) => {
-      scroll = Math.max(0, Math.min(maxScroll(), v));
-      row.style.transform = `translateX(${-scroll}px)`;
+    let first = 0, last = 0;
+    const layout = () => {
+      // последний влезающий в окно; группа [first..last] центрируется
+      let w = 0;
+      last = first;
+      for (let i = first; i < order.length; i++) {
+        const nw = w + (i > first ? GAP : 0) + ITEM;
+        if (nw > AREA) break;
+        w = nw; last = i;
+      }
+      let x = 512 - w / 2;
+      order.forEach((n, i) => {
+        const it = items.get(n);
+        const vis = i >= first && i <= last;
+        it.style.display = vis ? 'block' : 'none';
+        if (!vis) return;
+        it.style.left = `${x}px`;
+        it.style.top = `${BAR_CY + 96 - ITEM / 2}px`;
+        x += ITEM + GAP;
+      });
+      bscroll.style.display = first > 0 ? 'block' : 'none';
+      fscroll.style.display = last < order.length - 1 ? 'block' : 'none';
     };
-    // стрелки прокрутки (levelmenu_left/right.png: 32x64 обычная + нажатая под ней)
+    const scrollBy = (d) => {
+      const nf = Math.max(0, Math.min(order.length - 1, first + d));
+      if (nf === first || (d > 0 && last >= order.length - 1)) return;
+      first = nf;
+      layout();
+    };
+    // back_scroll / forward_scroll: levelmenu_left/right.tga (@button_left/right 32x64), pos 0,-102, по краям панели
     const nav = (right) => {
-      const b = this.el('div', 'lm_nav', bar);
+      const b = this.el('div', 'lm_nav', s);
       b.style.backgroundImage = `url('${this.tex(right ? 'gui/levelmenu_right.png' : 'gui/levelmenu_left.png')}')`;
-      b.addEventListener('click', () => { this.click(); setScroll(scroll + (right ? 1 : -1) * 4 * PITCH); });
+      b.style.left = `${right ? 512 + 450 - 32 : 512 - 450}px`;
+      b.style.top = `${BAR_CY + 102 - 32}px`;
+      b.addEventListener('click', () => { this.click(); scrollBy(right ? 1 : -1); });
       return b;
     };
-    nav(false).style.left = '140px';
-    nav(true).style.right = '140px';
-    scroller.addEventListener('wheel', (e) => {
+    const bscroll = nav(false), fscroll = nav(true);
+    page.addEventListener('wheel', (e) => {
       e.preventDefault();
-      setScroll(scroll + (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY));
+      scrollBy((Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) > 0 ? 1 : -1);
     }, { passive: false });
 
     const select = (n, instant) => {
@@ -738,18 +764,17 @@ export class Menu {
       this.selected = n;
       this.settings.set('level', n);
       for (const [k, it] of items) it.classList.toggle('sel', k === n);
-      const it = items.get(n);
-      if (it) {
-        arrow.style.left = `${it.offsetLeft + 16}px`;
-        if (!instant) setScroll(it.offsetLeft + 32 - scroller.clientWidth / 2);
-      }
+      // выбранный уровень должен быть виден
+      const i = order.indexOf(n);
+      if (i < first) { first = i; layout(); }
+      while (i > last && first < i) { first++; layout(); }
       info(n);
     };
 
     const init = this.pendingSelect || this.progress.current();
     this.pendingSelect = null;
+    layout();
     select(this.progress.unlocked(init) ? init : 1, true);
-    setScroll(items.get(this.selected) ? items.get(this.selected).offsetLeft + 32 - scroller.clientWidth / 2 : 0);
 
     // трофеи, выигранные в только что пройденном уровне, — по одному в окне
     this.announceTrophies(page);
