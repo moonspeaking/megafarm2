@@ -74,7 +74,7 @@ export class UI {
 
   bind(world, hooks) {
     this.moneyShown = null; this.moneyTarget = undefined;
-    this.taskOff = 0; this.taskTarget = 0; this.taskFrac = 0; this.taskShown = 0;
+    this.taskOff = 0; this.taskTarget = 0; this.taskFrac = 0; this.taskShown = 0; this.taskKey = '';
     clearInterval(this.moneyTimer);
     this.moneyTimer = setInterval(() => this.tickMoney(), 40);
     this.world = world;
@@ -205,6 +205,8 @@ export class UI {
     const lines = taskGoalLines(w);
     if (lines.length) {
       this.taskTarget = 14 * lines.length;
+      const gkey = lines.map((l) => l.text).join('|');
+      if (gkey !== this.taskKey) { this.taskKey = gkey; this.taskShown = 0; } // новое задание: заливка с нуля (sub_1002EE54)
       this.taskFrac = lines.filter((l) => l.cur >= l.target).length / lines.length;
       const sig = lines.map((l) => `${l.text}|${l.cur}|${l.target}`).join('\n');
       if (box.dataset.sig === sig) return;
@@ -222,7 +224,8 @@ export class UI {
     // целей нет (например, всё выполнено или у задания только временные условия): название задания
     box.dataset.sig = '';
     box.className = 'single';
-    this.taskFrac = 0;
+    // задание выполнено (цели исчезли с доски): полоса дозаполняется до конца, доска остаётся до следующего задания
+    this.taskFrac = this.taskKey ? 1 : 0;
     const active = [...w.tasks].reverse().find((t) => t.state === 'active');
     if (active) box.textContent = w.db.t(active.key, active.key);
     else if (w.tasks.length) box.textContent = w.db.t(w.tasks[w.tasks.length - 1].key, '');

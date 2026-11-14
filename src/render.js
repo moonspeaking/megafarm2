@@ -665,7 +665,23 @@ export class Renderer {
 
   drawPlantSprites(ctx, o, frame, dead) {
     const w = this.world;
-    for (const spr of o.def.children) {
+    const sprites = o.def.children.filter((c) => c.type === 'sprite');
+    if (!sprites.length) {
+      // часть 2 (CPlant sub_10040C34): анимации plant_idle0..4 / plant_growth0..3 берут лист `<texname|name>.tga`,
+      // размер кадра frame_size и сдвиг delta_pos самого растения; кадры — по таблице animationhost_scripts.txt
+      const p = o.def.props;
+      const img = this.assets.image(`animations/plants/${p.texname || p.name}`, w.env);
+      if (!img || !img.complete || !img.naturalWidth) return;
+      const size = p.frame_size || [32, 32];
+      const d = p.delta_pos || [0, 0];
+      const dx = o.x + d[0] - size[0] / 2;
+      const dy = o.y - d[1] - size[1] / 2;
+      if (dead) ctx.globalAlpha = 0.55;
+      drawPlantFrame(ctx, img, size, frame, dx, dy);
+      ctx.globalAlpha = 1;
+      return;
+    }
+    for (const spr of sprites) {
       if (spr.type !== 'sprite') continue;
       const size = spr.props.size || [32, 32];
       const pos = spr.props.pos || [0, 0];
